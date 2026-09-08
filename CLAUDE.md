@@ -60,6 +60,7 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
    - **WhatsApp number**: always pull the client's real phone number from their Google Maps listing (convert `08xx` to `https://wa.me/628xx...`). Only fall back to the `https://wa.me/62XXXXXXXXXX` placeholder if Maps has no number.
    - **Google rating**: if the Maps listing has a good rating, show it on the page (e.g. "4,7 di Google (100 ulasan)"); it's real data and free social proof.
    - **Instagram bio links**: any links found in the client's IG bio (Linktree, website, marketplace, other socials) must also appear on the demo site.
+   - **Testimonials**: if the Maps listing has good reviews, extract them (research browser: click the Ulasan tab) and show the best ones on the site verbatim: reviewer name, star count, labeled as Google reviews. Pick quotes that reinforce the page's story (patient teachers, comfy space). Never invent testimonials; omit the section entirely if real ones don't exist.
 6. Mobile-first responsive; the client will almost certainly open the link on their phone from Instagram DM/WhatsApp.
 7. **Never use em dashes (—)** anywhere: page copy, code comments, docs, commit messages. Use commas, colons, periods, or parentheses instead.
 8. Add a card for the new demo to the root `index.html` gallery.
