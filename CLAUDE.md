@@ -28,6 +28,20 @@ The repo is shared **only for deployment convenience** — each client's brand i
 - What MAY be shared is brand-neutral infrastructure only: `assets/demo-badge.js` (watermark — deliberately styled in neutral dark/white so it never clashes with any theme) and, if ever needed, other non-visual utilities under `assets/`.
 - Structural patterns (section order, checklist, responsive approach) are fine to reuse — the *skeleton* repeats, the *skin* never does.
 
+## Design brief — anti-generic guardrails
+
+Act as an elite front-end developer and designer. Every demo must be a unique, highly distinctive page for that client's audience, aimed at one primary conversion goal (usually a WhatsApp contact).
+
+- **Banned defaults**: no overused generic fonts (Inter, Roboto, Arial, system sans-serif); no cliché 3-column card grids; no generic purple gradient backgrounds.
+- **Typography**: distinctive, high-personality font pairings (e.g., a sharp editorial serif combined with a stark monospace label).
+- **Color & theme**: commit to a bold, cohesive palette — dominant, intentional tones with a single sharp accent color, inspired by the client's brand world (not a template default).
+- **Atmosphere**: create depth with layered CSS gradients, subtle geometric grids, or high-impact asymmetry — not flat, boring solid blocks.
+- **Hero**: give it a unique layout (e.g., massive asymmetric typography on one side, a single high-contrast visual anchor on the other) instead of a centered generic stock-image hero.
+- **Core content**: choose the exact sections the client's story needs; favor a unique narrative flow over repetitive card layouts.
+- **Motion & interaction**: smooth, CSS-only staggered entrance reveals on page load. Prioritize one well-orchestrated moment of visual delight over scattered, distracting micro-animations.
+
+These guardrails work *with* brand isolation: distinctiveness comes from the client's identity, so two demos should never feel like the same designer's template.
+
 ## Rules for every demo page
 
 1. **Watermark is mandatory**: include `<script src="/assets/demo-badge.js" defer></script>` before `</body>`. It injects a fixed corner badge marking the page as a demo, with my contact CTA. Config (contact link, label) lives in that one file so all demos update at once.
