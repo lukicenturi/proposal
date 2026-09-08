@@ -54,7 +54,7 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
 
 1. **Watermark is mandatory**: include `<script src="/assets/demo-badge.js" defer></script>` before `</body>`. It injects a fixed corner badge marking the page as a demo, with my contact CTA. Config (contact link, label) lives in that one file so all demos update at once.
 2. **`<meta name="robots" content="noindex, nofollow">`** on every page. These must never rank against the client's real presence.
-3. **Language: Bahasa Indonesia** (target clients and their customers are local).
+3. **Language: follow the client's Instagram bio.** Write the page in whatever language the client uses in their IG bio (e.g. Happy Healthy's bio is English, so the demo is in English). Default to Bahasa Indonesia only when the bio is in Indonesian or there is no bio to go by.
 4. **Match the client's brand identity**: pull vibe, colors, and tone from their Instagram bio/feed, logo, and Google Maps photos before designing. Font + palette should feel like *their* brand, not a generic template.
 5. **Real data only where we have it** (name, address, services from bio/Maps). Anything invented (prices, testimonials) uses obvious placeholders.
    - **WhatsApp number**: always pull the client's real phone number from their Google Maps listing (convert `08xx` to `https://wa.me/628xx...`). Only fall back to the `https://wa.me/62XXXXXXXXXX` placeholder if Maps has no number.
@@ -68,7 +68,7 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
 ## Adding a new client: workflow
 
 1. The user creates `<client-slug>/` and dumps links (Google Maps, Instagram, anything) into `<client-slug>/reference.txt`, then asks to check it. Assets may appear in `assets-suggestions/` at any time.
-2. Read `reference.txt` and research every link. Use the research browser (below) for pages that block plain fetching (Google Maps details, Instagram). Extract: real phone (for WA links), rating/reviews, address, hours, bio, bio links, brand colors from logo/feed.
+2. Read `reference.txt` and research every link. If it includes a competitor or reference site, treat that as the tone the client aspires to (e.g. classy and serene vs playful) and let it steer the design mood, not just the section ideas. Use the research browser (below) for pages that block plain fetching (Google Maps details, Instagram). Extract: real phone (for WA links), rating/reviews, address, hours, bio, bio links, brand colors from logo/feed.
 3. Create `<client-slug>/index.html` following the rules above.
 4. Add the demo to the root gallery with client name, category, and date.
 5. Push to `main` (Vercel auto-deploys).
