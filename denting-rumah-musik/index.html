@@ -6,6 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Denting Rumah Musik | Les Musik untuk Putra-Putri Anda</title>
   <meta name="description" content="Les musik Piano, Keyboard, Gitar, Violin, Saxophone & Vokal untuk anak di Medang, Pagedangan, Tangerang. Klasik, Pop & Jazz. Terbuka untuk anak berkebutuhan khusus.">
+  <!-- Photos in img/ are Unsplash placeholders; swap with the client's real photos when available. -->
   <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +61,13 @@
       );
     }
 
+    /* Arch mask, like a doorway into the music house */
+    .arch { border-radius: 999px 999px 2rem 2rem; }
+
+    /* Brand duotone: grayscale photo multiplied onto the brand red */
+    .duotone { background: #E8391D; }
+    .duotone img { filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply; opacity: .9; }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; animation: none; }
       .note-float, .note-float-slow, .marquee-track { animation: none; }
@@ -85,9 +93,9 @@
     </nav>
   </header>
 
-  <!-- Hero: asymmetric, type-led left, logo anchor right -->
+  <!-- Hero: type left, arch photo anchor right -->
   <section class="staff-lines relative overflow-hidden">
-    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-24 pt-14 lg:grid-cols-[1.2fr_1fr] lg:pt-20">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-24 pt-14 lg:grid-cols-[1.15fr_1fr] lg:pt-20">
       <div>
         <p class="reveal reveal-1 font-mono text-xs uppercase tracking-[0.28em] text-brand-deep">Medang &bull; Pagedangan &bull; Tangerang</p>
         <h1 class="reveal reveal-2 mt-5 font-display text-5xl font-extrabold leading-[0.98] sm:text-7xl">
@@ -104,13 +112,14 @@
         </div>
         <p class="reveal reveal-5 mt-6 font-mono text-xs text-ink/50">6 instrumen &bull; semua usia &bull; terbuka untuk anak berkebutuhan khusus</p>
       </div>
-      <div class="reveal reveal-3 relative mx-auto w-full max-w-sm lg:max-w-none">
-        <div class="absolute -right-8 -top-8 h-64 w-64 rounded-full bg-gradient-to-br from-brand to-brand-deep opacity-15 blur-2xl"></div>
-        <div class="relative rotate-2 rounded-[2rem] border-2 border-ink/10 bg-white p-8 shadow-2xl shadow-brand/20 transition hover:rotate-0">
-          <img src="logo.png" alt="Logo Denting Rumah Musik" class="w-full object-contain">
+      <div class="reveal reveal-3 relative mx-auto w-full max-w-sm">
+        <div class="absolute -right-10 -top-10 h-72 w-72 rounded-full bg-gradient-to-br from-brand to-brand-deep opacity-15 blur-2xl"></div>
+        <div class="arch relative overflow-hidden border-2 border-ink shadow-2xl shadow-brand/20">
+          <img src="img/hero-piano.jpg" alt="Anak belajar piano" class="h-[26rem] w-full object-cover sm:h-[30rem]">
         </div>
-        <span aria-hidden="true" class="note-float absolute -left-6 top-6 select-none font-display text-5xl text-brand">&#9835;</span>
-        <span aria-hidden="true" class="note-float-slow absolute -bottom-4 right-2 select-none font-display text-4xl text-brand-deep/60">&#9834;</span>
+        <img src="logo.png" alt="Logo Denting Rumah Musik" class="absolute -bottom-8 -left-8 h-28 w-28 rotate-[-6deg] rounded-full border-2 border-ink bg-white object-contain p-2 shadow-xl sm:h-32 sm:w-32">
+        <span aria-hidden="true" class="note-float absolute -right-4 top-8 select-none font-display text-5xl text-brand">&#9835;</span>
+        <span aria-hidden="true" class="note-float-slow absolute -left-8 top-1/2 select-none font-display text-4xl text-brand-deep/60">&#9834;</span>
       </div>
     </div>
   </section>
@@ -131,7 +140,7 @@
     </div>
   </div>
 
-  <!-- Program: editorial numbered rows, no card grid -->
+  <!-- Program: editorial numbered rows with photo chips -->
   <section id="program" class="py-20">
     <div class="mx-auto max-w-6xl px-5">
       <div class="mb-12 flex flex-wrap items-end justify-between gap-4">
@@ -143,33 +152,39 @@
       </div>
 
       <div class="border-t-2 border-ink">
-        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_auto_1fr_auto] items-center gap-4 border-b-2 border-ink/15 py-5 transition hover:bg-brand-faint sm:gap-8">
           <span class="font-mono text-sm text-brand-deep">01</span>
+          <img src="img/thumb-piano.jpg" alt="" class="h-14 w-14 rounded-full border-2 border-ink object-cover transition group-hover:scale-110 group-hover:rotate-6 sm:h-16 sm:w-16">
           <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Piano</span>
           <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Fondasi klasik yang kuat sekaligus lagu pop favorit anak.</span>
         </a>
-        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_auto_1fr_auto] items-center gap-4 border-b-2 border-ink/15 py-5 transition hover:bg-brand-faint sm:gap-8">
           <span class="font-mono text-sm text-brand-deep">02</span>
+          <img src="img/thumb-keyboard.jpg" alt="" class="h-14 w-14 rounded-full border-2 border-ink object-cover transition group-hover:scale-110 group-hover:rotate-6 sm:h-16 sm:w-16">
           <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Keyboard</span>
           <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Aransemen modern dan iringan lagu dengan cara menyenangkan.</span>
         </a>
-        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_auto_1fr_auto] items-center gap-4 border-b-2 border-ink/15 py-5 transition hover:bg-brand-faint sm:gap-8">
           <span class="font-mono text-sm text-brand-deep">03</span>
+          <img src="img/thumb-guitar.jpg" alt="" class="h-14 w-14 rounded-full border-2 border-ink object-cover transition group-hover:scale-110 group-hover:rotate-6 sm:h-16 sm:w-16">
           <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Gitar</span>
           <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Dari petikan pertama hingga memainkan lagu utuh.</span>
         </a>
-        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_auto_1fr_auto] items-center gap-4 border-b-2 border-ink/15 py-5 transition hover:bg-brand-faint sm:gap-8">
           <span class="font-mono text-sm text-brand-deep">04</span>
+          <img src="img/thumb-violin.jpg" alt="" class="h-14 w-14 rounded-full border-2 border-ink object-cover transition group-hover:scale-110 group-hover:rotate-6 sm:h-16 sm:w-16">
           <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Violin</span>
           <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Melatih ketelitian, postur, dan kepekaan nada sejak dini.</span>
         </a>
-        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_auto_1fr_auto] items-center gap-4 border-b-2 border-ink/15 py-5 transition hover:bg-brand-faint sm:gap-8">
           <span class="font-mono text-sm text-brand-deep">05</span>
+          <img src="img/thumb-sax.jpg" alt="" class="h-14 w-14 rounded-full border-2 border-ink object-cover transition group-hover:scale-110 group-hover:rotate-6 sm:h-16 sm:w-16">
           <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Saxophone</span>
           <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Pintu masuk ke dunia jazz: ekspresif, hangat, penuh gaya.</span>
         </a>
-        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_auto_1fr_auto] items-center gap-4 border-b-2 border-ink/15 py-5 transition hover:bg-brand-faint sm:gap-8">
           <span class="font-mono text-sm text-brand-deep">06</span>
+          <img src="img/thumb-vokal.jpg" alt="" class="h-14 w-14 rounded-full border-2 border-ink object-cover transition group-hover:scale-110 group-hover:rotate-6 sm:h-16 sm:w-16">
           <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Vokal</span>
           <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Teknik bernyanyi yang sehat dan percaya diri di depan audiens.</span>
         </a>
@@ -177,36 +192,39 @@
     </div>
   </section>
 
-  <!-- Kelas Inklusif: bold brand block, asymmetric -->
+  <!-- Kelas Inklusif: duotone photo + bold brand block -->
   <section id="inklusif" class="border-y-2 border-ink bg-brand text-white">
-    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-20 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+    <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+      <div class="duotone arch relative mx-auto w-full max-w-sm overflow-hidden border-2 border-white/40 shadow-2xl">
+        <img src="img/lesson-hands.jpg" alt="Guru membimbing tangan anak di tuts piano" class="h-80 w-full object-cover">
+      </div>
       <div>
         <p class="font-mono text-xs uppercase tracking-[0.28em] text-white/70">Kelas Inklusif</p>
         <h2 class="mt-4 font-display text-4xl font-extrabold leading-tight sm:text-6xl">
-          Musik untuk<br><span class="italic underline decoration-4 underline-offset-8">semua</span> anak
+          Musik untuk <span class="italic underline decoration-4 underline-offset-8">semua</span> anak
         </h2>
-      </div>
-      <div>
-        <p class="leading-relaxed text-white/85">
+        <p class="mt-6 max-w-lg leading-relaxed text-white/85">
           Kami percaya setiap anak berhak merasakan kebahagiaan bermusik. Kelas untuk anak berkebutuhan khusus dirancang dengan pendekatan yang sabar, ritme belajar yang fleksibel, dan suasana yang aman serta menyenangkan.
         </p>
-        <a href="https://wa.me/62XXXXXXXXXX" class="mt-7 inline-block rounded-full bg-white px-7 py-3.5 font-display font-bold text-brand-deep transition hover:bg-brand-soft">Konsultasikan Kebutuhan Anak Anda</a>
+        <a href="https://wa.me/62XXXXXXXXXX" class="mt-8 inline-block rounded-full bg-white px-7 py-3.5 font-display font-bold text-brand-deep transition hover:bg-brand-soft">Konsultasikan Kebutuhan Anak Anda</a>
       </div>
     </div>
   </section>
 
-  <!-- Tentang -->
+  <!-- Tentang: polaroid photo card + editorial points -->
   <section id="tentang" class="staff-lines py-20">
     <div class="mx-auto max-w-6xl px-5">
-      <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-        <div class="relative">
-          <div class="-rotate-2 rounded-[2rem] border-2 border-ink bg-white p-8 shadow-xl">
-            <p class="font-mono text-xs uppercase tracking-[0.28em] text-brand-deep">Rumah, bukan sekadar les</p>
-            <p class="mt-4 font-display text-3xl font-bold leading-snug">"Tempat anak bertumbuh bersama musik, dengan hangat seperti di rumah sendiri."</p>
+      <div class="grid gap-14 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+        <div class="relative mx-auto w-full max-w-sm">
+          <div class="-rotate-3 rounded-[2rem] border-2 border-ink bg-white p-4 pb-6 shadow-xl transition hover:rotate-0">
+            <img src="img/piano-wood.jpg" alt="Bermain piano di ruang yang hangat" class="rounded-3xl object-cover">
+            <p class="mt-4 text-center font-mono text-xs uppercase tracking-[0.22em] text-ink/60">Hangat seperti di rumah sendiri</p>
           </div>
+          <span aria-hidden="true" class="note-float-slow absolute -right-5 -top-5 select-none font-display text-4xl text-brand">&#9834;</span>
         </div>
         <div>
-          <h2 class="font-display text-4xl font-extrabold sm:text-5xl">Kenapa Denting?</h2>
+          <p class="font-mono text-xs uppercase tracking-[0.28em] text-brand-deep">Rumah, bukan sekadar les</p>
+          <h2 class="mt-2 font-display text-4xl font-extrabold sm:text-5xl">Kenapa Denting?</h2>
           <div class="mt-8 space-y-7">
             <div class="flex gap-5">
               <span class="font-mono text-sm font-bold text-brand-deep">a.</span>

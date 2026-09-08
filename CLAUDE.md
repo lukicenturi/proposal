@@ -39,6 +39,7 @@ Act as an elite front-end developer and designer. Every demo must be a unique, h
 - **Hero**: give it a unique layout (e.g., massive asymmetric typography on one side, a single high-contrast visual anchor on the other) instead of a centered generic stock-image hero.
 - **Core content**: choose the exact sections the client's story needs; favor a unique narrative flow over repetitive card layouts.
 - **Motion & interaction**: smooth, CSS-only staggered entrance reveals on page load. Prioritize one well-orchestrated moment of visual delight over scattered, distracting micro-animations.
+- **Imagery**: be experimental with images; never rely on text-only layouts. Use the client's own photos/logo when available (the user can supply them on request). Otherwise source fitting stock photos yourself via web search (e.g. Unsplash/Pexels) as placeholders, verify they actually match the subject, and store them in `<client-slug>/img/` so demos don't depend on hotlinks. Treat images as design material: collage, overlap, masking, duotone brand tints, not just rectangles in a row.
 
 These guardrails work *with* brand isolation: distinctiveness comes from the client's identity, so two demos should never feel like the same designer's template.
 
