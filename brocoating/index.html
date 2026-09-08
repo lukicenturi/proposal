@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>BROCOATING Auto Detailing | PPF, Premium Coating & Detailing Gading Serpong</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;1,700;1,800;1,900&family=Michroma&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#060608',
+            hangar: '#0C0C11',
+            bay: '#121218',
+            seam: '#26262F',
+            titanium: '#8B8B99',
+            smoke: '#9C9CAB',
+            silver: '#CACAD6',
+            mist: '#EDEDF3',
+          },
+          fontFamily: {
+            display: ['"Exo 2"', 'sans-serif'],
+            label: ['Michroma', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #060608; }
+
+    /* liquid chrome text, with a slow light sweep like a lamp passing over coated paint */
+    .chrome-text {
+      background: linear-gradient(105deg, #fafafc 0%, #c8c8d2 24%, #7e7e8c 42%, #e8e8ee 58%, #90909e 76%, #ffffff 100%);
+      background-size: 220% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: chrome-sweep 7s ease-in-out infinite;
+    }
+    @keyframes chrome-sweep {
+      0%, 100% { background-position: 0% 0; }
+      50% { background-position: 100% 0; }
+    }
+
+    /* staggered entrance on load */
+    .reveal { opacity: 0; transform: translateY(26px); animation: rise .9s cubic-bezier(.22,.8,.3,1) forwards; }
+    .reveal-1 { animation-delay: .05s } .reveal-2 { animation-delay: .18s }
+    .reveal-3 { animation-delay: .31s } .reveal-4 { animation-delay: .44s }
+    .reveal-5 { animation-delay: .57s } .reveal-6 { animation-delay: .72s }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+
+    /* service ticker */
+    .ticker { display: flex; width: max-content; animation: ticker 30s linear infinite; }
+    @keyframes ticker { to { transform: translateX(-50%); } }
+
+    /* faint engineering grid + overhead spotlight */
+    .bay-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 92%);
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 92%);
+    }
+    .spotlight { background: radial-gradient(52% 38% at 50% 0%, rgba(190,196,220,.16), transparent 70%); }
+
+    .clip-slant { clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%); }
+    .frame-chrome { border: 1px solid rgba(255,255,255,.14); box-shadow: 0 0 0 1px rgba(0,0,0,.6), 0 24px 60px -18px rgba(0,0,0,.8); }
+
+    /* service rows: title turns chrome on hover */
+    .svc:hover h3 {
+      background: linear-gradient(105deg, #fafafc 0%, #b9b9c6 40%, #8a8a98 55%, #ffffff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { animation-duration: .01s; animation-delay: 0s; }
+      .ticker, .chrome-text { animation: none; }
+    }
+  </style>
+</head>
+<body class="bg-obsidian font-display text-mist antialiased">
+
+  <!-- icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.53 14.9L2 22l5.25-1.47A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.1 8.1 0 0 1-4.14-1.14l-.3-.18-3.11.87.86-3.04-.2-.31a8.2 8.2 0 1 1 6.89 3.8zm4.5-6.13c-.25-.12-1.47-.72-1.7-.8-.22-.09-.39-.13-.55.12-.17.25-.64.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.35-2.93c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.55-1.34-.76-1.83-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.43.06-.66.3-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3c.4 2.1 1.7 3.5 3.9 3.7v2.8c-1.5 0-2.9-.5-3.9-1.3v6.1a5.7 5.7 0 1 1-5.7-5.7c.3 0 .7 0 1 .1v2.9a2.8 2.8 0 1 0 1.9 2.7V3h2.8z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.3-5.7-3.1-5.7 3.1 1.2-6.3L2.8 9.3l6.4-.8L12 2.6z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l7.5 2.6v5.6c0 4.7-3.1 8.1-7.5 9.8-4.4-1.7-7.5-5.1-7.5-9.8V5.6L12 3z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8.7 12l2.3 2.3 4.3-4.3"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2zm7 12l.9 2.9L23 18l-3.1 1.1L19 22l-.9-2.9L15 18l3.1-1.1L19 14z"/></symbol>
+    <symbol id="i-disc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-seat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 4c-1 4 0 7 .6 9.5L6 20h12l-1.4-5.2c-2-.6-4.8-.6-6.6-1.1C8.6 13.2 8 8 8.6 4H7z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9.5 13.5c2.5.8 5.5.7 7.1 1.3"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M2 6h12v10H2zM14 9h4l3 3v4h-7z"/><circle cx="6.5" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  </svg>
+
+  <!-- header -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-obsidian/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="BROCOATING logo" class="h-10 w-10 rounded-full">
+        <span class="hidden font-label text-[11px] tracking-[0.28em] text-silver sm:inline">BROCOATING</span>
+      </a>
+      <a href="https://wa.me/6281294383491?text=Halo%20Bro%20Coating!%20Mau%20tanya%20paket%20coating%2FPPF%20untuk%20mobil%20saya." class="inline-flex items-center gap-2 rounded-full bg-mist px-4 py-2 text-sm font-semibold text-obsidian transition hover:bg-white">
+        <svg class="h-4 w-4"><use href="#i-wa"/></svg> WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="relative overflow-hidden pt-24">
+    <div class="spotlight pointer-events-none absolute inset-0"></div>
+    <div class="bay-grid pointer-events-none absolute inset-0"></div>
+    <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-8 md:grid-cols-[7fr_5fr] md:gap-6 md:pt-16">
+      <div>
+        <p class="reveal reveal-1 font-label text-[11px] tracking-[0.32em] text-titanium">GADING SERPONG · SINCE 2022</p>
+        <h1 class="reveal reveal-2 mt-5 text-5xl font-black italic leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+          <span class="block">SHINE LIKE</span>
+          <span class="chrome-text block">DAY ONE.</span>
+          <span class="block">EVERY DAY.</span>
+        </h1>
+        <p class="reveal reveal-3 mt-6 max-w-md text-base leading-relaxed text-smoke">
+          Specialized nano ceramic coating, paint protection film and finest paint refinement. Your car gets handled like it's ours, because that's how bros do it.
+        </p>
+        <div class="reveal reveal-4 mt-6 inline-flex items-center gap-3 rounded-full border border-seam bg-hangar px-4 py-2">
+          <span class="flex text-amber-300">
+            <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+          </span>
+          <span class="text-sm font-semibold text-mist">5.0 on Google</span>
+          <span class="text-sm text-titanium">96 reviews</span>
+        </div>
+        <div class="reveal reveal-5 mt-8 flex flex-wrap items-center gap-4">
+          <a href="https://wa.me/6281294383491?text=Halo%20Bro%20Coating!%20Mau%20tanya%20paket%20coating%2FPPF%20untuk%20mobil%20saya." class="inline-flex items-center gap-2.5 rounded-full bg-mist px-7 py-3.5 text-base font-bold text-obsidian shadow-[0_0_40px_-8px_rgba(255,255,255,.45)] transition hover:bg-white">
+            <svg class="h-5 w-5"><use href="#i-wa"/></svg> Chat the bros
+          </a>
+          <a href="#work" class="inline-flex items-center gap-2 rounded-full border border-seam px-6 py-3.5 text-base font-semibold text-silver transition hover:border-titanium hover:text-mist">
+            See the work <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <div class="reveal reveal-6 mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-titanium">
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4"><use href="#i-clock"/></svg> Open 24 hours</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4"><use href="#i-truck"/></svg> Free pick up & delivery</span>
+        </div>
+      </div>
+      <div class="reveal reveal-3 relative">
+        <div class="clip-slant frame-chrome overflow-hidden rounded-2xl md:rounded-3xl">
+          <img src="assets/hero-studio.jpg" alt="Freshly coated SUV under BROCOATING studio lights" class="h-[420px] w-full object-cover sm:h-[520px] md:h-[600px]">
+        </div>
+        <div class="frame-chrome absolute -bottom-5 -left-4 rounded-xl bg-hangar/95 px-4 py-3 backdrop-blur md:-left-8">
+          <p class="font-label text-[9px] tracking-[0.26em] text-titanium">FRESH FROM THE BAY</p>
+          <p class="mt-1 text-sm font-semibold text-silver">Gloss you can check your fit in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ticker -->
+  <div class="overflow-hidden border-y border-white/5 bg-hangar/70 py-3.5">
+    <div class="ticker font-label text-[11px] tracking-[0.3em] text-titanium">
+      <div class="flex shrink-0 items-center">
+        <span class="px-5">NANO CERAMIC COATING</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">PAINT PROTECTION FILM</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">PAINT REFINEMENT</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">INTERIOR DETAILING</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">ENGINE BAY</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">VELG DETAILING</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">FREE PICK UP & DELIVERY</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+      </div>
+      <div class="flex shrink-0 items-center" aria-hidden="true">
+        <span class="px-5">NANO CERAMIC COATING</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">PAINT PROTECTION FILM</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">PAINT REFINEMENT</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">INTERIOR DETAILING</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">ENGINE BAY</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">VELG DETAILING</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+        <span class="px-5">FREE PICK UP & DELIVERY</span><svg class="h-3 w-3 text-silver"><use href="#i-star"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- stats -->
+  <section class="mx-auto max-w-6xl px-5 py-14">
+    <div class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-seam bg-seam md:grid-cols-4">
+    <div class="bg-hangar px-6 py-7 text-center">
+      <p class="chrome-text text-4xl font-black italic">5.0</p>
+      <p class="mt-2 font-label text-[10px] tracking-[0.24em] text-titanium">GOOGLE RATING</p>
+    </div>
+    <div class="bg-hangar px-6 py-7 text-center">
+      <p class="chrome-text text-4xl font-black italic">96</p>
+      <p class="mt-2 font-label text-[10px] tracking-[0.24em] text-titanium">5-STAR REVIEWS</p>
+    </div>
+    <div class="bg-hangar px-6 py-7 text-center">
+      <p class="chrome-text text-4xl font-black italic">24H</p>
+      <p class="mt-2 font-label text-[10px] tracking-[0.24em] text-titanium">OPEN EVERY DAY</p>
+    </div>
+    <div class="bg-hangar px-6 py-7 text-center">
+      <p class="chrome-text text-4xl font-black italic">2022</p>
+      <p class="mt-2 font-label text-[10px] tracking-[0.24em] text-titanium">ON THE GRIND SINCE</p>
+    </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section class="mx-auto max-w-6xl px-5 py-14">
+    <div class="grid gap-12 md:grid-cols-[5fr_7fr]">
+      <div class="md:sticky md:top-28 md:self-start">
+        <p class="font-label text-[11px] tracking-[0.32em] text-titanium">WHAT WE DO</p>
+        <h2 class="mt-4 text-4xl font-black italic leading-tight sm:text-5xl">THE BRO<br><span class="chrome-text">TREATMENT.</span></h2>
+        <p class="mt-5 max-w-sm leading-relaxed text-smoke">
+          One stop for paint protection and perfection. Tell us what your car needs, or send a photo on WhatsApp and we'll tell you straight, no upsell drama.
+        </p>
+        <div class="clip-slant frame-chrome mt-8 hidden overflow-hidden rounded-2xl md:block">
+          <img src="assets/byd-front.jpg" alt="Matte blue SUV detailed at BROCOATING" class="h-72 w-full object-cover">
+        </div>
+      </div>
+      <ol class="divide-y divide-seam border-y border-seam">
+        <li class="group svc flex gap-5 py-7">
+          <span class="font-label text-xs text-titanium pt-1.5">01</span>
+          <svg class="mt-1 h-6 w-6 shrink-0 text-silver"><use href="#i-shield"/></svg>
+          <div>
+            <h3 class="text-xl font-extrabold italic tracking-tight">PAINT PROTECTION FILM</h3>
+            <p class="mt-2 text-sm leading-relaxed text-smoke">Self-healing film that eats rock chips and scratches so your paint doesn't have to. Gloss or matte, high-impact zones or full body, applied by our PPF specialists at @bro.ppf.</p>
+          </div>
+        </li>
+        <li class="group svc flex gap-5 py-7">
+          <span class="font-label text-xs text-titanium pt-1.5">02</span>
+          <svg class="mt-1 h-6 w-6 shrink-0 text-silver"><use href="#i-spark"/></svg>
+          <div>
+            <h3 class="text-xl font-extrabold italic tracking-tight">NANO CERAMIC COATING</h3>
+            <p class="mt-2 text-sm leading-relaxed text-smoke">Our specialty. A hard nano-ceramic layer bonded to your paint: deep wet gloss, UV and water-spot resistance, and way easier washes for years, not weeks.</p>
+          </div>
+        </li>
+        <li class="group svc flex gap-5 py-7">
+          <span class="font-label text-xs text-titanium pt-1.5">03</span>
+          <svg class="mt-1 h-6 w-6 shrink-0 text-silver"><use href="#i-disc"/></svg>
+          <div>
+            <h3 class="text-xl font-extrabold italic tracking-tight">FINEST PAINT REFINEMENT</h3>
+            <p class="mt-2 text-sm leading-relaxed text-smoke">Multi-stage machine polishing that erases swirls, holograms and dull haze before anything gets coated. This is where the mirror finish is actually made.</p>
+          </div>
+        </li>
+        <li class="group svc flex gap-5 py-7">
+          <span class="font-label text-xs text-titanium pt-1.5">04</span>
+          <svg class="mt-1 h-6 w-6 shrink-0 text-silver"><use href="#i-seat"/></svg>
+          <div>
+            <h3 class="text-xl font-extrabold italic tracking-tight">INTERIOR & ENGINE BAY</h3>
+            <p class="mt-2 text-sm leading-relaxed text-smoke">Deep-clean detailing for cabin and engine bay: seats, trim, carpets and every vent, so the inside feels as fresh as the outside looks.</p>
+          </div>
+        </li>
+        <li class="group svc flex gap-5 py-7">
+          <span class="font-label text-xs text-titanium pt-1.5">05</span>
+          <svg class="mt-1 h-6 w-6 shrink-0 text-silver"><use href="#i-disc"/></svg>
+          <div>
+            <h3 class="text-xl font-extrabold italic tracking-tight">VELG & GLASS DETAILING</h3>
+            <p class="mt-2 text-sm leading-relaxed text-smoke">Wheels detailed to the barrel and nano glass coating for clear vision in the rain. The details most shops skip are the ones we obsess over.</p>
+          </div>
+        </li>
+        <li class="group svc flex gap-5 py-7">
+          <span class="font-label text-xs text-titanium pt-1.5">06</span>
+          <svg class="mt-1 h-6 w-6 shrink-0 text-silver"><use href="#i-truck"/></svg>
+          <div>
+            <h3 class="text-xl font-extrabold italic tracking-tight">FREE PICK UP & DELIVERY</h3>
+            <p class="mt-2 text-sm leading-relaxed text-smoke">Too busy? We collect your car, work our magic, and bring it back gleaming. Zero effort on your side, that's the whole point.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- work gallery -->
+  <section id="work" class="relative overflow-hidden py-16">
+    <div class="bay-grid pointer-events-none absolute inset-0"></div>
+    <div class="relative mx-auto max-w-6xl px-5">
+      <p class="font-label text-[11px] tracking-[0.32em] text-titanium">STRAIGHT FROM THE BAY</p>
+      <h2 class="mt-4 text-4xl font-black italic leading-tight sm:text-5xl">REAL CARS. <span class="chrome-text">REAL GLOSS.</span></h2>
+      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
+        <figure class="frame-chrome col-span-2 overflow-hidden rounded-2xl md:rotate-[-1deg]">
+          <img src="assets/byd-studio.jpg" alt="Matte blue BYD SUV after full PPF at BROCOATING" class="h-64 w-full object-cover transition duration-500 hover:scale-105 md:h-80" loading="lazy">
+          <figcaption class="border-t border-white/10 bg-hangar px-4 py-2.5 font-label text-[9px] tracking-[0.24em] text-titanium">MATTE FINISH · FULL PROTECTION</figcaption>
+        </figure>
+        <figure class="frame-chrome overflow-hidden rounded-2xl md:translate-y-6 md:rotate-[1.2deg]">
+          <img src="assets/gloss-detail.jpg" alt="Deep gloss reflection on a coated car at BROCOATING" class="h-64 w-full object-cover transition duration-500 hover:scale-105 md:h-80" loading="lazy">
+          <figcaption class="border-t border-white/10 bg-hangar px-4 py-2.5 font-label text-[9px] tracking-[0.24em] text-titanium">CERAMIC DEEP GLOSS</figcaption>
+        </figure>
+        <figure class="frame-chrome overflow-hidden rounded-2xl md:rotate-[-1.2deg]">
+          <img src="assets/interior-detail.jpg" alt="Detailed dashboard interior at BROCOATING" class="h-64 w-full object-cover transition duration-500 hover:scale-105 md:h-80" loading="lazy">
+          <figcaption class="border-t border-white/10 bg-hangar px-4 py-2.5 font-label text-[9px] tracking-[0.24em] text-titanium">INTERIOR RESET</figcaption>
+        </figure>
+      </div>
+      <p class="mt-8 flex flex-wrap items-center gap-2 text-sm text-titanium">
+        <svg class="h-4 w-4"><use href="#i-ig"/></svg> More on Instagram:
+        <a href="https://www.instagram.com/brocoating_/" class="font-semibold text-silver underline decoration-seam underline-offset-4 hover:text-mist">@brocoating_</a> ·
+        <a href="https://www.instagram.com/bro.ppf/" class="font-semibold text-silver underline decoration-seam underline-offset-4 hover:text-mist">@bro.ppf</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- testimonials -->
+  <section class="mx-auto max-w-6xl px-5 py-16">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="font-label text-[11px] tracking-[0.32em] text-titanium">GOOGLE REVIEWS</p>
+        <h2 class="mt-4 text-4xl font-black italic leading-tight sm:text-5xl">THE BROS <span class="chrome-text">HAVE SPOKEN.</span></h2>
+      </div>
+      <a href="https://www.google.com/maps/place/Bro+Coating+-+Coating+Mobil+Gading+Serpong/@-6.2713848,106.6322457,17z" class="inline-flex items-center gap-2 rounded-full border border-seam px-4 py-2 text-sm text-silver transition hover:border-titanium hover:text-mist">
+        <svg class="h-4 w-4 text-amber-300"><use href="#i-star"/></svg> 5.0 · 96 reviews on Google
+      </a>
+    </div>
+    <div class="mt-10 grid gap-5 md:grid-cols-3">
+      <blockquote class="frame-chrome flex flex-col rounded-2xl bg-hangar p-6">
+        <span class="flex text-amber-300">
+          <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+        </span>
+        <p class="mt-4 flex-1 leading-relaxed text-silver">"Rekomen untuk pasang ppf di daerah gading serpong. Hasil bagus. Dan Owner komunikatif.. Dan tanggung jawab 👍🏻 sukses bro coating 🎉🎉🎉"</p>
+        <footer class="mt-5 border-t border-seam pt-4">
+          <p class="font-semibold text-mist">Yuliana Lau</p>
+          <p class="mt-0.5 font-label text-[9px] tracking-[0.22em] text-titanium">LOCAL GUIDE · GOOGLE REVIEW</p>
+        </footer>
+      </blockquote>
+      <blockquote class="frame-chrome flex flex-col rounded-2xl bg-hangar p-6">
+        <span class="flex text-amber-300">
+          <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+        </span>
+        <p class="mt-4 flex-1 leading-relaxed text-silver">"Yang paling saya suka adalah ketahanannya. Setelah beberapa bulan, efek coating masih terlihat sama baiknya seperti hari pertama. Harganya memang sedikit lebih tinggi, tetapi sebanding dengan kualitas yang didapatkan."</p>
+        <footer class="mt-5 border-t border-seam pt-4">
+          <p class="font-semibold text-mist">Athoook Saidul</p>
+          <p class="mt-0.5 font-label text-[9px] tracking-[0.22em] text-titanium">GOOGLE REVIEW</p>
+        </footer>
+      </blockquote>
+      <blockquote class="frame-chrome flex flex-col rounded-2xl bg-hangar p-6">
+        <span class="flex text-amber-300">
+          <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+        </span>
+        <p class="mt-4 flex-1 leading-relaxed text-silver">"Tempatnya strategis, pengerjaan sangat rapih dan detail, hasilnya bagus sesuai ekspektasi. Ownernya langsung turun tangan handle pengerjaanya terlebih lagi ownernya ngejelasin rincian paketnya secara detail dan ramah banget..."</p>
+        <footer class="mt-5 border-t border-seam pt-4">
+          <p class="font-semibold text-mist">Angga Pramudya</p>
+          <p class="mt-0.5 font-label text-[9px] tracking-[0.22em] text-titanium">LOCAL GUIDE · GOOGLE REVIEW</p>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- visit / contact -->
+  <section class="relative overflow-hidden border-t border-white/5 bg-hangar/60 py-16">
+    <div class="spotlight pointer-events-none absolute inset-0"></div>
+    <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-5 md:grid-cols-2">
+      <div class="clip-slant frame-chrome order-2 overflow-hidden rounded-2xl md:order-1">
+        <img src="assets/storefront.jpg" alt="BROCOATING Auto Detailing storefront on Jl. BSD Raya Utama" class="h-80 w-full object-cover md:h-[460px]" loading="lazy">
+      </div>
+      <div class="order-1 md:order-2">
+        <p class="font-label text-[11px] tracking-[0.32em] text-titanium">PULL UP ANYTIME</p>
+        <h2 class="mt-4 text-4xl font-black italic leading-tight sm:text-5xl">THE BAY IS <span class="chrome-text">ALWAYS OPEN.</span></h2>
+        <ul class="mt-7 space-y-4 text-smoke">
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-silver"><use href="#i-pin"/></svg>
+            <span>Jl. BSD Raya Utama No.8, Cihuni, Pagedangan,<br>Kab. Tangerang, Banten 15334</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-silver"><use href="#i-clock"/></svg>
+            <span><strong class="text-mist">Open 24 hours</strong>, seven days a week</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-silver"><use href="#i-truck"/></svg>
+            <span>Free pick up & delivery around Gading Serpong / BSD</span>
+          </li>
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://wa.me/6281294383491?text=Halo%20Bro%20Coating!%20Mau%20tanya%20paket%20coating%2FPPF%20untuk%20mobil%20saya." class="inline-flex items-center gap-2.5 rounded-full bg-mist px-6 py-3 font-bold text-obsidian transition hover:bg-white">
+            <svg class="h-5 w-5"><use href="#i-wa"/></svg> 0812-9438-3491
+          </a>
+          <a href="https://www.google.com/maps/place/Bro+Coating+-+Coating+Mobil+Gading+Serpong/@-6.2713848,106.6322457,17z" class="inline-flex items-center gap-2 rounded-full border border-seam px-5 py-3 font-semibold text-silver transition hover:border-titanium hover:text-mist">
+            <svg class="h-4 w-4"><use href="#i-pin"/></svg> Directions
+          </a>
+        </div>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://www.instagram.com/brocoating_/" class="inline-flex items-center gap-2 rounded-full border border-seam px-4 py-2 text-sm text-silver transition hover:border-titanium hover:text-mist">
+            <svg class="h-4 w-4"><use href="#i-ig"/></svg> @brocoating_
+          </a>
+          <a href="https://www.tiktok.com/@brocoating.official" class="inline-flex items-center gap-2 rounded-full border border-seam px-4 py-2 text-sm text-silver transition hover:border-titanium hover:text-mist">
+            <svg class="h-4 w-4"><use href="#i-tiktok"/></svg> @brocoating.official
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="border-t border-white/5 py-10 text-center">
+    <img src="assets/logo.png" alt="BROCOATING logo" class="mx-auto h-14 w-14 rounded-full">
+    <p class="mx-auto mt-4 max-w-xs px-5 font-label text-[10px] leading-relaxed tracking-[0.3em] text-titanium sm:max-w-none">BROCOATING AUTO DETAILING · GADING SERPONG</p>
+    <p class="mx-auto mt-3 max-w-sm px-5 text-xs text-titanium/70">Demo landing page concept. Built from BROCOATING's public Instagram & Google Maps info.</p>
+  </footer>
+
+  <script src="/assets/demo-badge.js" defer></script>
+</body>
+</html>
