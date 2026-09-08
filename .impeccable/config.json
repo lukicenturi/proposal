@@ -47,6 +47,24 @@
         ],
         "createdAt": "2026-09-08T15:37:53.664Z",
         "reason": "False positive: detector cannot resolve inline tailwind.config token text-page (#f5f1e4) on .stamp-btn; rendered contrast on the #241a4f stamp pad is ~12:1"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "visae-expert/index.html"
+        ],
+        "createdAt": "2026-09-08T15:49:12.502Z",
+        "reason": "Finish reviewer accepted: circular stamp-ring divs have p-3/p-4 with centered content; ring-hugging text is the authentic rubber-stamp form"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "visae-expert/index.html"
+        ],
+        "createdAt": "2026-09-08T15:49:12.539Z",
+        "reason": "Finish reviewer accepted: .mrz strips are aria-hidden passport machine-readable-zone mono grammar, not body copy"
       }
     ]
   }
