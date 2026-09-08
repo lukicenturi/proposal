@@ -97,3 +97,4 @@ Screenshot: `node tools/mobshot.js <url> <out.png>` (390x844 mobile emulation vi
 | Slug | Client | Type | Status |
 |------|--------|------|--------|
 | `denting-rumah-musik` | Denting Rumah Musik | Music school (kids, incl. special needs), Medang, Pagedangan, Kab. Tangerang | Demo built |
+| `happy-healthy-massage` | Happy Healthy Reflexology & Family Massage | Massage spa, Gading Mendrisio (dekat BSD) & Alam Sutera, Tangerang | Demo built |
