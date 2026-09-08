@@ -101,4 +101,5 @@ Screenshot: `node tools/mobshot.js <url> <out.png>` (390x844 mobile emulation vi
 |------|--------|------|--------|
 | `denting-rumah-musik` | Denting Rumah Musik | Music school (kids, incl. special needs), Medang, Pagedangan, Kab. Tangerang | Demo built |
 | `happy-healthy-massage` | Happy Healthy Reflexology & Family Massage | Massage spa, Gading Mendrisio (dekat BSD) & Alam Sutera, Tangerang | Demo built |
+| `we-are-mukai` | MUKAI (Grosir Modis Outlet, IG @wearmukai) | Women's clothing store, curated everyday wear, Ruko Faraday, Gading Serpong, Kab. Tangerang | Demo built |
 | `otoworx` | OTOWORX Car Detailing | Auto detailing & nano ceramic coating, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |
