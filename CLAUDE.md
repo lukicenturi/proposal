@@ -45,7 +45,8 @@ Act as an elite front-end developer and designer. Every demo must be a unique, h
 - **Hero**: give it a unique layout (e.g., massive asymmetric typography on one side, a single high-contrast visual anchor on the other) instead of a centered generic stock-image hero.
 - **Core content**: choose the exact sections the client's story needs; favor a unique narrative flow over repetitive card layouts.
 - **Motion & interaction**: smooth, CSS-only staggered entrance reveals on page load. Prioritize one well-orchestrated moment of visual delight over scattered, distracting micro-animations.
-- **Imagery**: be experimental with images; never rely on text-only layouts. Use the client's own photos/logo when available (the user can supply them on request). Otherwise source fitting stock photos yourself via web search (e.g. Unsplash/Pexels) as placeholders, verify they actually match the subject, and store them in `<client-slug>/img/` so demos don't depend on hotlinks. Treat images as design material: collage, overlap, masking, duotone brand tints, not just rectangles in a row.
+- **Imagery**: be experimental with images; never rely on text-only layouts. Use the client's own photos/logo when available (the user can supply them on request). Otherwise source fitting stock photos yourself via web search (e.g. Unsplash/Pexels) as placeholders, verify they actually match the subject, and store them in `<client-slug>/assets/` so demos don't depend on hotlinks. Treat images as design material: collage, overlap, masking, duotone brand tints, not just rectangles in a row.
+- **Iconography**: don't be shy with icons. Pair text with inline SVG icons everywhere it helps scanning: WhatsApp glyph on WA buttons, Instagram glyph on IG links, map pin, clock, stars for ratings. Define them once in a hidden SVG sprite at the top of `<body>` and reference with `<use href="#icon-id">`, colored via `currentColor` so they inherit the theme. Buttons, contact rows, and info lists should never be bare text.
 
 These guardrails work *with* brand isolation: distinctiveness comes from the client's identity, so two demos should never feel like the same designer's template.
 
@@ -55,17 +56,30 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
 2. **`<meta name="robots" content="noindex, nofollow">`** on every page. These must never rank against the client's real presence.
 3. **Language: Bahasa Indonesia** (target clients and their customers are local).
 4. **Match the client's brand identity**: pull vibe, colors, and tone from their Instagram bio/feed, logo, and Google Maps photos before designing. Font + palette should feel like *their* brand, not a generic template.
-5. **Real data only where we have it** (name, address, services from bio/Maps). Anything invented (phone numbers, prices, testimonials, opening hours) uses obvious placeholders. WhatsApp links use `https://wa.me/62XXXXXXXXXX` until the client's real number is known.
+5. **Real data only where we have it** (name, address, services from bio/Maps). Anything invented (prices, testimonials) uses obvious placeholders.
+   - **WhatsApp number**: always pull the client's real phone number from their Google Maps listing (convert `08xx` to `https://wa.me/628xx...`). Only fall back to the `https://wa.me/62XXXXXXXXXX` placeholder if Maps has no number.
+   - **Google rating**: if the Maps listing has a good rating, show it on the page (e.g. "4,7 di Google (100 ulasan)"); it's real data and free social proof.
+   - **Instagram bio links**: any links found in the client's IG bio (Linktree, website, marketplace, other socials) must also appear on the demo site.
 6. Mobile-first responsive; the client will almost certainly open the link on their phone from Instagram DM/WhatsApp.
 7. **Never use em dashes (—)** anywhere: page copy, code comments, docs, commit messages. Use commas, colons, periods, or parentheses instead.
 8. Add a card for the new demo to the root `index.html` gallery.
 
-## Adding a new client: checklist
+## Adding a new client: workflow
 
-1. Research: Instagram bio + recent posts, Google Maps listing (address, category, reviews, photos).
-2. Create `<client-slug>/index.html` following the rules above.
-3. Add the demo to the root gallery with client name, category, and date.
-4. Deploy (static: the host picks up the new folder automatically on push/upload).
+1. The user creates `<client-slug>/` and dumps links (Google Maps, Instagram, anything) into `<client-slug>/reference.txt`, then asks to check it. Assets may appear in `assets-suggestions/` at any time.
+2. Read `reference.txt` and research every link. Use the research browser (below) for pages that block plain fetching (Google Maps details, Instagram). Extract: real phone (for WA links), rating/reviews, address, hours, bio, bio links, brand colors from logo/feed.
+3. Create `<client-slug>/index.html` following the rules above.
+4. Add the demo to the root gallery with client name, category, and date.
+5. Push to `main` (Vercel auto-deploys).
+
+## Research browser (for Maps/Instagram)
+
+Plain `curl`/fetch gets blocked or returns JS shells for Google Maps details and Instagram. Instead, drive a dedicated Chrome instance over the DevTools protocol:
+
+- Launch (persistent profile, safe to relaunch): `open -na "Google Chrome" --args --remote-debugging-port=9223 --user-data-dir="$HOME/.claude-chrome" --no-first-run --no-default-browser-check --window-size=1280,900 "about:blank"`
+- Drive it with `tools/browse.js` (Node + `chrome-remote-interface`): `node tools/browse.js <url> <screenshot.png>` prints the page title + text and saves a screenshot to view with Read.
+- Gotcha: do NOT create tabs via `PUT /json/new?url=...`; Chrome silently ignores encoded URLs and opens `about:blank`. Always navigate with `Page.navigate` (the script does this).
+- Instagram may still require login; the user can log in once in that Chrome window (profile persists in `~/.claude-chrome`).
 
 ## Clients
 
