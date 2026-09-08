@@ -11,6 +11,33 @@
         ],
         "createdAt": "2026-09-08T14:50:58.811Z",
         "reason": "Claude verified via screenshot: scanner reads text as #000000 because colors are runtime tailwind.config tokens (CDN); rendered text is #E6E7EB/#9EA0A8 on #070708, passes AA"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "dens-autoworks/index.html"
+        ],
+        "createdAt": "2026-09-08T14:53:38.558Z",
+        "reason": "Claude verified via screenshots: hierarchy is text-7xl/5xl italic display down to text-sm body (ratios 1.33-1.7 per step); scanner cannot resolve runtime Tailwind CDN font tokens"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "dens-autoworks/index.html"
+        ],
+        "createdAt": "2026-09-08T14:53:38.729Z",
+        "reason": "Claude: domain-appropriate motorsport pit-lane ticker, single orchestrated motion moment; all ticker stats (rating, remap count, hours) also appear statically elsewhere on the page"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-08T14:53:38.819Z",
+        "reason": "Claude: internal noindex gallery with pre-existing type scale (3xl page title, xl card titles, sm body, ratios >=1.4); new card follows the established pattern"
       }
     ]
   }
