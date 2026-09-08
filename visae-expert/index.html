@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>VISAE XPERT | Jasa Pengurusan Visa, Paspor & Dokumen, BSD Tangerang</title>
+  <meta name="description" content="VISAE XPERT (PT. Pramulia Xpert Solutions) mengurus visa, paspor, tiket, pajak, dan dokumen Anda dari konsultasi sampai approved. Rating 5,0 di Google.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Share+Tech+Mono&family=Hanken+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cover: '#241a4f',
+            cover2: '#2e2260',
+            page: '#f5f1e4',
+            pageline: '#e3dcc4',
+            ink: '#2b2344',
+            inksoft: '#575072',
+            foil: '#4fd2de',
+            stamp: '#c14a68',
+            stampvio: '#6455c4',
+          },
+          fontFamily: {
+            display: ['Forum', 'serif'],
+            mono: ['"Share Tech Mono"', 'monospace'],
+            body: ['"Hanken Grotesk"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Hanken Grotesk', sans-serif; }
+    ::selection { background: rgba(79, 210, 222, .35); color: #241a4f; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #241a4f; }
+    ::-webkit-scrollbar-thumb { background: #4fd2de; border-radius: 5px; border: 2px solid #241a4f; }
+    :focus-visible { outline: 2px solid #4fd2de; outline-offset: 3px; border-radius: 2px; }
+
+    /* Security-paper guilloche: fine interlaced arcs, like a passport page */
+    .guilloche {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%236455c4' stroke-width='.6' opacity='.13'%3E%3Ccircle cx='0' cy='60' r='58'/%3E%3Ccircle cx='120' cy='60' r='58'/%3E%3Ccircle cx='60' cy='0' r='58'/%3E%3Ccircle cx='60' cy='120' r='58'/%3E%3Ccircle cx='60' cy='60' r='40'/%3E%3Ccircle cx='60' cy='60' r='52'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 120px 120px;
+    }
+    .guilloche-dark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%234fd2de' stroke-width='.6' opacity='.10'%3E%3Ccircle cx='0' cy='80' r='78'/%3E%3Ccircle cx='160' cy='80' r='78'/%3E%3Ccircle cx='80' cy='0' r='78'/%3E%3Ccircle cx='80' cy='160' r='78'/%3E%3Ccircle cx='80' cy='80' r='55'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 160px 160px;
+    }
+
+    /* Wet rubber-stamp ink: turbulence-displaced edges; heavy variant adds mottled ink opacity */
+    .ink { filter: url(#ink-bleed); }
+    .ink-heavy { filter: url(#ink-heavy); }
+
+    /* WA action as an inked boarding-stamp impression: rough border and pad on a pseudo layer, crisp text above */
+    .stamp-btn { position: relative; isolation: isolate; transform: rotate(-1.5deg); }
+    .stamp-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: #241a4f;
+      border: 3px solid #241a4f;
+      border-radius: 4px;
+      filter: url(#ink-bleed);
+    }
+    .stamp-btn:hover { transform: rotate(-1.5deg) translateY(-2px); }
+    .stamp-btn:active { transform: rotate(-1.5deg) translateY(1px) scale(.98); }
+
+    .stamp-ring {
+      border: 3px double currentColor;
+      border-radius: 9999px;
+    }
+    .rot { transform: rotate(var(--rot, 0deg)); }
+
+    /* Passport page stack: layered sheet edges under the open page */
+    .page-stack {
+      box-shadow:
+        0 1px 0 #e9e3d0, 0 3px 0 #efe9d8, 0 5px 0 #e6dfc9,
+        0 7px 0 #ece5d2, 0 22px 34px -18px rgba(12, 8, 40, .55);
+    }
+    .page-gutter-l { background: linear-gradient(to left, rgba(43,35,68,.16), rgba(43,35,68,0) 55%); }
+    .page-gutter-r { background: linear-gradient(to right, rgba(43,35,68,.16), rgba(43,35,68,0) 55%); }
+
+    .mrz {
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: .14em;
+      word-break: break-all;
+      line-height: 1.75;
+    }
+
+    /* The one orchestrated moment: stamps thud onto the hero page */
+    @keyframes stamp-in {
+      0%   { opacity: 0; transform: scale(1.7) rotate(var(--rot, 0deg)); }
+      55%  { opacity: 1; transform: scale(.93) rotate(var(--rot, 0deg)); }
+      75%  { transform: scale(1.03) rotate(var(--rot, 0deg)); }
+      100% { opacity: 1; transform: scale(1) rotate(var(--rot, 0deg)); }
+    }
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .stamp-in { opacity: 0; animation: stamp-in .55s cubic-bezier(.16, 1, .3, 1) forwards; }
+    .rise-in  { opacity: 0; animation: rise-in .7s cubic-bezier(.16, 1, .3, 1) forwards; }
+    .d-1 { animation-delay: .15s; } .d-2 { animation-delay: .3s; } .d-3 { animation-delay: .45s; }
+    .d-4 { animation-delay: .7s; } .d-5 { animation-delay: .9s; } .d-6 { animation-delay: 1.1s; }
+    .d-7 { animation-delay: 1.3s; } .d-8 { animation-delay: 1.5s; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .stamp-in, .rise-in { animation: none; opacity: 1; }
+    }
+
+    .wa-btn { transition: transform .18s cubic-bezier(.16,1,.3,1), box-shadow .18s ease; }
+    .wa-btn:hover { transform: translateY(-2px) rotate(-1deg); box-shadow: 0 10px 24px -8px rgba(79, 210, 222, .5); }
+    .wa-btn:active { transform: translateY(1px) scale(.98); }
+    .tag-link { transition: transform .18s ease, background-color .18s ease; }
+    .tag-link:hover { transform: rotate(-1.5deg) translateY(-2px); }
+  </style>
+</head>
+<body class="bg-cover font-body text-ink antialiased">
+
+  <!-- Icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <defs>
+      <filter id="ink-bleed" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5"/>
+      </filter>
+      <filter id="ink-heavy" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" result="disp"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.28" numOctaves="2" seed="11" result="mottle"/>
+        <feColorMatrix in="mottle" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 .6" result="mottleA"/>
+        <feComposite in="disp" in2="mottleA" operator="in"/>
+      </filter>
+      <symbol id="icon-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.1 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.2.2 1.8 2.8 4.4 3.8 2.1.9 2.6.7 3 .7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.2-.5-.3l-1.7-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.3 0-.4.1-.6l.6-.7c.2-.2.2-.4.1-.6L10 8.3c-.2-.4-.4-.4-.6-.4l-.5-.1Z"/></symbol>
+      <symbol id="icon-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c2.7 0 3 0 4.1.1 1 0 1.6.2 2 .4.5.2.8.4 1.2.8.4.4.6.7.8 1.2.2.4.3 1 .4 2 0 1.1.1 1.4.1 4.1s0 3-.1 4.1c0 1-.2 1.6-.4 2a3.4 3.4 0 0 1-.8 1.2c-.4.4-.7.6-1.2.8-.4.2-1 .3-2 .4-1.1 0-1.4.1-4.1.1s-3 0-4.1-.1c-1 0-1.6-.2-2-.4a3.4 3.4 0 0 1-1.2-.8 3.4 3.4 0 0 1-.8-1.2c-.2-.4-.3-1-.4-2 0-1.1-.1-1.4-.1-4.1s0-3 .1-4.1c0-1 .2-1.6.4-2 .2-.5.4-.8.8-1.2.4-.4.7-.6 1.2-.8.4-.2 1-.3 2-.4 1.1 0 1.4-.1 4.1-.1Zm0 1.8c-2.7 0-3 0-4 .1-1 0-1.5.2-1.8.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1-.1.4-.3 1-.3 1.9-.1 1-.1 1.3-.1 4s0 3 .1 4c0 1 .2 1.5.3 1.8.2.5.4.8.7 1.1.3.3.6.5 1 .7.4.1 1 .3 1.9.3 1 .1 1.3.1 4 .1s3 0 4-.1c1 0 1.5-.2 1.8-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1 .1-.4.3-1 .3-1.9.1-1 .1-1.3.1-4s0-3-.1-4c0-1-.2-1.5-.3-1.8a2.9 2.9 0 0 0-.7-1.1 2.9 2.9 0 0 0-1-.7c-.4-.1-1-.3-1.9-.3-1-.1-1.3-.1-4-.1Zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Zm5.2-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7.4 7.4 0 0 0-7.4 7.4c0 5.5 6.6 11.9 6.9 12.2a.8.8 0 0 0 1 0c.3-.3 6.9-6.7 6.9-12.2A7.4 7.4 0 0 0 12 2Zm0 10.2a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6Z"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 1.8a8.2 8.2 0 1 1 0 16.4 8.2 8.2 0 0 1 0-16.4Zm-.9 3v5.5c0 .3.1.5.3.7l3.5 2.5 1-1.4-3-2.2V6.8h-1.8Z"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.5 5.9 20.8 7.1 14l-5-4.8 6.9-.9L12 2Z"/></symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M7.7 3c.4 0 .8.3 1 .7l1.5 3.6c.1.4 0 .8-.3 1.1L8.5 9.8a13 13 0 0 0 5.7 5.7l1.4-1.4c.3-.3.7-.4 1.1-.3l3.6 1.5c.4.2.7.6.7 1v3.2c0 .8-.6 1.5-1.4 1.5A17.6 17.6 0 0 1 3 4.4C3 3.6 3.7 3 4.5 3h3.2Z"/></symbol>
+      <symbol id="icon-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 4.5a2.1 2.1 0 0 0-3-.1l-4.2 4.1-9.6-2.6-1.9 1.9 7.8 4.3-4 4-2.9-.5L2 17.3l4 1.7 1.7 4 1.7-1.7-.5-2.9 4-4 4.3 7.8 1.9-1.9-2.6-9.6 4.1-4.2c.8-.8.8-2.1-.1-3Z"/></symbol>
+      <symbol id="icon-doc" viewBox="0 0 24 24"><path fill="currentColor" d="M14 2H7a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2V7l-5-5Zm-1 6V3.8L17.2 8H13Zm-4.5 4h7v1.8h-7V12Zm0 3.6h7v1.8h-7v-1.8Z"/></symbol>
+      <symbol id="icon-ticket" viewBox="0 0 24 24"><path fill="currentColor" d="M4 5a2 2 0 0 0-2 2v3a2 2 0 1 1 0 4v3c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2v-3a2 2 0 1 1 0-4V7a2 2 0 0 0-2-2H4Zm10 2.2v1.6h-1.6V7.2H14Zm0 4.2V13h-1.6v-1.6H14Zm0 4.2v1.6h-1.6v-1.6H14Z"/></symbol>
+      <symbol id="icon-car" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 5c-.8 0-1.6.5-1.9 1.3L3 11v8c0 .6.4 1 1 1h1.5c.6 0 1-.4 1-1v-1h11v1c0 .6.4 1 1 1H20c.6 0 1-.4 1-1v-8l-1.7-4.7A2 2 0 0 0 17.4 5H6.6Zm.2 2h10.4l1.3 3.5H5.5L6.8 7Zm0 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm10.4 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/></symbol>
+      <symbol id="icon-globe" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.4 7h-3.2a15 15 0 0 0-1.6-4.6A8.3 8.3 0 0 1 19.4 9ZM12 3.9c.9 1.2 1.7 3 2.2 5.1H9.8c.5-2.2 1.3-3.9 2.2-5.1ZM4.6 9a8.3 8.3 0 0 1 4.8-4.6A15 15 0 0 0 7.8 9H4.6Zm-.8 3c0-.4 0-.7.1-1h3.5a21 21 0 0 0 0 2H3.9a8 8 0 0 1-.1-1Zm.8 3h3.2c.4 1.8 1 3.3 1.6 4.6A8.3 8.3 0 0 1 4.6 15Zm4.6-3a18 18 0 0 1 0-2h5.6a18 18 0 0 1 0 2H9.2Zm2.8 8.1c-.9-1.2-1.7-3-2.2-5.1h4.4c-.5 2.2-1.3 3.9-2.2 5.1Zm2.6-.5c.7-1.3 1.2-2.8 1.6-4.6h3.2a8.3 8.3 0 0 1-4.8 4.6Zm1.9-7.6a21 21 0 0 0 0-2h3.5a8 8 0 0 1 0 2h-3.5Z"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path fill="currentColor" d="m9.5 16.2-4-4L4 13.7l5.5 5.5 11-11L19 6.7l-9.5 9.5Z"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 4.5 12 6l4.9 5H4v2h12.9L12 18l1.5 1.5L20.9 12l-7.4-7.5Z"/></symbol>
+      <symbol id="icon-ext" viewBox="0 0 24 24"><path fill="currentColor" d="M14 4v2h3.6l-9.8 9.8 1.4 1.4L19 7.4V11h2V4h-7ZM5 7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2v-5h-2v5H5V9h5V7H5Z"/></symbol>
+      <symbol id="icon-link" viewBox="0 0 24 24"><path fill="currentColor" d="M10.6 13.4a1 1 0 0 0 1.4 0l4.9-4.9a3 3 0 0 0-4.3-4.2L10 6.9l1.4 1.4 2.6-2.6a1 1 0 0 1 1.5 1.5l-4.9 4.8a1 1 0 0 0 0 1.4Zm2.8-2.8a1 1 0 0 0-1.4 0l-4.9 4.9a3 3 0 0 0 4.3 4.2l2.6-2.6-1.4-1.4-2.6 2.6a1 1 0 0 1-1.5-1.5l4.9-4.8a1 1 0 0 0 0-1.4Z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Cover strip -->
+  <header class="guilloche-dark sticky top-0 z-40 border-b border-foil/25 bg-cover/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Logo VISAE XPERT" class="h-10 w-10 rounded-full ring-1 ring-foil/40">
+        <span class="leading-tight">
+          <span class="block font-display text-lg tracking-[.18em] text-page">VISAE XPERT</span>
+          <span class="block font-mono text-[10px] uppercase tracking-[.22em] text-foil">PT. Pramulia Xpert Solutions</span>
+        </span>
+      </a>
+      <a href="https://wa.me/6282244218083?text=Halo%20VISAE%20XPERT%2C%20saya%20mau%20konsultasi%20pengurusan%20visa%20%2F%20dokumen"
+         class="wa-btn flex items-center gap-2 rounded-full bg-foil px-4 py-2 text-sm font-bold text-cover">
+        <svg class="h-4 w-4"><use href="#icon-wa"/></svg>
+        <span class="hidden sm:inline">Konsultasi</span><span class="sm:hidden">Chat</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO: the open passport -->
+  <section class="guilloche-dark relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
+    <div class="pointer-events-none absolute -left-24 -top-24 h-96 w-96 rounded-full bg-stampvio/30 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-foil/20 blur-3xl"></div>
+
+    <div class="relative mx-auto max-w-6xl">
+      <div class="page-stack rise-in d-1 overflow-hidden rounded-2xl md:grid md:grid-cols-2">
+        <!-- Passport cover strip -->
+        <div class="guilloche-dark border-b border-foil/25 bg-cover2 px-6 py-3 sm:px-10 md:col-span-2">
+          <p class="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11px] uppercase tracking-[.28em] text-foil sm:text-xs">
+            <span>Republik Perjalanan Anda</span>
+            <span aria-hidden="true" class="text-page/40">///</span>
+            <span>Dokumen Perjalanan · Sejak 2021</span>
+          </p>
+        </div>
+        <!-- Left page -->
+        <div class="guilloche relative bg-page p-6 sm:p-10 md:p-12">
+          <div class="page-gutter-l pointer-events-none absolute inset-y-0 right-0 hidden w-16 md:block"></div>
+          <p class="font-mono text-[11px] uppercase tracking-[.26em] text-inksoft">Halaman 01 · Pemegang paspor: Anda</p>
+          <h1 class="mt-4 font-display text-4xl leading-[1.08] sm:text-5xl lg:text-[3.4rem]">
+            Paspor penuh stempel, tanpa sekali pun antre.
+          </h1>
+          <p class="mt-5 max-w-md text-base leading-relaxed text-inksoft sm:text-lg">
+            Visa, paspor, tiket perjalanan, sampai pajak dan dokumen: tim VISAE XPERT yang mengurus semuanya, dari chat pertama sampai stempel <span class="font-bold text-ink">APPROVED</span>.
+          </p>
+          <div class="mt-7 flex flex-wrap items-center gap-3">
+            <a href="https://wa.me/6282244218083?text=Halo%20VISAE%20XPERT%2C%20saya%20mau%20konsultasi%20pengurusan%20visa%20%2F%20dokumen"
+               class="stamp-btn wa-btn inline-flex items-center gap-2.5 px-6 py-3.5 font-bold text-page">
+              <svg class="h-5 w-5 text-foil"><use href="#icon-wa"/></svg>
+              Konsultasi via WhatsApp
+            </a>
+            <a href="#layanan" class="inline-flex items-center gap-2 rounded-lg border border-ink/25 px-5 py-3.5 font-semibold text-ink transition hover:border-ink/60">
+              Lihat layanan
+              <svg class="h-4 w-4 rotate-90"><use href="#icon-arrow"/></svg>
+            </a>
+          </div>
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-dashed border-ink/20 pt-5 text-sm text-inksoft">
+            <span class="flex items-center gap-1.5">
+              <span class="flex text-stamp" aria-hidden="true">
+                <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+              </span>
+              <strong class="text-ink">5,0</strong> di Google (30 ulasan)
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="h-4 w-4"><use href="#icon-clock"/></svg>
+              24/7 dengan janji temu
+            </span>
+          </div>
+        </div>
+
+        <!-- Right page: the stamp field -->
+        <div class="guilloche relative min-h-[380px] bg-page p-6 sm:p-10 md:min-h-0">
+          <div class="page-gutter-r pointer-events-none absolute inset-y-0 left-0 hidden w-16 md:block"></div>
+          <p class="font-mono text-[11px] uppercase tracking-[.26em] text-inksoft">Halaman 02 · Visa & cap kedatangan</p>
+
+          <div class="relative mt-4 h-[440px] sm:h-[460px]">
+            <!-- Round immigration stamp -->
+            <div class="stamp-in d-4 ink-heavy absolute left-0 top-2 mix-blend-multiply text-stampvio" style="--rot:-8deg">
+              <div class="rot stamp-ring flex h-36 w-36 flex-col items-center justify-center p-4 text-center sm:h-40 sm:w-40">
+                <span class="font-mono text-[9px] uppercase tracking-[.2em]">Imigrasi · Visae Xpert</span>
+                <span class="mt-1 font-display text-xl uppercase tracking-widest">Approved</span>
+                <svg class="mt-1 h-5 w-5"><use href="#icon-check"/></svg>
+                <span class="mt-1 font-mono text-[10px] tracking-[.15em]">SCHENGEN</span>
+              </div>
+            </div>
+            <!-- Express stamp: struck over the round stamp's edge -->
+            <div class="stamp-in d-5 ink-heavy absolute left-16 top-24 z-10 mix-blend-multiply text-stamp sm:left-24" style="--rot:5deg">
+              <div class="rot border-[3px] border-current px-4 py-2.5 text-center">
+                <span class="block font-display text-lg uppercase tracking-[.2em]">Visa Express</span>
+                <span class="block font-mono text-[10px] uppercase tracking-[.14em]">Sekali pengajuan · langsung keluar</span>
+              </div>
+            </div>
+            <!-- Brazil ticket stamp -->
+            <div class="stamp-in d-6 ink-heavy absolute left-2 top-52 mix-blend-multiply text-ink sm:left-6 sm:top-56" style="--rot:-4deg">
+              <div class="rot flex items-center gap-3 border-2 border-dashed border-current px-4 py-3">
+                <svg class="h-6 w-6"><use href="#icon-plane"/></svg>
+                <span>
+                  <span class="block font-display text-base uppercase tracking-[.18em]">CGK → Brazil</span>
+                  <span class="block font-mono text-[10px] uppercase tracking-[.14em]">Tiket + itinerary beres</span>
+                </span>
+              </div>
+            </div>
+            <!-- Rating stamp with the tax stamp struck across its corner -->
+            <div class="stamp-in d-7 ink-heavy absolute bottom-14 right-0 mix-blend-multiply text-stampvio" style="--rot:7deg">
+              <div class="rot border-[3px] border-current px-5 py-3 text-center">
+                <span class="flex justify-center gap-0.5" aria-hidden="true">
+                  <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+                </span>
+                <span class="mt-1 block font-display text-2xl">5,0</span>
+                <span class="block font-mono text-[10px] uppercase tracking-[.18em]">Google · 30 ulasan</span>
+              </div>
+              <!-- Small tax stamp: overlapping impression -->
+              <div class="stamp-in d-8 ink-heavy absolute -bottom-5 -left-20 z-10 mix-blend-multiply text-stamp" style="--rot:-6deg">
+                <div class="rot flex items-center gap-1.5 border-2 border-current px-3 py-1.5">
+                  <span class="whitespace-nowrap font-mono text-[11px] uppercase tracking-[.16em]">Pajak kendaraan &lt; 5 hari</span>
+                  <svg class="h-3.5 w-3.5 shrink-0"><use href="#icon-check"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MRZ strip -->
+        <div class="border-t-2 border-dashed border-ink/25 bg-page px-6 py-4 sm:px-10 md:col-span-2">
+          <p class="mrz text-[11px] text-inksoft sm:text-xs" aria-hidden="true">
+            P&lt;IDNVISAE&lt;XPERT&lt;&lt;PRAMULIA&lt;XPERT&lt;SOLUTIONS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+            VX2021&lt;&lt;GOOGLE50&lt;30ULASAN&lt;&lt;BSD&lt;TANGERANG&lt;&lt;APPROVED&lt;&lt;06
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN -->
+  <section id="layanan" class="relative bg-page">
+    <div class="guilloche absolute inset-0" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      <div class="max-w-2xl border-t-2 border-dashed border-ink/20 pt-5">
+        <p class="font-mono text-[11px] uppercase tracking-[.26em] text-inksoft">Halaman 03 · Visa & Layanan</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl">Visa & Layanan</h2>
+        <p class="mt-3 text-inksoft">
+          Satu loket untuk semua urusan yang biasanya bikin pusing. Ceritakan tujuan Anda, sisanya biar kami.
+        </p>
+      </div>
+
+      <ul class="mt-10 space-y-0 divide-y divide-dashed divide-ink/20 border-y border-dashed border-ink/20">
+        <li class="flex flex-col gap-4 py-7 sm:flex-row sm:items-start sm:gap-8">
+          <div class="ink rot shrink-0 self-start border-[3px] border-stampvio p-3 text-stampvio" style="--rot:-3deg">
+            <svg class="h-7 w-7"><use href="#icon-globe"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display text-xl sm:text-2xl">Visa Turis & Kunjungan</h3>
+            <p class="mt-1.5 max-w-xl text-inksoft">Schengen, Asia, Amerika, sampai tujuan jarang seperti Brazil. Termasuk daftar dokumen persis dan tips lolos wawancara.</p>
+          </div>
+          <span class="ink rot self-start border-2 border-stamp px-3 py-1 font-mono text-[11px] uppercase tracking-[.16em] text-stamp" style="--rot:2deg">Express tersedia</span>
+        </li>
+        <li class="flex flex-col gap-4 py-7 sm:flex-row sm:items-start sm:gap-8">
+          <div class="ink rot shrink-0 self-start border-[3px] border-stampvio p-3 text-stampvio" style="--rot:2deg">
+            <svg class="h-7 w-7"><use href="#icon-doc"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display text-xl sm:text-2xl">Paspor Baru & Perpanjangan</h3>
+            <p class="mt-1.5 max-w-xl text-inksoft">Pengajuan, jadwal, sampai paspor kembali ke tangan Anda. Antrenya biar kami yang pikirkan.</p>
+          </div>
+          <span class="ink rot self-start border-2 border-stamp px-3 py-1 font-mono text-[11px] uppercase tracking-[.16em] text-stamp" style="--rot:-2deg">Tanpa antre</span>
+        </li>
+        <li class="flex flex-col gap-4 py-7 sm:flex-row sm:items-start sm:gap-8">
+          <div class="ink rot shrink-0 self-start border-[3px] border-stampvio p-3 text-stampvio" style="--rot:-2deg">
+            <svg class="h-7 w-7"><use href="#icon-link"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display text-xl sm:text-2xl">Layanan Legal Expat</h3>
+            <p class="mt-1.5 max-w-xl text-inksoft">Pendampingan dokumen imigrasi dan legalitas untuk expat yang bekerja atau menetap di Indonesia. Bilingual, ID/EN.</p>
+          </div>
+          <span class="ink rot self-start border-2 border-stamp px-3 py-1 font-mono text-[11px] uppercase tracking-[.16em] text-stamp" style="--rot:2deg">Expat friendly</span>
+        </li>
+        <li class="flex flex-col gap-4 py-7 sm:flex-row sm:items-start sm:gap-8">
+          <div class="ink rot shrink-0 self-start border-[3px] border-stampvio p-3 text-stampvio" style="--rot:3deg">
+            <svg class="h-7 w-7"><use href="#icon-ticket"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display text-xl sm:text-2xl">Tiket & Itinerary Perjalanan</h3>
+            <p class="mt-1.5 max-w-xl text-inksoft">Tiket pesawat, penginapan, dan rencana perjalanan keluarga. Mendadak dan ramai-ramai pun kami kejar.</p>
+          </div>
+          <span class="ink rot self-start border-2 border-stamp px-3 py-1 font-mono text-[11px] uppercase tracking-[.16em] text-stamp" style="--rot:-2deg">24/7 janji temu</span>
+        </li>
+        <li class="flex flex-col gap-4 py-7 sm:flex-row sm:items-start sm:gap-8">
+          <div class="ink rot shrink-0 self-start border-[3px] border-stampvio p-3 text-stampvio" style="--rot:-3deg">
+            <svg class="h-7 w-7"><use href="#icon-car"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display text-xl sm:text-2xl">Pajak & Dokumen</h3>
+            <p class="mt-1.5 max-w-xl text-inksoft">Pajak kendaraan luar kota, lapor pajak, dan urusan dokumen lainnya. Selesai tanpa drama.</p>
+          </div>
+          <span class="ink rot self-start border-2 border-stamp px-3 py-1 font-mono text-[11px] uppercase tracking-[.16em] text-stamp" style="--rot:2deg">&lt; 5 hari kerja</span>
+        </li>
+      </ul>
+
+      <p class="mt-8 flex items-start gap-2 font-mono text-xs uppercase tracking-[.14em] text-inksoft">
+        <svg class="mt-0.5 h-4 w-4 shrink-0"><use href="#icon-doc"/></svg>
+        Biaya menyesuaikan tujuan & jenis dokumen. Chat kami untuk estimasi (contoh: mulai Rp XXX.XXX, placeholder).
+      </p>
+    </div>
+  </section>
+
+  <!-- ALUR -->
+  <section class="guilloche-dark relative bg-cover2 text-page">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      <div class="max-w-2xl border-t-2 border-dashed border-foil/30 pt-5">
+        <p class="font-mono text-[11px] uppercase tracking-[.26em] text-foil">Halaman 04 · Alur Pengurusan</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl">Alur Pengurusan</h2>
+        <p class="mt-3 text-page/70">Empat langkah dari niat sampai berangkat. Anda cukup di langkah pertama.</p>
+      </div>
+
+      <ol class="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="relative border-l-2 border-dashed border-foil/40 pl-6 lg:border-l-0 lg:border-t-2 lg:pl-0 lg:pt-6">
+          <span class="ink absolute -left-[19px] top-0 flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-foil bg-cover font-mono text-sm text-foil lg:-top-[19px] lg:left-0">1</span>
+          <h3 class="font-display text-xl">Chat WhatsApp</h3>
+          <p class="mt-2 text-sm leading-relaxed text-page/70">Ceritakan tujuan dan kebutuhan Anda. Konsultasi awal gratis, dijawab langsung oleh tim.</p>
+        </li>
+        <li class="relative border-l-2 border-dashed border-foil/40 pl-6 lg:border-l-0 lg:border-t-2 lg:pl-0 lg:pt-6">
+          <span class="ink absolute -left-[19px] top-0 flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-foil bg-cover font-mono text-sm text-foil lg:-top-[19px] lg:left-0">2</span>
+          <h3 class="font-display text-xl">Siapkan Dokumen</h3>
+          <p class="mt-2 text-sm leading-relaxed text-page/70">Kami kirim checklist persis apa saja yang perlu disiapkan, plus bantu mengisi formulirnya.</p>
+        </li>
+        <li class="relative border-l-2 border-dashed border-foil/40 pl-6 lg:border-l-0 lg:border-t-2 lg:pl-0 lg:pt-6">
+          <span class="ink absolute -left-[19px] top-0 flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-foil bg-cover font-mono text-sm text-foil lg:-top-[19px] lg:left-0">3</span>
+          <h3 class="font-display text-xl">Kami Proses</h3>
+          <p class="mt-2 text-sm leading-relaxed text-page/70">Pengajuan, jadwal, sampai latihan wawancara kalau perlu. Anda terima update berkala.</p>
+        </li>
+        <li class="relative pl-6 lg:pl-0 lg:pt-6">
+          <span class="ink rot absolute -left-[23px] top-0 flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-stamp bg-cover text-stamp lg:-top-[23px] lg:left-0" style="--rot:-8deg">
+            <svg class="h-5 w-5"><use href="#icon-check"/></svg>
+          </span>
+          <h3 class="font-display text-xl text-foil">APPROVED</h3>
+          <p class="mt-2 text-sm leading-relaxed text-page/70">Paspor dan dokumen kembali ke tangan Anda. Tinggal kemas koper dan berangkat.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ULASAN -->
+  <section class="relative bg-page">
+    <div class="guilloche absolute inset-0" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div class="max-w-2xl border-t-2 border-dashed border-ink/20 pt-5">
+          <p class="font-mono text-[11px] uppercase tracking-[.26em] text-inksoft">Halaman 05 · Stempel Kepuasan</p>
+          <h2 class="mt-3 font-display text-3xl sm:text-4xl">Stempel Kepuasan</h2>
+          <p class="mt-3 text-inksoft">Ditulis klien kami di Google, kata per kata.</p>
+        </div>
+        <span class="ink rot border-[3px] border-stampvio px-4 py-2 text-center text-stampvio" style="--rot:4deg">
+          <span class="font-display text-2xl leading-none">5,0</span>
+          <span class="block font-mono text-[10px] uppercase tracking-[.18em]">30 ulasan Google</span>
+        </span>
+      </div>
+
+      <div class="mt-10 columns-1 gap-6 md:columns-2 xl:columns-3 [&>figure]:mb-6 [&>figure]:break-inside-avoid">
+        <figure class="rot rounded-sm border border-ink/15 bg-[#fbf8ef] p-6 shadow-[0_10px_24px_-14px_rgba(43,35,68,.4)]" style="--rot:-.7deg">
+          <span class="flex gap-0.5 text-stamp" aria-hidden="true">
+            <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+          </span>
+          <blockquote class="mt-3 leading-relaxed text-ink">"Buat visa express sekali langsung keluar super recomend, fast respon dan trusteddd!"</blockquote>
+          <figcaption class="mt-4 border-t border-dashed border-ink/20 pt-3 font-mono text-xs uppercase tracking-[.14em] text-inksoft">panca karya mega · Ulasan Google</figcaption>
+        </figure>
+        <figure class="rot rounded-sm border border-ink/15 bg-[#fbf8ef] p-6 shadow-[0_10px_24px_-14px_rgba(43,35,68,.4)]" style="--rot:.8deg">
+          <span class="flex gap-0.5 text-stamp" aria-hidden="true">
+            <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+          </span>
+          <blockquote class="mt-3 leading-relaxed text-ink">"Wah mantap..2 hari langsung jadi , mb nya detail bgt ngasi tau cara2 nya supaya lolos interview..recommended banget"</blockquote>
+          <figcaption class="mt-4 border-t border-dashed border-ink/20 pt-3 font-mono text-xs uppercase tracking-[.14em] text-inksoft">lindia burhan · Ulasan Google</figcaption>
+        </figure>
+        <figure class="rot rounded-sm border border-ink/15 bg-[#fbf8ef] p-6 shadow-[0_10px_24px_-14px_rgba(43,35,68,.4)]" style="--rot:-.5deg">
+          <span class="flex gap-0.5 text-stamp" aria-hidden="true">
+            <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+          </span>
+          <blockquote class="mt-3 leading-relaxed text-ink">"Terimakasih owner cantik yg uda urusin tiket aku ke brazil. Gak nympe itungan jam. smuanya kelar.. Sukses berkah. Slalu my dear"</blockquote>
+          <figcaption class="mt-4 border-t border-dashed border-ink/20 pt-3 font-mono text-xs uppercase tracking-[.14em] text-inksoft">Gita Ginezza · Ulasan Google</figcaption>
+        </figure>
+        <figure class="rot rounded-sm border border-ink/15 bg-[#fbf8ef] p-6 shadow-[0_10px_24px_-14px_rgba(43,35,68,.4)]" style="--rot:.6deg">
+          <span class="flex gap-0.5 text-stamp" aria-hidden="true">
+            <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+          </span>
+          <blockquote class="mt-3 leading-relaxed text-ink">"Sangat happy dibantu mb Eza..thanks banget Visae Xpert...bener2 dr awal pesan tiket sampai balik Jakarta di bantu proses semua...krn kita mepet cr tiket dan penginapan pas hari Raya dan 8 org...tp smua beres ktn mb Eza gercep.....next ga kapok utk lanjut trip lagi...sukses Visae Xpert...Gbu"</blockquote>
+          <figcaption class="mt-4 border-t border-dashed border-ink/20 pt-3 font-mono text-xs uppercase tracking-[.14em] text-inksoft">Nn Bokulo · Ulasan Google</figcaption>
+        </figure>
+        <figure class="rot rounded-sm border border-ink/15 bg-[#fbf8ef] p-6 shadow-[0_10px_24px_-14px_rgba(43,35,68,.4)]" style="--rot:-.8deg">
+          <span class="flex gap-0.5 text-stamp" aria-hidden="true">
+            <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+          </span>
+          <blockquote class="mt-3 leading-relaxed text-ink">"Saya sangat puas dengan layanan Visae Xpert dalam membantu pengurusan pajak saya. Timnya profesional, responsif, dan benar-benar memahami kebutuhan saya sebagai klien. Seluruh proses dijelaskan dengan jelas dan transparan. Bestt bgt pokoknya, terimakasii banyakk visae xpertt"</blockquote>
+          <figcaption class="mt-4 border-t border-dashed border-ink/20 pt-3 font-mono text-xs uppercase tracking-[.14em] text-inksoft">Valenknight · Ulasan Google</figcaption>
+        </figure>
+        <figure class="rot rounded-sm border border-ink/15 bg-[#fbf8ef] p-6 shadow-[0_10px_24px_-14px_rgba(43,35,68,.4)]" style="--rot:.5deg">
+          <span class="flex gap-0.5 text-stamp" aria-hidden="true">
+            <svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg><svg class="h-4 w-4"><use href="#icon-star"/></svg>
+          </span>
+          <blockquote class="mt-3 leading-relaxed text-ink">"Cepet bgt pelayanannya, ngurus pajak kendaraan luar kota under 5 hari. harga jg bersahabat. Thank youuu"</blockquote>
+          <figcaption class="mt-4 border-t border-dashed border-ink/20 pt-3 font-mono text-xs uppercase tracking-[.14em] text-inksoft">Anggita Anggraeni · Ulasan Google</figcaption>
+        </figure>
+      </div>
+
+      <a href="https://maps.app.goo.gl/mYFncdTtzbYyY6ez5" class="mt-8 inline-flex items-center gap-2 font-semibold text-stampvio underline decoration-dashed underline-offset-4 transition hover:text-ink">
+        Baca semua 30 ulasan di Google Maps
+        <svg class="h-4 w-4"><use href="#icon-ext"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- LOKET / KONTAK -->
+  <section class="guilloche-dark relative bg-cover text-page">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+        <div>
+          <p class="border-t-2 border-dashed border-foil/30 pt-5 font-mono text-[11px] uppercase tracking-[.26em] text-foil">Halaman 06 · Loket Kami</p>
+          <h2 class="mt-3 font-display text-3xl sm:text-4xl">Loket Kami</h2>
+          <p class="mt-3 max-w-md text-page/70">Kantor di jantung BSD. Datang dengan janji temu, atau selesaikan semuanya dari HP Anda.</p>
+
+          <ul class="mt-8 space-y-5">
+            <li class="flex items-start gap-3.5">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-foil"><use href="#icon-map"/></svg>
+              <div>
+                <p class="font-semibold">Ruko Tabe Spot, Jl. BSD Raya Pusat No.2 Blok G7</p>
+                <p class="text-sm text-page/70">Lengkong Kulon, Kec. Pagedangan, Kab. Tangerang, Banten 15339</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3.5">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-foil"><use href="#icon-clock"/></svg>
+              <div>
+                <p class="font-semibold">Buka 24/7 dengan janji temu</p>
+                <p class="text-sm text-page/70">Telepon kantor dilayani pada jam kerja</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3.5">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-foil"><use href="#icon-phone"/></svg>
+              <div>
+                <p class="font-semibold"><a href="tel:+622138929204" class="hover:text-foil">(021) 38929204</a></p>
+                <p class="text-sm text-page/70">WhatsApp: <a href="https://wa.me/6282244218083" class="underline decoration-dashed underline-offset-4 hover:text-foil">0822-4421-8083</a></p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://www.instagram.com/visae.xpert/" class="tag-link flex items-center gap-2 rounded-md border border-page/30 px-4 py-2 text-sm font-semibold hover:bg-page/10">
+              <svg class="h-4 w-4 text-foil"><use href="#icon-ig"/></svg> @visae.xpert
+            </a>
+            <a href="https://linktr.ee/Visaeexpert" class="tag-link flex items-center gap-2 rounded-md border border-page/30 px-4 py-2 text-sm font-semibold hover:bg-page/10">
+              <svg class="h-4 w-4 text-foil"><use href="#icon-link"/></svg> Linktree
+            </a>
+            <a href="https://maps.app.goo.gl/mYFncdTtzbYyY6ez5" class="tag-link flex items-center gap-2 rounded-md border border-page/30 px-4 py-2 text-sm font-semibold hover:bg-page/10">
+              <svg class="h-4 w-4 text-foil"><use href="#icon-map"/></svg> Google Maps
+            </a>
+          </div>
+
+          <p class="mt-8 inline-flex items-center gap-2 rounded-full border border-foil/40 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[.18em] text-foil">
+            <svg class="h-3.5 w-3.5"><use href="#icon-check"/></svg>
+            Usaha milik perempuan · terdaftar di Google
+          </p>
+        </div>
+
+        <!-- Final CTA: the last stamp -->
+        <div class="guilloche relative flex flex-col items-center justify-center rounded-2xl bg-page px-6 py-12 text-center text-ink sm:px-10">
+          <div class="ink rot text-stamp" style="--rot:-7deg">
+            <div class="rot stamp-ring flex h-32 w-32 flex-col items-center justify-center p-3 text-center">
+              <span class="font-mono text-[9px] uppercase tracking-[.2em]">Visae Xpert</span>
+              <span class="font-display text-xl uppercase tracking-widest">Approved</span>
+              <span class="font-mono text-[10px] tracking-[.15em]">SEJAK 2021</span>
+            </div>
+          </div>
+          <h3 class="mt-6 font-display text-2xl sm:text-3xl">Stempel berikutnya milik Anda.</h3>
+          <p class="mt-2 max-w-xs text-inksoft">Mulai dari satu chat singkat. Ceritakan rencana Anda, kami jawab hari ini juga.</p>
+          <a href="https://wa.me/6282244218083?text=Halo%20VISAE%20XPERT%2C%20saya%20mau%20konsultasi%20pengurusan%20visa%20%2F%20dokumen"
+             class="stamp-btn wa-btn mt-6 inline-flex items-center gap-2.5 px-7 py-4 font-bold text-page">
+            <svg class="h-5 w-5 text-foil"><use href="#icon-wa"/></svg>
+            Chat WhatsApp Sekarang
+          </a>
+          <p class="mt-3 font-mono text-[11px] uppercase tracking-[.18em] text-inksoft">0822-4421-8083 · 24/7 janji temu</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-page/15">
+      <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+        <p class="mrz text-[10px] text-page/40" aria-hidden="true">
+          VISAE&lt;XPERT&lt;&lt;PT&lt;PRAMULIA&lt;XPERT&lt;SOLUTIONS&lt;&lt;BSD&lt;RAYA&lt;PUSAT&lt;&lt;TANGERANG&lt;&lt;&lt;&lt;
+        </p>
+        <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm text-page/60">
+          <p>© 2026 VISAE XPERT · PT. Pramulia Xpert Solutions</p>
+          <p class="flex items-center gap-4">
+            <a href="https://www.instagram.com/visae.xpert/" class="flex items-center gap-1.5 hover:text-foil"><svg class="h-4 w-4"><use href="#icon-ig"/></svg> Instagram</a>
+            <a href="https://linktr.ee/Visaeexpert" class="flex items-center gap-1.5 hover:text-foil"><svg class="h-4 w-4"><use href="#icon-link"/></svg> Linktree</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="/assets/demo-badge.js" defer></script>
+</body>
+</html>
