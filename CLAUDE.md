@@ -82,6 +82,16 @@ Plain `curl`/fetch gets blocked or returns JS shells for Google Maps details and
 - Gotcha: do NOT create tabs via `PUT /json/new?url=...`; Chrome silently ignores encoded URLs and opens `about:blank`. Always navigate with `Page.navigate` (the script does this).
 - Instagram may still require login; the user can log in once in that Chrome window (profile persists in `~/.claude-chrome`).
 
+## IG DM template (send with a mobile screenshot of the demo)
+
+```
+Halo min! Saya Luki, web developer. Saya lihat <Nama Brand Lengkap> sepertinya belum punya website sendiri, jadi saya coba buatkan contohnya (gratis): https://proposal.lukicenturi.com/<client-slug>
+
+Coba buka dari HP, 1 menit saja. Kalau suka, kabari saya 😄
+```
+
+Screenshot: `node tools/mobshot.js <url> <out.png>` (390x844 mobile emulation via the research browser).
+
 ## Clients
 
 | Slug | Client | Type | Status |
