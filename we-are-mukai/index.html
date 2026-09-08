@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>MUKAI, Curated Everyday Wear | Grosir Modis Outlet, Gading Serpong</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream:    '#F6F1E7',
+        sand:     '#EDE4D3',
+        linen:    '#E3D7C1',
+        espresso: '#3B2318',
+        cocoa:    '#5C3A26',
+        caramel:  '#A96F3F',
+        blush:    '#C9A47E',
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans:  ['Archivo', 'sans-serif'],
+      },
+    },
+  },
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #F6F1E7; }
+
+  /* entrance reveals: hero staggers on load */
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  .rise { opacity: 0; animation: rise .9s cubic-bezier(.22,.61,.36,1) forwards; }
+  .rise-1 { animation-delay: .08s; } .rise-2 { animation-delay: .22s; }
+  .rise-3 { animation-delay: .36s; } .rise-4 { animation-delay: .5s; }
+  .rise-5 { animation-delay: .68s; } .rise-6 { animation-delay: .86s; }
+
+  /* scroll reveals */
+  .sr { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1); }
+  .sr.on { opacity: 1; transform: none; }
+  .sr-d1 { transition-delay: .1s; } .sr-d2 { transition-delay: .2s; } .sr-d3 { transition-delay: .3s; }
+
+  /* marquee */
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee { animation: slide 28s linear infinite; }
+
+  /* rotating stamp */
+  @keyframes spin360 { to { transform: rotate(360deg); } }
+  .stamp { animation: spin360 22s linear infinite; }
+
+  /* arch photo */
+  .arch { border-radius: 999px 999px 26px 26px / 620px 620px 26px 26px; }
+
+  /* keep the shared demo badge clear of the sticky WA bar on phones */
+  @media (max-width: 639px) {
+    body .demo-badge { bottom: 92px !important; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise, .marquee, .stamp { animation: none; opacity: 1; }
+    .sr { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body class="bg-cream text-espresso font-sans antialiased overflow-x-hidden">
+
+<!-- icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.66 15L2 22l5.16-1.32A10 10 0 1 0 12 2Zm0 18.13a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.06.79.82-2.98-.2-.31a8.13 8.13 0 1 1 6.87 3.81Zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79s-.39-.12-.55.12-.63.79-.77.95-.28.18-.53.06a6.65 6.65 0 0 1-1.96-1.21 7.33 7.33 0 0 1-1.35-1.68c-.14-.24 0-.37.11-.5s.24-.28.37-.42a1.62 1.62 0 0 0 .24-.4.45.45 0 0 0 0-.43c-.06-.12-.55-1.32-.75-1.81s-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31 2.73 2.73 0 0 0-.85 2 4.74 4.74 0 0 0 1 2.52 10.85 10.85 0 0 0 4.16 3.67 13.87 13.87 0 0 0 1.39.51 3.35 3.35 0 0 0 1.53.1 2.51 2.51 0 0 0 1.64-1.16 2 2 0 0 0 .14-1.16c-.06-.1-.22-.16-.46-.28Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07a6.63 6.63 0 0 1 2.23.42 3.98 3.98 0 0 1 2.27 2.27c.26.71.4 1.46.42 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85a6.63 6.63 0 0 1-.42 2.23 3.98 3.98 0 0 1-2.27 2.27c-.71.26-1.46.4-2.23.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07a6.63 6.63 0 0 1-2.23-.42 3.98 3.98 0 0 1-2.27-2.27 6.63 6.63 0 0 1-.42-2.23c-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.02-.77.16-1.52.42-2.23A3.98 3.98 0 0 1 4.92 2.65a6.63 6.63 0 0 1 2.23-.42c1.27-.06 1.65-.07 4.85-.07Zm0 1.8c-3.15 0-3.52.01-4.77.07a4.84 4.84 0 0 0-1.71.32 2.18 2.18 0 0 0-1.25 1.25 4.84 4.84 0 0 0-.32 1.71c-.06 1.25-.07 1.62-.07 4.77s.01 3.52.07 4.77c.02.58.13 1.16.32 1.71a2.18 2.18 0 0 0 1.25 1.25c.55.19 1.13.3 1.71.32 1.25.06 1.62.07 4.77.07s3.52-.01 4.77-.07a4.84 4.84 0 0 0 1.71-.32 2.18 2.18 0 0 0 1.25-1.25c.19-.55.3-1.13.32-1.71.06-1.25.07-1.62.07-4.77s-.01-3.52-.07-4.77a4.84 4.84 0 0 0-.32-1.71 2.18 2.18 0 0 0-1.25-1.25 4.84 4.84 0 0 0-1.71-.32c-1.25-.06-1.62-.07-4.77-.07Zm0 3.06a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 8.46a3.33 3.33 0 1 0 0-6.66 3.33 3.33 0 0 0 0 6.66Zm5.34-8.67a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 6.62 11.62 6.9 11.89a.86.86 0 0 0 1.2 0c.28-.27 6.9-6.64 6.9-11.89A7.5 7.5 0 0 0 12 2Zm0 10.31a2.81 2.81 0 1 1 0-5.62 2.81 2.81 0 0 1 0 5.62Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18.13A8.13 8.13 0 1 1 20.13 12 8.14 8.14 0 0 1 12 20.13Zm.94-8.51V7a.94.94 0 0 0-1.88 0v5a.93.93 0 0 0 .28.66l3.12 3.13a.94.94 0 0 0 1.33-1.33Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.9l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 1.9z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2 7 7 3-7 3-2 7-2-7-7-3 7-3 2-7z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path fill="currentColor" d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1Zm-9-1a2 2 0 0 1 4 0v1h-4Zm8 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path fill="currentColor" d="M21.9 8.6l-1.8-5A1 1 0 0 0 19.2 3H4.8a1 1 0 0 0-.9.6l-1.8 5A1 1 0 0 0 3 10h.3A3.6 3.6 0 0 0 5 12.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7.5a3.6 3.6 0 0 0 1.7-2.5H21a1 1 0 0 0 .9-1.4ZM17 19H7v-6h10Zm1.5-9.6a1.7 1.7 0 0 1-1.5 1.1 1.68 1.68 0 0 1-1.7-1.5.94.94 0 0 0-1.86 0 1.7 1.7 0 0 1-3.38 0 .94.94 0 0 0-1.86 0A1.68 1.68 0 0 1 6.5 10.5 1.7 1.7 0 0 1 5 9.4L5.5 8h13Z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path fill="currentColor" d="M21.9 11.6l-2-4A1 1 0 0 0 19 7h-3V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1.18a3 3 0 0 0 5.64 0h4.36a3 3 0 0 0 5.64 0H21a1 1 0 0 0 1-1v-5a1 1 0 0 0-.1-.4ZM7 18.5A1.5 1.5 0 1 1 8.5 17 1.5 1.5 0 0 1 7 18.5Zm7-2.5H9.82a3 3 0 0 0-5.64 0H4V7h10Zm2-7h2.38l1.5 3H16Zm1 9.5A1.5 1.5 0 1 1 18.5 17 1.5 1.5 0 0 1 17 18.5Zm3-2.5h-.18a3 3 0 0 0-2.82-2v-1h3Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.3 4.3a1 1 0 0 0 0 1.4L18.6 11H5a1 1 0 0 0 0 2h13.6l-5.3 5.3a1 1 0 1 0 1.4 1.4l7-7a1 1 0 0 0 0-1.4l-7-7a1 1 0 0 0-1.4 0Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9.55 17.58a1 1 0 0 1-.71-.3l-4.12-4.11a1 1 0 1 1 1.41-1.42l3.42 3.41 8.34-8.33a1 1 0 1 1 1.41 1.41l-9 9a1 1 0 0 1-.75.34Z"/></symbol>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="fixed top-0 inset-x-0 z-40 bg-cream/85 backdrop-blur border-b border-linen/70">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="assets/logo.png" alt="MUKAI logo" class="h-9 w-9 rounded-full object-cover">
+      <span class="font-serif text-xl font-semibold tracking-[0.35em] uppercase">Mukai</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-cocoa">
+      <a href="#collection" class="hover:text-espresso transition-colors">Collection</a>
+      <a href="#store" class="hover:text-espresso transition-colors">The Store</a>
+      <a href="#reviews" class="hover:text-espresso transition-colors">Reviews</a>
+      <a href="#visit" class="hover:text-espresso transition-colors">Visit</a>
+    </nav>
+    <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20saya%20mau%20tanya%20koleksi%20terbaru%20%F0%9F%98%8A" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 bg-espresso text-cream text-[11px] font-semibold uppercase tracking-[0.18em] px-4 py-2.5 rounded-full hover:bg-cocoa transition-colors">
+      <svg class="w-4 h-4"><use href="#i-wa"/></svg><span class="hidden sm:inline">WhatsApp</span><span class="sm:hidden">Chat</span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="top" class="relative pt-28 sm:pt-32 pb-16 sm:pb-24">
+  <!-- atmosphere -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-32 -right-40 w-[34rem] h-[34rem] rounded-full bg-sand/80 blur-3xl"></div>
+    <div class="absolute top-1/2 -left-48 w-[28rem] h-[28rem] rounded-full bg-linen/60 blur-3xl"></div>
+    <div class="absolute inset-0 opacity-[0.35]" style="background-image: repeating-linear-gradient(90deg, rgba(59,35,24,0.045) 0 1px, transparent 1px 96px);"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <!-- copy -->
+    <div class="lg:col-span-7">
+      <p class="rise rise-1 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-caramel">
+        <svg class="w-3.5 h-3.5"><use href="#i-pin"/></svg> Gading Serpong, Tangerang
+      </p>
+      <h1 class="rise rise-2 mt-5 font-serif text-[13vw] sm:text-7xl lg:text-[5.4rem] leading-[0.98] font-medium">
+        Curated<br>
+        <em class="font-semibold text-cocoa">Everyday</em> Wear<span class="text-caramel">.</span>
+      </h1>
+      <p class="rise rise-3 mt-6 max-w-md text-[15px] leading-relaxed text-cocoa">
+        MUKAI is the label behind Grosir Modis Outlet: knitwear, vests, denim and coord sets picked fresh for every week, at outlet prices your wallet will love.
+      </p>
+      <div class="rise rise-4 mt-8 flex flex-wrap items-center gap-3">
+        <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20saya%20mau%20tanya%20koleksi%20terbaru%20%F0%9F%98%8A" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2.5 bg-espresso text-cream px-6 py-3.5 rounded-full text-sm font-semibold hover:bg-cocoa transition-colors shadow-lg shadow-espresso/20">
+          <svg class="w-5 h-5"><use href="#i-wa"/></svg> Chat on WhatsApp
+        </a>
+        <a href="#visit" class="inline-flex items-center gap-2 border border-espresso/30 px-6 py-3.5 rounded-full text-sm font-semibold hover:bg-espresso hover:text-cream transition-colors">
+          <svg class="w-4 h-4"><use href="#i-store"/></svg> Visit the store
+        </a>
+      </div>
+      <div class="rise rise-5 mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-cocoa">
+        <span class="inline-flex items-center gap-1.5">
+          <span class="inline-flex text-caramel">
+            <svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg>
+          </span>
+          <strong class="font-semibold text-espresso">4.8</strong> on Google (334 reviews)
+        </span>
+        <span class="inline-flex items-center gap-1.5"><svg class="w-4 h-4 text-caramel"><use href="#i-clock"/></svg> Open every day, 10.00-22.00</span>
+      </div>
+    </div>
+
+    <!-- visual -->
+    <div class="lg:col-span-5 relative rise rise-3">
+      <div class="absolute -top-6 -left-6 right-10 bottom-10 border border-caramel/40 arch" aria-hidden="true"></div>
+      <img src="assets/navy-vest.jpg" alt="MUKAI navy pinstripe vest outfit" class="arch relative w-full max-w-sm mx-auto object-cover aspect-[4/5] shadow-2xl shadow-espresso/25">
+      <figure class="absolute -bottom-8 -left-2 sm:-left-8 w-36 sm:w-44 rotate-[-4deg] bg-cream p-2 pb-3 shadow-xl shadow-espresso/20 rounded-lg">
+        <img src="assets/pinstripe-pants.jpg" alt="MUKAI brown pinstripe wide pants" class="rounded-md object-cover aspect-[4/5]">
+        <figcaption class="mt-2 text-center font-serif italic text-sm text-cocoa">Pinstripe Series</figcaption>
+      </figure>
+      <div class="stamp absolute -top-10 right-2 sm:-right-4 w-24 h-24 sm:w-28 sm:h-28 text-espresso" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+          <defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+          <text class="uppercase" style="font-size:8.6px; letter-spacing:2.1px; font-family:Archivo, sans-serif; font-weight:600;" fill="currentColor">
+            <textPath href="#circ">Curated Everyday Wear • Mukai •&#160;</textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="bg-espresso text-cream/90 py-3.5 overflow-hidden" aria-hidden="true">
+  <div class="marquee flex whitespace-nowrap w-max">
+    <div class="flex items-center gap-8 pr-8 text-[12px] font-semibold uppercase tracking-[0.28em]">
+      <span>Knitwear</span><span class="text-caramel">✦</span><span>Vests</span><span class="text-caramel">✦</span><span>Denim</span><span class="text-caramel">✦</span><span>Coord Sets</span><span class="text-caramel">✦</span><span>Cardigans</span><span class="text-caramel">✦</span><span>New Styles Every Week</span><span class="text-caramel">✦</span>
+      <span>Knitwear</span><span class="text-caramel">✦</span><span>Vests</span><span class="text-caramel">✦</span><span>Denim</span><span class="text-caramel">✦</span><span>Coord Sets</span><span class="text-caramel">✦</span><span>Cardigans</span><span class="text-caramel">✦</span><span>New Styles Every Week</span><span class="text-caramel">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COLLECTION ===== -->
+<section id="collection" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="sr flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-caramel">The July Edit</p>
+        <h2 class="mt-3 font-serif text-4xl sm:text-5xl font-medium">Pieces you will wear <em class="text-cocoa font-semibold">on repeat</em></h2>
+      </div>
+      <p class="max-w-xs text-sm leading-relaxed text-cocoa">Real styles from our latest Instagram collection. Chat us to check sizes and today's stock.</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <!-- card -->
+      <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20Velyn%20Vest%20masih%20ready%3F" target="_blank" rel="noopener" class="sr group">
+        <div class="overflow-hidden rounded-2xl bg-sand"><img src="assets/velyn-vest.jpg" alt="Velyn Vest" loading="lazy" class="w-full object-cover aspect-[4/5] group-hover:scale-[1.04] transition-transform duration-700"></div>
+        <div class="mt-3 flex items-baseline justify-between gap-2">
+          <h3 class="font-serif italic text-xl sm:text-2xl">Velyn Vest</h3>
+          <p class="text-sm font-semibold text-caramel whitespace-nowrap">IDR 146K</p>
+        </div>
+      </a>
+      <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20Azra%20Pattern%20Top%20masih%20ready%3F" target="_blank" rel="noopener" class="sr sr-d1 group lg:mt-10">
+        <div class="overflow-hidden rounded-2xl bg-sand"><img src="assets/azra-top.jpg" alt="Azra Short Sleeve O-Neck Pattern Top" loading="lazy" class="w-full object-cover aspect-[4/5] group-hover:scale-[1.04] transition-transform duration-700"></div>
+        <div class="mt-3 flex items-baseline justify-between gap-2">
+          <h3 class="font-serif italic text-xl sm:text-2xl">Azra Pattern Top</h3>
+          <p class="text-sm font-semibold text-caramel whitespace-nowrap">IDR 149K</p>
+        </div>
+      </a>
+      <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20Ashana%20Barrel%20Denim%20masih%20ready%3F" target="_blank" rel="noopener" class="sr sr-d2 group">
+        <div class="overflow-hidden rounded-2xl bg-sand"><img src="assets/ashana-denim.jpg" alt="Ashana Barrel Denim Pants" loading="lazy" class="w-full object-cover aspect-[4/5] group-hover:scale-[1.04] transition-transform duration-700"></div>
+        <div class="mt-3 flex items-baseline justify-between gap-2">
+          <h3 class="font-serif italic text-xl sm:text-2xl">Ashana Barrel Denim</h3>
+          <p class="text-sm font-semibold text-caramel whitespace-nowrap">IDR 190K</p>
+        </div>
+      </a>
+      <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20Evanna%20Lace%20Cardi%20masih%20ready%3F" target="_blank" rel="noopener" class="sr group lg:mt-10">
+        <div class="overflow-hidden rounded-2xl bg-sand"><img src="assets/evanna-cardi.jpg" alt="Evanna Lace Cardi" loading="lazy" class="w-full object-cover aspect-[4/5] group-hover:scale-[1.04] transition-transform duration-700"></div>
+        <div class="mt-3 flex items-baseline justify-between gap-2">
+          <h3 class="font-serif italic text-xl sm:text-2xl">Evanna Lace Cardi</h3>
+          <p class="text-sm font-semibold text-caramel whitespace-nowrap">IDR 190K</p>
+        </div>
+      </a>
+      <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20Mirae%20Pattern%20Cardi%20masih%20ready%3F" target="_blank" rel="noopener" class="sr sr-d1 group">
+        <div class="overflow-hidden rounded-2xl bg-sand"><img src="assets/mirae-cardi.jpg" alt="Mirae V-Neck Pattern Cardi" loading="lazy" class="w-full object-cover aspect-[4/5] group-hover:scale-[1.04] transition-transform duration-700"></div>
+        <div class="mt-3 flex items-baseline justify-between gap-2">
+          <h3 class="font-serif italic text-xl sm:text-2xl">Mirae Pattern Cardi</h3>
+          <p class="text-sm font-semibold text-caramel whitespace-nowrap">IDR 195K</p>
+        </div>
+      </a>
+      <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20Cropped%20Buttoned%20Up%20Cardi%20warna%20apa%20saja%20yang%20ready%3F" target="_blank" rel="noopener" class="sr sr-d2 group lg:mt-10">
+        <div class="overflow-hidden rounded-2xl bg-sand"><img src="assets/cardi-colors.jpg" alt="Cropped Buttoned Up Cardi in 6 colors" loading="lazy" class="w-full object-cover aspect-[4/5] group-hover:scale-[1.04] transition-transform duration-700"></div>
+        <div class="mt-3 flex items-baseline justify-between gap-2">
+          <h3 class="font-serif italic text-xl sm:text-2xl">Cropped Cardi</h3>
+          <p class="text-sm font-semibold text-caramel whitespace-nowrap">6 colors</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="sr mt-10 flex flex-wrap items-center gap-4">
+      <a href="https://www.instagram.com/wearmukai/" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 border border-espresso/30 px-6 py-3 rounded-full text-sm font-semibold hover:bg-espresso hover:text-cream transition-colors">
+        <svg class="w-4 h-4"><use href="#i-ig"/></svg> See the full collection on Instagram
+      </a>
+      <p class="text-xs text-cocoa/80">Prices as posted on @wearmukai, July collection. Stock moves fast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORE STORY ===== -->
+<section id="store" class="py-16 sm:py-24 bg-sand/60 border-y border-linen/70">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-5 relative sr">
+      <img src="assets/pattern-knit-series.jpg" alt="MUKAI Pattern Knit Series" class="rounded-2xl object-cover w-full aspect-[4/5] shadow-xl shadow-espresso/15">
+      <div class="absolute -bottom-6 -right-3 sm:-right-6 bg-espresso text-cream rounded-2xl px-5 py-4 shadow-lg rotate-2">
+        <p class="font-serif italic text-2xl leading-none">4.8 ★</p>
+        <p class="mt-1 text-[10px] uppercase tracking-[0.22em] font-semibold text-cream/80">334 Google reviews</p>
+      </div>
+    </div>
+    <div class="lg:col-span-7 sr sr-d1">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-caramel">The Store</p>
+      <h2 class="mt-3 font-serif text-4xl sm:text-5xl font-medium leading-tight">An outlet that feels like a <em class="text-cocoa font-semibold">boutique</em></h2>
+      <p class="mt-5 max-w-lg text-[15px] leading-relaxed text-cocoa">
+        Two shophouse units at Ruko Faraday, Gading Serpong, stocked with curated everyday pieces. Come try things on, or shop from home through our WhatsApp channel.
+      </p>
+      <ul class="mt-8 space-y-4 max-w-lg">
+        <li class="flex gap-4 items-start">
+          <span class="shrink-0 w-10 h-10 rounded-full bg-cream border border-linen flex items-center justify-center text-caramel"><svg class="w-5 h-5"><use href="#i-spark"/></svg></span>
+          <div><p class="font-semibold">Fresh styles, constantly</p><p class="text-sm text-cocoa">New models come in all the time, so the rack never feels stale or pasaran.</p></div>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="shrink-0 w-10 h-10 rounded-full bg-cream border border-linen flex items-center justify-center text-caramel"><svg class="w-5 h-5"><use href="#i-bag"/></svg></span>
+          <div><p class="font-semibold">Outlet prices</p><p class="text-sm text-cocoa">Most pieces sit between IDR 100K and 200K, quality first.</p></div>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="shrink-0 w-10 h-10 rounded-full bg-cream border border-linen flex items-center justify-center text-caramel"><svg class="w-5 h-5"><use href="#i-store"/></svg></span>
+          <div><p class="font-semibold">Shop your way</p><p class="text-sm text-cocoa">In-store shopping, in-store pickup and delivery are all available.</p></div>
+        </li>
+        <li class="flex gap-4 items-start">
+          <span class="shrink-0 w-10 h-10 rounded-full bg-cream border border-linen flex items-center justify-center text-caramel"><svg class="w-5 h-5"><use href="#i-wa"/></svg></span>
+          <div><p class="font-semibold">Belanja online via WhatsApp</p><p class="text-sm text-cocoa">Join our channel for drops and order straight from the admin.</p>
+            <a href="https://whatsapp.com/channel/0029VbA0y6ZFCCoYMKQTkI0o" target="_blank" rel="noopener" class="mt-1.5 inline-flex items-center gap-1.5 text-sm font-semibold text-caramel hover:text-espresso transition-colors">Join the WA Channel <svg class="w-3.5 h-3.5"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="sr text-center max-w-xl mx-auto">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-caramel">Google Reviews</p>
+      <h2 class="mt-3 font-serif text-4xl sm:text-5xl font-medium">Loved by <em class="text-cocoa font-semibold">334</em> shoppers</h2>
+      <p class="mt-4 inline-flex items-center gap-2 text-sm text-cocoa">
+        <span class="inline-flex text-caramel"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></span>
+        <strong class="text-espresso font-semibold">4.8 / 5</strong> on Google Maps
+      </p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <figure class="sr bg-white/70 border border-linen rounded-2xl p-5 flex flex-col">
+        <span class="inline-flex text-caramel" aria-label="5 stars"><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg></span>
+        <blockquote class="mt-3 text-sm leading-relaxed text-cocoa grow">"tempatnya rapi bersih wangi &amp; harganya pun msh terjangkau. top markotop bakal balik lg utk belanja"</blockquote>
+        <figcaption class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-espresso/70">Mayang Sesilia</figcaption>
+      </figure>
+      <figure class="sr sr-d1 bg-white/70 border border-linen rounded-2xl p-5 flex flex-col">
+        <span class="inline-flex text-caramel" aria-label="5 stars"><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg></span>
+        <blockquote class="mt-3 text-sm leading-relaxed text-cocoa grow">"Bajunya sering banget baru2 modelnya, ga pasaran. Unik."</blockquote>
+        <figcaption class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-espresso/70">Eva Octariana</figcaption>
+      </figure>
+      <figure class="sr sr-d2 bg-white/70 border border-linen rounded-2xl p-5 flex flex-col">
+        <span class="inline-flex text-caramel" aria-label="5 stars"><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg></span>
+        <blockquote class="mt-3 text-sm leading-relaxed text-cocoa grow">"tempatnya bersih banget, dan banyak banget pilihan baju bajunya super lengkap and trendy as well! pasti bakalan sering kesini deh"</blockquote>
+        <figcaption class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-espresso/70">Gabriela Violet</figcaption>
+      </figure>
+      <figure class="sr sr-d3 bg-white/70 border border-linen rounded-2xl p-5 flex flex-col">
+        <span class="inline-flex text-caramel" aria-label="5 stars"><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg><svg class="w-3.5 h-3.5"><use href="#i-star"/></svg></span>
+        <blockquote class="mt-3 text-sm leading-relaxed text-cocoa grow">"Suka banget baju2nyaa, cocok sm aku apalagi aku pecinta knit🫶🏻 deket dari rumah, jadi gampang buat belanja"</blockquote>
+        <figcaption class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-espresso/70">Vira Haerunnisa</figcaption>
+      </figure>
+    </div>
+
+    <p class="sr mt-8 text-center">
+      <a href="https://www.google.com/maps/place/Grosir+Modis+Store/@-6.2671669,106.6071726,18.88z/data=!4m6!3m5!1s0x2e69fd9a32fff37f:0x7d984485fca38f75!8m2!3d-6.2673819!4d106.6076992!16s%2Fg%2F11jyn2sf2l?entry=ttu" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-caramel hover:text-espresso transition-colors">
+        Read all reviews on Google Maps <svg class="w-3.5 h-3.5"><use href="#i-arrow"/></svg>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== VISIT ===== -->
+<section id="visit" class="pb-16 sm:pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="sr relative overflow-hidden bg-espresso text-cream rounded-3xl px-6 py-12 sm:p-14">
+      <div class="absolute inset-0 pointer-events-none opacity-60" aria-hidden="true" style="background: radial-gradient(42rem 22rem at 110% -10%, rgba(169,111,63,0.4), transparent 60%), radial-gradient(30rem 18rem at -10% 110%, rgba(169,111,63,0.25), transparent 60%);"></div>
+      <div class="relative grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-blush">Visit Us</p>
+          <h2 class="mt-3 font-serif text-4xl sm:text-5xl font-medium leading-tight">Come say hi,<br><em class="font-semibold text-blush">fitting room's ready</em></h2>
+          <ul class="mt-8 space-y-4 text-sm text-cream/90">
+            <li class="flex gap-3 items-start"><svg class="w-5 h-5 shrink-0 text-blush"><use href="#i-pin"/></svg><span>Ruko Faraday Blok B No. 6-7, Jl. Scientia Boulevard, Gading Serpong, Tangerang 15330</span></li>
+            <li class="flex gap-3 items-start"><svg class="w-5 h-5 shrink-0 text-blush"><use href="#i-clock"/></svg><span>Open every day, 10.00-22.00</span></li>
+            <li class="flex gap-3 items-start"><svg class="w-5 h-5 shrink-0 text-blush"><use href="#i-wa"/></svg><span>Admin: +62 811-9158-558</span></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20saya%20mau%20tanya%20koleksi%20terbaru%20%F0%9F%98%8A" target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2.5 bg-cream text-espresso px-6 py-4 rounded-full text-sm font-bold hover:bg-blush transition-colors">
+            <svg class="w-5 h-5"><use href="#i-wa"/></svg> Chat on WhatsApp
+          </a>
+          <a href="https://www.google.com/maps/place/Grosir+Modis+Store/@-6.2671669,106.6071726,18.88z/data=!4m6!3m5!1s0x2e69fd9a32fff37f:0x7d984485fca38f75!8m2!3d-6.2673819!4d106.6076992!16s%2Fg%2F11jyn2sf2l?entry=ttu" target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2.5 border border-cream/40 px-6 py-4 rounded-full text-sm font-semibold hover:bg-cream/10 transition-colors">
+            <svg class="w-5 h-5"><use href="#i-pin"/></svg> Get directions
+          </a>
+          <a href="https://www.instagram.com/wearmukai/" target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2.5 border border-cream/40 px-6 py-4 rounded-full text-sm font-semibold hover:bg-cream/10 transition-colors">
+            <svg class="w-5 h-5"><use href="#i-ig"/></svg> @wearmukai
+          </a>
+          <a href="https://whatsapp.com/channel/0029VbA0y6ZFCCoYMKQTkI0o" target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2.5 border border-cream/40 px-6 py-4 rounded-full text-sm font-semibold hover:bg-cream/10 transition-colors">
+            <svg class="w-5 h-5"><use href="#i-wa"/></svg> WA Channel (Belanja Online)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="border-t border-linen/70 py-10 pb-24 sm:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-5">
+    <div class="flex items-center gap-3">
+      <img src="assets/logo.png" alt="MUKAI logo" class="h-8 w-8 rounded-full object-cover">
+      <div>
+        <p class="font-serif font-semibold tracking-[0.3em] uppercase text-sm">Mukai</p>
+        <p class="text-[11px] text-cocoa/80">Grosir Modis Outlet · Gading Serpong</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-4 text-cocoa">
+      <a href="https://www.instagram.com/wearmukai/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-espresso transition-colors"><svg class="w-5 h-5"><use href="#i-ig"/></svg></a>
+      <a href="https://wa.me/628119158558" target="_blank" rel="noopener" aria-label="WhatsApp" class="hover:text-espresso transition-colors"><svg class="w-5 h-5"><use href="#i-wa"/></svg></a>
+      <a href="https://www.google.com/maps/place/Grosir+Modis+Store/@-6.2671669,106.6071726,18.88z/data=!4m6!3m5!1s0x2e69fd9a32fff37f:0x7d984485fca38f75!8m2!3d-6.2673819!4d106.6076992!16s%2Fg%2F11jyn2sf2l?entry=ttu" target="_blank" rel="noopener" aria-label="Google Maps" class="hover:text-espresso transition-colors"><svg class="w-5 h-5"><use href="#i-pin"/></svg></a>
+    </div>
+    <p class="text-[11px] text-cocoa/70">Open every day, 10.00-22.00</p>
+  </div>
+</footer>
+
+<!-- sticky mobile WA bar -->
+<div class="fixed bottom-0 inset-x-0 z-40 sm:hidden p-3 bg-gradient-to-t from-cream via-cream/95 to-transparent">
+  <a href="https://wa.me/628119158558?text=Halo%20Admin%20MUKAI%2C%20saya%20mau%20tanya%20koleksi%20terbaru%20%F0%9F%98%8A" target="_blank" rel="noopener"
+     class="flex items-center justify-center gap-2.5 bg-espresso text-cream py-4 rounded-full text-sm font-bold shadow-xl shadow-espresso/30">
+    <svg class="w-5 h-5"><use href="#i-wa"/></svg> Chat MUKAI on WhatsApp
+  </a>
+</div>
+
+<script>
+  // scroll reveals
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.sr').forEach(el => io.observe(el));
+</script>
+<script src="/assets/demo-badge.js" defer></script>
+</body>
+</html>
