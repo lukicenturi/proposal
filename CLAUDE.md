@@ -104,3 +104,4 @@ Screenshot: `node tools/mobshot.js <url> <out.png>` (390x844 mobile emulation vi
 | `we-are-mukai` | MUKAI (Grosir Modis Outlet, IG @wearmukai) | Women's clothing store, curated everyday wear, Ruko Faraday, Gading Serpong, Kab. Tangerang | Demo built |
 | `otoworx` | OTOWORX Car Detailing | Auto detailing & nano ceramic coating, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |
 | `rsv-store-serpong` | RSV Store Serpong (IG @rsvstoreserpong) | Helmets & riding gear (toko motorsport), Ruko Mendrisio 3, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |
+| `shion-dental` | Shion Dental Clinic Gading Serpong (IG @shiondental) | Klinik gigi, 5.0 (292 ulasan) di Google, Pakulonan Barat, Kelapa Dua, Kab. Tangerang. Real WA: wa.me/message/JZ2ADZ7UAV7EA1 (from IG bio; Maps has no phone) | Demo built |
