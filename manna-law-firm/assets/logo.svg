@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 126" role="img" aria-label="Logo Manna Law Firm">
+  <defs>
+    <path id="mw" d="M19 7 C 1 25, 36 41, 18 61 C 0 81, 35 97, 17 118" fill="none" stroke="#1F8FCE" stroke-width="14" stroke-linecap="butt"/>
+  </defs>
+  <g transform="translate(22 0) skewX(-8)">
+    <use href="#mw"/>
+    <use href="#mw" x="27"/>
+    <use href="#mw" x="54"/>
+  </g>
+</svg>
