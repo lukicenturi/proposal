@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "hygloss.id/index.html"
+        ],
+        "createdAt": "2026-09-08T15:33:43.490Z",
+        "reason": "Claude: gold gradient text mirrors the client logo's metallic champagne-gold gradient; brand-intentional on two short display phrases"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "hygloss.id/index.html"
+        ],
+        "createdAt": "2026-09-08T15:33:43.519Z",
+        "reason": "Claude: computed AA ratios pass (fog on ink 6.4:1, champagne/70 5.2:1); remaining flags are decorative aria-hidden glyphs"
+      }
+    ]
+  }
+}

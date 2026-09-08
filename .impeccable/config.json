@@ -38,6 +38,15 @@
         ],
         "createdAt": "2026-09-08T14:53:38.819Z",
         "reason": "Claude: internal noindex gallery with pre-existing type scale (3xl page title, xl card titles, sm body, ratios >=1.4); new card follows the established pattern"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "visae-expert/index.html"
+        ],
+        "createdAt": "2026-09-08T15:37:53.664Z",
+        "reason": "False positive: detector cannot resolve inline tailwind.config token text-page (#f5f1e4) on .stamp-btn; rendered contrast on the #241a4f stamp pad is ~12:1"
       }
     ]
   }
