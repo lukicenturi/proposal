@@ -6,192 +6,229 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Denting Rumah Musik | Les Musik untuk Putra-Putri Anda</title>
   <meta name="description" content="Les musik Piano, Keyboard, Gitar, Violin, Saxophone & Vokal untuk anak di Medang, Pagedangan, Tangerang. Klasik, Pop & Jazz. Terbuka untuk anak berkebutuhan khusus.">
+  <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            cream: '#FBF7F0',
-            sand: '#F3EADB',
-            ink: '#33281F',
-            cocoa: '#5C4A38',
-            amber: { DEFAULT: '#B97F32', deep: '#96601F', soft: '#EBD9BC' },
-            rose: '#A9553F',
+            paper: '#FFF7F1',
+            ink: '#241410',
+            brand: { DEFAULT: '#E8391D', deep: '#B92408', soft: '#FBDCD3', faint: '#FDEFE9' },
           },
           fontFamily: {
-            display: ['Fraunces', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Baloo 2"', 'cursive'],
+            sans: ['Karla', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
           },
         },
       },
     };
   </script>
   <style>
-    .note-float { animation: float 6s ease-in-out infinite; }
-    .note-float-slow { animation: float 9s ease-in-out infinite; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-6deg); }
-      50% { transform: translateY(-14px) rotate(6deg); }
-    }
     html { scroll-behavior: smooth; }
+
+    /* Staggered entrance reveal (hero only, one orchestrated moment) */
+    .reveal { opacity: 0; transform: translateY(24px); animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+    .reveal-1 { animation-delay: .05s } .reveal-2 { animation-delay: .18s }
+    .reveal-3 { animation-delay: .31s } .reveal-4 { animation-delay: .44s }
+    .reveal-5 { animation-delay: .6s }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+    .note-float { animation: float 5s ease-in-out infinite; }
+    .note-float-slow { animation: float 8s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-8deg); }
+      50% { transform: translateY(-16px) rotate(8deg); }
+    }
+
+    /* Genre marquee */
+    .marquee { overflow: hidden; }
+    .marquee-track { display: flex; width: max-content; animation: marquee 26s linear infinite; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* Staff-line motif (from the logo's music-note "d") */
+    .staff-lines {
+      background-image: repeating-linear-gradient(
+        0deg,
+        rgba(232, 57, 29, .08) 0 2px,
+        transparent 2px 26px
+      );
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; animation: none; }
+      .note-float, .note-float-slow, .marquee-track { animation: none; }
+    }
   </style>
 </head>
-<body class="bg-cream font-sans text-ink antialiased">
+<body class="bg-paper font-sans text-ink antialiased">
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-50 border-b border-amber-soft/60 bg-cream/90 backdrop-blur">
-    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-      <a href="#" class="flex items-center gap-2.5">
-        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-xl text-amber-soft">♪</span>
-        <span class="font-display text-lg font-semibold leading-tight">Denting<br class="sm:hidden"> <span class="sm:ml-0">Rumah Musik</span></span>
+  <header class="sticky top-0 z-50 border-b-2 border-ink/10 bg-paper/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="#" class="flex items-center gap-3">
+        <img src="logo.png" alt="Denting Rumah Musik" class="h-11 w-11 rounded-full bg-white object-contain ring-2 ring-brand/20">
+        <span class="font-display text-xl font-bold leading-none text-brand-deep">denting<span class="block font-mono text-[10px] font-normal tracking-[0.22em] text-ink/60">RUMAH MUSIK</span></span>
       </a>
-      <div class="hidden items-center gap-8 text-sm font-medium text-cocoa md:flex">
-        <a href="#kelas" class="hover:text-ink">Kelas</a>
-        <a href="#inklusif" class="hover:text-ink">Kelas Inklusif</a>
-        <a href="#tentang" class="hover:text-ink">Tentang</a>
-        <a href="#lokasi" class="hover:text-ink">Lokasi</a>
+      <div class="hidden items-center gap-7 font-mono text-xs uppercase tracking-widest text-ink/70 md:flex">
+        <a href="#program" class="hover:text-brand">Program</a>
+        <a href="#inklusif" class="hover:text-brand">Kelas Inklusif</a>
+        <a href="#tentang" class="hover:text-brand">Tentang</a>
+        <a href="#lokasi" class="hover:text-brand">Lokasi</a>
       </div>
-      <a href="https://wa.me/62XXXXXXXXXX" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-cream transition hover:bg-cocoa">Hubungi Kami</a>
+      <a href="https://wa.me/62XXXXXXXXXX" class="rounded-full bg-brand px-5 py-2.5 font-display text-sm font-bold text-white shadow-md shadow-brand/30 transition hover:bg-brand-deep">Hubungi Kami</a>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <span aria-hidden="true" class="note-float absolute left-[6%] top-16 select-none font-display text-5xl text-amber/30">♫</span>
-    <span aria-hidden="true" class="note-float-slow absolute right-[8%] top-28 select-none font-display text-6xl text-rose/20">♪</span>
-    <span aria-hidden="true" class="note-float absolute bottom-10 left-[14%] hidden select-none font-display text-4xl text-amber/25 lg:block">♩</span>
-    <div class="mx-auto max-w-6xl px-5 pb-20 pt-16 text-center sm:pt-24">
-      <p class="mb-5 inline-block rounded-full border border-amber/40 bg-sand px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-deep">Medang · Pagedangan · Tangerang</p>
-      <h1 class="mx-auto max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
-        Les Musik untuk <span class="italic text-amber-deep">Putra-Putri</span> Anda
-      </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-cocoa sm:text-lg">
-        Di Denting Rumah Musik, setiap anak belajar mencintai musik dengan caranya sendiri:
-        dari denting piano pertama hingga tampil percaya diri di atas panggung.
-      </p>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-cocoa">
-        <span class="rounded-full bg-amber-soft px-4 py-1.5">Klasik</span>
-        <span class="rounded-full bg-amber-soft px-4 py-1.5">Pop</span>
-        <span class="rounded-full bg-amber-soft px-4 py-1.5">Jazz</span>
-      </div>
-      <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a href="https://wa.me/62XXXXXXXXXX" class="w-full rounded-full bg-amber-deep px-8 py-3.5 font-semibold text-cream shadow-lg shadow-amber/30 transition hover:bg-amber sm:w-auto">Daftar Kelas via WhatsApp</a>
-        <a href="#kelas" class="w-full rounded-full border-2 border-ink/15 px-8 py-3.5 font-semibold text-ink transition hover:border-ink/40 sm:w-auto">Lihat Pilihan Kelas</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kelas / Instruments -->
-  <section id="kelas" class="bg-sand/70 py-20">
-    <div class="mx-auto max-w-6xl px-5">
-      <div class="mb-12 text-center">
-        <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-deep">Pilihan Kelas</p>
-        <h2 class="font-display text-3xl font-semibold sm:text-4xl">Enam Instrumen, Satu Rumah</h2>
-        <p class="mx-auto mt-4 max-w-xl text-cocoa">Kurikulum disesuaikan dengan usia dan minat anak, dibimbing pengajar yang sabar dan berpengalaman.</p>
-      </div>
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-2xl border border-amber-soft bg-cream p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-          <div class="mb-4 text-4xl">🎹</div>
-          <h3 class="font-display text-xl font-semibold">Piano</h3>
-          <p class="mt-2 text-sm leading-relaxed text-cocoa">Fondasi klasik yang kuat sekaligus lagu-lagu pop favorit anak.</p>
-        </div>
-        <div class="rounded-2xl border border-amber-soft bg-cream p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-          <div class="mb-4 text-4xl">🎼</div>
-          <h3 class="font-display text-xl font-semibold">Keyboard</h3>
-          <p class="mt-2 text-sm leading-relaxed text-cocoa">Belajar aransemen modern dan iringan lagu dengan cara menyenangkan.</p>
-        </div>
-        <div class="rounded-2xl border border-amber-soft bg-cream p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-          <div class="mb-4 text-4xl">🎸</div>
-          <h3 class="font-display text-xl font-semibold">Gitar</h3>
-          <p class="mt-2 text-sm leading-relaxed text-cocoa">Dari petikan pertama hingga bermain lagu utuh, klasik maupun pop.</p>
-        </div>
-        <div class="rounded-2xl border border-amber-soft bg-cream p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-          <div class="mb-4 text-4xl">🎻</div>
-          <h3 class="font-display text-xl font-semibold">Violin</h3>
-          <p class="mt-2 text-sm leading-relaxed text-cocoa">Melatih ketelitian, postur, dan kepekaan nada sejak dini.</p>
-        </div>
-        <div class="rounded-2xl border border-amber-soft bg-cream p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-          <div class="mb-4 text-4xl">🎷</div>
-          <h3 class="font-display text-xl font-semibold">Saxophone</h3>
-          <p class="mt-2 text-sm leading-relaxed text-cocoa">Pintu masuk ke dunia jazz: ekspresif, hangat, dan penuh gaya.</p>
-        </div>
-        <div class="rounded-2xl border border-amber-soft bg-cream p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-          <div class="mb-4 text-4xl">🎤</div>
-          <h3 class="font-display text-xl font-semibold">Vokal</h3>
-          <p class="mt-2 text-sm leading-relaxed text-cocoa">Teknik bernyanyi yang sehat dan kepercayaan diri di depan audiens.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kelas Inklusif -->
-  <section id="inklusif" class="py-20">
-    <div class="mx-auto max-w-6xl px-5">
-      <div class="overflow-hidden rounded-3xl bg-ink px-7 py-12 text-center text-cream sm:px-14 sm:py-16">
-        <span class="mb-5 inline-block rounded-full bg-amber/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-soft">Kelas Inklusif</span>
-        <h2 class="mx-auto max-w-2xl font-display text-3xl font-semibold leading-snug sm:text-4xl">
-          Musik untuk <span class="italic text-amber-soft">semua</span> anak, termasuk anak berkebutuhan khusus
-        </h2>
-        <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-cream/75">
-          Kami percaya setiap anak berhak merasakan kebahagiaan bermusik. Kelas untuk anak
-          <em>special needs</em> dirancang dengan pendekatan yang sabar, ritme belajar yang
-          fleksibel, dan suasana yang aman serta menyenangkan.
+  <!-- Hero: asymmetric, type-led left, logo anchor right -->
+  <section class="staff-lines relative overflow-hidden">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-24 pt-14 lg:grid-cols-[1.2fr_1fr] lg:pt-20">
+      <div>
+        <p class="reveal reveal-1 font-mono text-xs uppercase tracking-[0.28em] text-brand-deep">Medang &bull; Pagedangan &bull; Tangerang</p>
+        <h1 class="reveal reveal-2 mt-5 font-display text-5xl font-extrabold leading-[0.98] sm:text-7xl">
+          Les musik untuk<br>
+          <span class="text-brand">putra-putri</span><br>
+          Anda<span class="text-brand">.</span>
+        </h1>
+        <p class="reveal reveal-3 mt-6 max-w-md text-lg leading-relaxed text-ink/70">
+          Dari denting piano pertama sampai percaya diri di atas panggung. Setiap anak belajar mencintai musik dengan caranya sendiri.
         </p>
-        <a href="https://wa.me/62XXXXXXXXXX" class="mt-8 inline-block rounded-full bg-amber-soft px-8 py-3.5 font-semibold text-ink transition hover:bg-cream">Konsultasikan Kebutuhan Anak Anda</a>
+        <div class="reveal reveal-4 mt-9 flex flex-col gap-3 sm:flex-row">
+          <a href="https://wa.me/62XXXXXXXXXX" class="rounded-full bg-brand px-8 py-4 text-center font-display text-lg font-bold text-white shadow-lg shadow-brand/30 transition hover:bg-brand-deep">Daftar via WhatsApp</a>
+          <a href="#program" class="rounded-full border-2 border-ink px-8 py-4 text-center font-display text-lg font-bold text-ink transition hover:bg-ink hover:text-paper">Lihat Program</a>
+        </div>
+        <p class="reveal reveal-5 mt-6 font-mono text-xs text-ink/50">6 instrumen &bull; semua usia &bull; terbuka untuk anak berkebutuhan khusus</p>
+      </div>
+      <div class="reveal reveal-3 relative mx-auto w-full max-w-sm lg:max-w-none">
+        <div class="absolute -right-8 -top-8 h-64 w-64 rounded-full bg-gradient-to-br from-brand to-brand-deep opacity-15 blur-2xl"></div>
+        <div class="relative rotate-2 rounded-[2rem] border-2 border-ink/10 bg-white p-8 shadow-2xl shadow-brand/20 transition hover:rotate-0">
+          <img src="logo.png" alt="Logo Denting Rumah Musik" class="w-full object-contain">
+        </div>
+        <span aria-hidden="true" class="note-float absolute -left-6 top-6 select-none font-display text-5xl text-brand">&#9835;</span>
+        <span aria-hidden="true" class="note-float-slow absolute -bottom-4 right-2 select-none font-display text-4xl text-brand-deep/60">&#9834;</span>
       </div>
     </div>
   </section>
 
-  <!-- Tentang / Why us -->
-  <section id="tentang" class="pb-20">
+  <!-- Genre marquee band -->
+  <div class="marquee border-y-2 border-ink bg-brand py-3 text-white" aria-hidden="true">
+    <div class="marquee-track font-mono text-sm font-bold uppercase tracking-[0.3em]">
+      <span class="flex shrink-0 gap-10 pr-10">
+        <span>Klasik &#10022;</span><span>Pop &#10022;</span><span>Jazz &#10022;</span>
+        <span>Piano &#10022;</span><span>Keyboard &#10022;</span><span>Gitar &#10022;</span>
+        <span>Violin &#10022;</span><span>Saxophone &#10022;</span><span>Vokal &#10022;</span>
+      </span>
+      <span class="flex shrink-0 gap-10 pr-10">
+        <span>Klasik &#10022;</span><span>Pop &#10022;</span><span>Jazz &#10022;</span>
+        <span>Piano &#10022;</span><span>Keyboard &#10022;</span><span>Gitar &#10022;</span>
+        <span>Violin &#10022;</span><span>Saxophone &#10022;</span><span>Vokal &#10022;</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Program: editorial numbered rows, no card grid -->
+  <section id="program" class="py-20">
     <div class="mx-auto max-w-6xl px-5">
-      <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div class="mb-12 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-deep">Tentang Kami</p>
-          <h2 class="font-display text-3xl font-semibold leading-snug sm:text-4xl">Rumah kedua untuk bertumbuh bersama musik</h2>
-          <p class="mt-5 leading-relaxed text-cocoa">
-            Berlokasi di Medang, Pagedangan, dekat kawasan Gading Serpong, Denting Rumah Musik
-            hadir sebagai tempat belajar yang hangat seperti di rumah sendiri. Bukan sekadar les,
-            tetapi perjalanan menumbuhkan disiplin, kreativitas, dan kepercayaan diri anak.
-          </p>
-          <ul class="mt-8 space-y-4">
-            <li class="flex items-start gap-4">
-              <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-soft font-display font-semibold text-amber-deep">1</span>
-              <div>
-                <p class="font-semibold">Pengajar sabar &amp; berpengalaman</p>
-                <p class="text-sm text-cocoa">Terbiasa mengajar anak-anak dari berbagai usia dan kebutuhan.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-soft font-display font-semibold text-amber-deep">2</span>
-              <div>
-                <p class="font-semibold">Tiga aliran musik</p>
-                <p class="text-sm text-cocoa">Klasik untuk fondasi, pop untuk kesenangan, jazz untuk eksplorasi.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-soft font-display font-semibold text-amber-deep">3</span>
-              <div>
-                <p class="font-semibold">Suasana rumah yang hangat</p>
-                <p class="text-sm text-cocoa">Anak belajar tanpa tekanan, orang tua tenang menunggu dengan nyaman.</p>
-              </div>
-            </li>
-          </ul>
+          <p class="font-mono text-xs uppercase tracking-[0.28em] text-brand-deep">Program</p>
+          <h2 class="mt-2 font-display text-4xl font-extrabold sm:text-5xl">Enam pintu masuk<br>ke dunia musik</h2>
         </div>
+        <p class="max-w-xs text-sm leading-relaxed text-ink/60">Kurikulum mengikuti usia dan minat anak, dibimbing pengajar yang sabar dan berpengalaman.</p>
+      </div>
+
+      <div class="border-t-2 border-ink">
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+          <span class="font-mono text-sm text-brand-deep">01</span>
+          <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Piano</span>
+          <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Fondasi klasik yang kuat sekaligus lagu pop favorit anak.</span>
+        </a>
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+          <span class="font-mono text-sm text-brand-deep">02</span>
+          <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Keyboard</span>
+          <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Aransemen modern dan iringan lagu dengan cara menyenangkan.</span>
+        </a>
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+          <span class="font-mono text-sm text-brand-deep">03</span>
+          <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Gitar</span>
+          <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Dari petikan pertama hingga memainkan lagu utuh.</span>
+        </a>
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+          <span class="font-mono text-sm text-brand-deep">04</span>
+          <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Violin</span>
+          <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Melatih ketelitian, postur, dan kepekaan nada sejak dini.</span>
+        </a>
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+          <span class="font-mono text-sm text-brand-deep">05</span>
+          <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Saxophone</span>
+          <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Pintu masuk ke dunia jazz: ekspresif, hangat, penuh gaya.</span>
+        </a>
+        <a href="https://wa.me/62XXXXXXXXXX" class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-b-2 border-ink/15 py-6 transition hover:bg-brand-faint sm:gap-8">
+          <span class="font-mono text-sm text-brand-deep">06</span>
+          <span class="font-display text-3xl font-bold transition group-hover:text-brand sm:text-4xl">Vokal</span>
+          <span class="hidden max-w-xs text-right text-sm text-ink/60 sm:block">Teknik bernyanyi yang sehat dan percaya diri di depan audiens.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kelas Inklusif: bold brand block, asymmetric -->
+  <section id="inklusif" class="border-y-2 border-ink bg-brand text-white">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-20 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-[0.28em] text-white/70">Kelas Inklusif</p>
+        <h2 class="mt-4 font-display text-4xl font-extrabold leading-tight sm:text-6xl">
+          Musik untuk<br><span class="italic underline decoration-4 underline-offset-8">semua</span> anak
+        </h2>
+      </div>
+      <div>
+        <p class="leading-relaxed text-white/85">
+          Kami percaya setiap anak berhak merasakan kebahagiaan bermusik. Kelas untuk anak berkebutuhan khusus dirancang dengan pendekatan yang sabar, ritme belajar yang fleksibel, dan suasana yang aman serta menyenangkan.
+        </p>
+        <a href="https://wa.me/62XXXXXXXXXX" class="mt-7 inline-block rounded-full bg-white px-7 py-3.5 font-display font-bold text-brand-deep transition hover:bg-brand-soft">Konsultasikan Kebutuhan Anak Anda</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="staff-lines py-20">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
         <div class="relative">
-          <div class="flex aspect-[4/3] items-center justify-center rounded-3xl bg-sand">
-            <div class="text-center">
-              <span class="font-display text-7xl text-amber/50">♪ ♫ ♩</span>
-              <p class="mt-4 text-sm font-medium text-cocoa/60">Foto studio / kegiatan kelas<br>(dari Instagram @dentingrumahmusik)</p>
-            </div>
+          <div class="-rotate-2 rounded-[2rem] border-2 border-ink bg-white p-8 shadow-xl">
+            <p class="font-mono text-xs uppercase tracking-[0.28em] text-brand-deep">Rumah, bukan sekadar les</p>
+            <p class="mt-4 font-display text-3xl font-bold leading-snug">"Tempat anak bertumbuh bersama musik, dengan hangat seperti di rumah sendiri."</p>
           </div>
-          <div class="absolute -bottom-5 -left-5 hidden rounded-2xl bg-cream p-5 shadow-lg sm:block">
-            <p class="font-display text-2xl font-semibold text-amber-deep">6 Instrumen</p>
-            <p class="text-xs font-medium text-cocoa">Piano · Keyboard · Gitar · Violin · Saxophone · Vokal</p>
+        </div>
+        <div>
+          <h2 class="font-display text-4xl font-extrabold sm:text-5xl">Kenapa Denting?</h2>
+          <div class="mt-8 space-y-7">
+            <div class="flex gap-5">
+              <span class="font-mono text-sm font-bold text-brand-deep">a.</span>
+              <div>
+                <p class="font-display text-xl font-bold">Pengajar sabar &amp; berpengalaman</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink/60">Terbiasa mengajar anak dari berbagai usia dan kebutuhan.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <span class="font-mono text-sm font-bold text-brand-deep">b.</span>
+              <div>
+                <p class="font-display text-xl font-bold">Tiga aliran musik</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink/60">Klasik untuk fondasi, pop untuk kesenangan, jazz untuk eksplorasi.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <span class="font-mono text-sm font-bold text-brand-deep">c.</span>
+              <div>
+                <p class="font-display text-xl font-bold">Lokasi strategis</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink/60">Di Medang, Pagedangan, mudah dijangkau dari Gading Serpong &amp; BSD.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -199,23 +236,22 @@
   </section>
 
   <!-- Lokasi -->
-  <section id="lokasi" class="bg-sand/70 py-20">
+  <section id="lokasi" class="border-t-2 border-ink/10 py-20">
     <div class="mx-auto max-w-6xl px-5">
-      <div class="grid items-center gap-10 lg:grid-cols-2">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
         <div>
-          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-deep">Lokasi</p>
-          <h2 class="font-display text-3xl font-semibold sm:text-4xl">Kunjungi Rumah Kami</h2>
-          <p class="mt-4 leading-relaxed text-cocoa">
-            Medang, Kec. Pagedangan, Kabupaten Tangerang, Banten<br>
-            <span class="text-sm text-cocoa/70">(mudah dijangkau dari Gading Serpong &amp; BSD)</span>
+          <p class="font-mono text-xs uppercase tracking-[0.28em] text-brand-deep">Lokasi</p>
+          <h2 class="mt-2 font-display text-4xl font-extrabold sm:text-5xl">Main ke rumah kami</h2>
+          <p class="mt-5 leading-relaxed text-ink/70">
+            Medang, Kec. Pagedangan, Kabupaten Tangerang, Banten
           </p>
-          <div class="mt-6 space-y-2 text-sm text-cocoa">
-            <p><span class="font-semibold text-ink">Jam operasional:</span> [sesuaikan, mis. Senin-Sabtu, 10.00-19.00]</p>
-            <p><span class="font-semibold text-ink">Instagram:</span> <a href="https://www.instagram.com/dentingrumahmusik/" class="font-semibold text-amber-deep underline underline-offset-2">@dentingrumahmusik</a></p>
+          <div class="mt-5 space-y-2 font-mono text-sm text-ink/70">
+            <p><span class="font-bold text-ink">Jam:</span> [sesuaikan, mis. Senin-Sabtu, 10.00-19.00]</p>
+            <p><span class="font-bold text-ink">IG:</span> <a href="https://www.instagram.com/dentingrumahmusik/" class="text-brand-deep underline underline-offset-4">@dentingrumahmusik</a></p>
           </div>
-          <a href="https://www.google.com/maps/place/Denting+Rumah+Musik/@-6.2626558,106.6107384,17z" class="mt-7 inline-block rounded-full bg-ink px-7 py-3 text-sm font-semibold text-cream transition hover:bg-cocoa">Buka di Google Maps</a>
+          <a href="https://www.google.com/maps/place/Denting+Rumah+Musik/@-6.2626558,106.6107384,17z" class="mt-7 inline-block rounded-full border-2 border-ink px-7 py-3 font-display font-bold text-ink transition hover:bg-ink hover:text-paper">Buka di Google Maps</a>
         </div>
-        <div class="overflow-hidden rounded-3xl border border-amber-soft shadow-sm">
+        <div class="overflow-hidden rounded-[2rem] border-2 border-ink shadow-xl">
           <iframe
             title="Peta lokasi Denting Rumah Musik"
             src="https://maps.google.com/maps?q=-6.2626558,106.6107384&z=16&output=embed"
@@ -228,21 +264,21 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20">
-    <div class="mx-auto max-w-3xl px-5 text-center">
-      <span aria-hidden="true" class="font-display text-4xl text-amber/40">♫</span>
-      <h2 class="mt-3 font-display text-3xl font-semibold leading-snug sm:text-4xl">Mulai perjalanan musik putra-putri Anda hari ini</h2>
-      <p class="mx-auto mt-4 max-w-xl text-cocoa">Hubungi kami untuk informasi jadwal, biaya, dan kelas yang paling cocok untuk buah hati Anda.</p>
-      <a href="https://wa.me/62XXXXXXXXXX" class="mt-8 inline-block rounded-full bg-amber-deep px-10 py-4 font-semibold text-cream shadow-lg shadow-amber/30 transition hover:bg-amber">Chat via WhatsApp</a>
+  <section class="staff-lines border-t-2 border-ink/10 py-24 text-center">
+    <div class="mx-auto max-w-3xl px-5">
+      <span aria-hidden="true" class="font-display text-5xl text-brand">&#9835;</span>
+      <h2 class="mt-4 font-display text-4xl font-extrabold leading-tight sm:text-6xl">Mulai dari satu<br><span class="text-brand">denting</span> hari ini</h2>
+      <p class="mx-auto mt-5 max-w-md text-ink/70">Tanyakan jadwal, biaya, dan kelas yang paling cocok untuk buah hati Anda.</p>
+      <a href="https://wa.me/62XXXXXXXXXX" class="mt-9 inline-block rounded-full bg-brand px-12 py-5 font-display text-xl font-bold text-white shadow-xl shadow-brand/30 transition hover:bg-brand-deep">Chat via WhatsApp</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-amber-soft/60 bg-cream">
-    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-cocoa sm:flex-row">
-      <p class="flex items-center gap-2 font-display font-semibold text-ink"><span class="text-amber-deep">♪</span> Denting Rumah Musik</p>
-      <p>Les Musik untuk Putra-Putri Anda · Klasik, Pop &amp; Jazz</p>
-      <a href="https://www.instagram.com/dentingrumahmusik/" class="font-semibold text-amber-deep hover:underline">Instagram</a>
+  <footer class="border-t-2 border-ink bg-ink text-paper">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row">
+      <p class="flex items-center gap-2.5 font-display font-bold"><img src="logo.png" alt="" class="h-8 w-8 rounded-full bg-white object-contain">Denting Rumah Musik</p>
+      <p class="font-mono text-xs uppercase tracking-widest text-paper/60">Klasik &bull; Pop &bull; Jazz</p>
+      <a href="https://www.instagram.com/dentingrumahmusik/" class="font-mono text-xs uppercase tracking-widest text-brand-soft hover:text-white">Instagram</a>
     </div>
   </footer>
 
