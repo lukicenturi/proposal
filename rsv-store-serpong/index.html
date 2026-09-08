@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>RSV Store Serpong: Center of Your Riding Needs</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&family=Saira:wght@400;500;600&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0A0A0C',
+        carbon: '#131318',
+        steel: '#1C1C23',
+        seam: '#2A2A33',
+        chrome: '#C9C9D2',
+        smoke: '#8E8E9A',
+        signal: '#E62329',
+        flare: '#FF3B41',
+      },
+      fontFamily: {
+        display: ['"Saira Condensed"', 'sans-serif'],
+        body: ['Saira', 'sans-serif'],
+        label: ['"Chakra Petch"', 'sans-serif'],
+      },
+    },
+  },
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #0A0A0C; }
+
+  /* brushed metal stripes, echoing the logo */
+  .stripes {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(201,201,210,0.10) 0px, rgba(201,201,210,0.10) 2px,
+      transparent 2px, transparent 5px,
+      rgba(201,201,210,0.04) 5px, rgba(201,201,210,0.04) 7px,
+      transparent 7px, transparent 14px
+    );
+  }
+  .hero-atmo {
+    background:
+      radial-gradient(900px 480px at 82% 8%, rgba(230,35,41,0.16), transparent 60%),
+      radial-gradient(700px 420px at 8% 92%, rgba(201,201,210,0.05), transparent 60%),
+      linear-gradient(180deg, #0A0A0C 0%, #101014 55%, #0A0A0C 100%);
+  }
+  .clip-slash { clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%); }
+  .clip-slash-r { clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%); }
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #E62329;
+  }
+
+  /* staggered entrance */
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes wipe { from { opacity: 0; clip-path: polygon(0 0, 12% 0, 0% 100%, 0 100%); } to { opacity: 1; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+  .rise { opacity: 0; animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  .wipe { opacity: 0; animation: wipe 1s cubic-bezier(.3,.7,.2,1) forwards; }
+  .d1 { animation-delay: .1s; } .d2 { animation-delay: .25s; } .d3 { animation-delay: .4s; }
+  .d4 { animation-delay: .55s; } .d5 { animation-delay: .7s; } .d6 { animation-delay: .85s; }
+
+  /* scroll reveals */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* brand marquee */
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-track { animation: marquee 26s linear infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise, .wipe { animation: none; opacity: 1; clip-path: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .marquee-track { animation: none; }
+  }
+</style>
+</head>
+<body class="font-body text-chrome antialiased overflow-x-hidden">
+
+<!-- icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.6-.3Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.3-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4 1.2-.1 1.6-.1 4.8-.1Zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1Zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M19.6 7.3a5.1 5.1 0 0 1-3.1-1V14a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.1a2.9 2.9 0 1 0 2 2.8V2h3a5.1 5.1 0 0 0 3.1 4.2v3.1Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18.2A8.2 8.2 0 1 1 12 3.8a8.2 8.2 0 0 1 0 16.4Zm.9-13.7h-1.8v6.2l5.4 3.2.9-1.5-4.5-2.7V6.5Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5.5v5.2c0 5 3.4 9.6 8 10.8 4.6-1.2 8-5.8 8-10.8V5.5L12 2Zm-1.4 14.5-3.5-3.5 1.4-1.4 2.1 2.1 5-5 1.4 1.4-6.4 6.4Z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path fill="currentColor" d="M17 7V6a5 5 0 0 0-10 0v1H4v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7h-3ZM9 6a3 3 0 1 1 6 0v1H9V6Zm9 14H6V9h1v2h2V9h6v2h2V9h1v11Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M5 12h12.2l-5.6-5.6L13 5l8 7-8 7-1.4-1.4 5.6-5.6H5v-2Z"/></symbol>
+  <symbol id="i-spray" viewBox="0 0 24 24"><path fill="currentColor" d="M10 4h4v3h-4V4Zm5 5H9a2 2 0 0 0-2 2v9h10v-9a2 2 0 0 0-2-2Zm0 9H9v-7h6v7ZM16 2h2v2h-2V2Zm3 3h2v2h-2V5Zm-3 2h2v2h-2V7ZM19 9h2v2h-2V9Z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path fill="currentColor" d="M10.6 13.4a1 1 0 0 0 1.4 0l4.6-4.6a3 3 0 0 0-4.2-4.2L10 7l1.4 1.4 2.4-2.4a1 1 0 0 1 1.4 1.4l-4.6 4.6a1 1 0 0 0 0 1.4Zm2.8-2.8a1 1 0 0 0-1.4 0l-4.6 4.6a3 3 0 1 0 4.2 4.2L14 17l-1.4-1.4-2.4 2.4a1 1 0 0 1-1.4-1.4l4.6-4.6a1 1 0 0 0 0-1.4Z"/></symbol>
+</svg>
+
+<!-- ===== HEADER ===== -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/85 backdrop-blur border-b border-seam/60">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="assets/logo.png" alt="RSV Store Serpong logo" class="h-10 w-10 rounded" width="40" height="40">
+      <div class="leading-none">
+        <span class="font-display font-800 italic text-white text-lg tracking-wide block" style="font-weight:800">RSV STORE</span>
+        <span class="font-label text-signal text-[10px] tracking-[0.35em]">SERPONG</span>
+      </div>
+    </a>
+    <a href="https://wa.me/6285318172500?text=Halo%20RSV%20Store%20Serpong%2C%20saya%20mau%20tanya%20soal%20helm%20dan%20riding%20gear."
+       class="inline-flex items-center gap-2 bg-signal hover:bg-flare transition-colors text-white font-label text-xs sm:text-sm font-semibold tracking-wider px-4 py-2.5 clip-slash">
+      <svg class="w-4 h-4"><use href="#i-wa"/></svg>
+      CHAT US
+    </a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="top" class="relative hero-atmo stripes pt-28 pb-14 sm:pt-36 sm:pb-24">
+  <!-- diagonal red slash accents -->
+  <div class="absolute top-0 right-0 w-1/2 h-full pointer-events-none opacity-60"
+       style="background: linear-gradient(115deg, transparent 55%, rgba(230,35,41,0.07) 55%, rgba(230,35,41,0.07) 72%, transparent 72%);"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <p class="rise d1 font-label text-[11px] sm:text-xs tracking-[0.4em] text-smoke flex items-center gap-2">
+        <span class="inline-block w-8 h-[2px] bg-signal"></span>
+        OFFICIAL RSV STORE · GADING SERPONG
+      </p>
+      <h1 class="rise d2 font-display italic uppercase leading-[0.86] mt-5" style="font-weight:900">
+        <span class="block text-white text-6xl sm:text-8xl">For every</span>
+        <span class="block text-outline text-6xl sm:text-8xl" style="-webkit-text-stroke-width:3px">ride.</span>
+      </h1>
+      <p class="rise d3 mt-6 max-w-lg text-smoke text-base sm:text-lg">
+        Center of your riding needs. Helmets fitted in store, riding apparel, gloves, visors, and free RSV helmet wash, all under one roof on Jl. Boulevard iL Lago.
+      </p>
+
+      <div class="rise d4 mt-7 flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-2 bg-carbon border border-seam px-3 py-2 font-label text-xs tracking-wider">
+          <svg class="w-4 h-4 text-amber-400"><use href="#i-star"/></svg>
+          <span class="text-white font-semibold">4.7</span>
+          <span class="text-smoke">on Google (116 reviews)</span>
+        </span>
+        <span class="inline-flex items-center gap-2 bg-carbon border border-seam px-3 py-2 font-label text-xs tracking-wider">
+          <svg class="w-4 h-4 text-signal"><use href="#i-clock"/></svg>
+          <span class="text-smoke">Open daily</span>
+          <span class="text-white font-semibold">09.00–21.00</span>
+        </span>
+      </div>
+
+      <div class="rise d5 mt-8 flex flex-wrap gap-4">
+        <a href="https://wa.me/6285318172500?text=Halo%20RSV%20Store%20Serpong%2C%20saya%20mau%20tanya%20soal%20helm%20dan%20riding%20gear."
+           class="inline-flex items-center gap-3 bg-signal hover:bg-flare transition-colors text-white font-label font-semibold tracking-wider text-sm px-7 py-4 clip-slash">
+          <svg class="w-5 h-5"><use href="#i-wa"/></svg>
+          CHAT ON WHATSAPP
+        </a>
+        <a href="#visit"
+           class="inline-flex items-center gap-3 border border-chrome/40 hover:border-white hover:text-white transition-colors font-label font-semibold tracking-wider text-sm px-7 py-4 clip-slash-r">
+          <svg class="w-5 h-5"><use href="#i-pin"/></svg>
+          VISIT THE STORE
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 relative">
+      <div class="wipe d4 relative">
+        <div class="absolute -inset-2 translate-x-3 translate-y-3 border border-signal/50 clip-slash pointer-events-none"></div>
+        <img src="assets/interior.jpg" alt="Inside RSV Store Serpong: helmet displays and service area"
+             class="clip-slash w-full h-72 sm:h-96 object-cover" loading="eager" width="1600" height="900">
+        <div class="absolute inset-0 clip-slash bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-6 right-4 flex items-end justify-between gap-3">
+          <p class="font-label text-[10px] tracking-[0.3em] text-chrome">INSIDE THE STORE · FITTING ROOM · SERVICE AREA</p>
+        </div>
+      </div>
+      <div class="rise d6 absolute -bottom-8 -left-2 sm:-left-8 bg-carbon border border-seam px-5 py-4 shadow-2xl shadow-black/60">
+        <p class="font-label text-[10px] tracking-[0.3em] text-smoke">RSV STORE NETWORK</p>
+        <p class="font-display italic uppercase text-white text-xl mt-1" style="font-weight:800">Jkt · Bdg · Sby · Mdn · Plm · Tgn</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRAND MARQUEE ===== -->
+<div class="border-y border-seam bg-carbon overflow-hidden py-4 select-none" aria-hidden="true">
+  <div class="marquee-track flex whitespace-nowrap w-max">
+    <div class="flex items-center">
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">RSV Helmets</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Respiro</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Retouch</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Blaise</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Tracker</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Prostreet</span><span class="text-signal mx-2">///</span>
+    </div>
+    <div class="flex items-center">
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">RSV Helmets</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Respiro</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Retouch</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Blaise</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Tracker</span><span class="text-signal mx-2">///</span>
+      <span class="font-display italic uppercase text-2xl text-white/90 mx-6" style="font-weight:800">Prostreet</span><span class="text-signal mx-2">///</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LINEUP ===== -->
+<section class="relative py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="reveal flex items-end justify-between gap-6 flex-wrap">
+      <div>
+        <p class="font-label text-xs tracking-[0.4em] text-signal">WHAT'S IN STORE</p>
+        <h2 class="font-display italic uppercase text-white text-4xl sm:text-6xl leading-none mt-3" style="font-weight:900">The lineup</h2>
+      </div>
+      <p class="max-w-sm text-smoke text-sm">From daily commutes to Sunday long rides, the store is stocked wall to wall. Try it on, get fitted, ride out.</p>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <!-- Helmets: big card with product image -->
+      <div class="reveal md:col-span-7 relative bg-carbon border border-seam overflow-hidden group">
+        <img src="assets/helmet-sv300.jpg" alt="RSV SV300 helmet, white glossy"
+             class="w-full h-64 sm:h-80 object-cover object-center group-hover:scale-[1.03] transition-transform duration-700" loading="lazy" width="1000" height="1000">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <p class="font-label text-[10px] tracking-[0.35em] text-signal">01</p>
+          <h3 class="font-display italic uppercase text-white text-3xl" style="font-weight:800">Helmets</h3>
+          <p class="text-smoke text-sm mt-1 max-w-md">Full face, open face, and modular from the RSV range. Fitted in store, so the size is right the first time.</p>
+        </div>
+      </div>
+
+      <!-- Apparel -->
+      <div class="reveal md:col-span-5 relative bg-steel border border-seam p-6 flex flex-col justify-between min-h-[16rem]">
+        <div class="stripes absolute inset-0 opacity-40 pointer-events-none"></div>
+        <p class="font-label text-[10px] tracking-[0.35em] text-signal relative">02</p>
+        <div class="relative">
+          <h3 class="font-display italic uppercase text-white text-3xl" style="font-weight:800">Riding apparel</h3>
+          <p class="text-smoke text-sm mt-2">Respiro jackets, vests, and pants built for the commute: windproof, breathable, and made to be worn every day.</p>
+          <ul class="mt-4 space-y-2 text-sm text-chrome">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-signal"><use href="#i-shield"/></svg> Jackets and windproof vests</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-signal"><use href="#i-shield"/></svg> Riding pants and base layers</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gloves & accessories with photo -->
+      <div class="reveal md:col-span-5 relative bg-carbon border border-seam overflow-hidden group">
+        <img src="assets/gear-wall.jpg" alt="Gloves and accessories wall at RSV Store Serpong"
+             class="w-full h-64 sm:h-80 object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" loading="lazy" width="675" height="1200">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <p class="font-label text-[10px] tracking-[0.35em] text-signal">03</p>
+          <h3 class="font-display italic uppercase text-white text-3xl" style="font-weight:800">Gloves &amp; gear</h3>
+          <p class="text-smoke text-sm mt-1">Gloves, bags, and riding accessories stocked deep on the wall.</p>
+        </div>
+      </div>
+
+      <!-- Parts & intercom -->
+      <div class="reveal md:col-span-7 relative bg-steel border border-seam p-6 flex flex-col justify-between min-h-[16rem]">
+        <div class="stripes absolute inset-0 opacity-40 pointer-events-none"></div>
+        <p class="font-label text-[10px] tracking-[0.35em] text-signal relative">04</p>
+        <div class="relative">
+          <h3 class="font-display italic uppercase text-white text-3xl" style="font-weight:800">Visors, intercoms &amp; parts</h3>
+          <p class="text-smoke text-sm mt-2">Keep the helmet you love riding. Original visors, spare padding, intercoms, and small parts, with staff who actually know what fits what.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="font-label text-[11px] tracking-wider border border-seam bg-carbon px-3 py-1.5">VISORS</span>
+            <span class="font-label text-[11px] tracking-wider border border-seam bg-carbon px-3 py-1.5">INTERCOMS</span>
+            <span class="font-label text-[11px] tracking-wider border border-seam bg-carbon px-3 py-1.5">PADDING &amp; FOAM</span>
+            <span class="font-label text-[11px] tracking-wider border border-seam bg-carbon px-3 py-1.5">SPARE PARTS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FREE HELMET WASH ===== -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-signal via-[#B3181D] to-[#7E1013]"></div>
+  <div class="absolute inset-0 stripes opacity-30"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 grid md:grid-cols-12 gap-8 items-center">
+    <div class="reveal md:col-span-8">
+      <p class="font-label text-xs tracking-[0.4em] text-white/70 flex items-center gap-2">
+        <svg class="w-4 h-4"><use href="#i-spray"/></svg>
+        OWN AN RSV HELMET?
+      </p>
+      <h2 class="font-display italic uppercase text-white leading-[0.9] text-4xl sm:text-6xl mt-3" style="font-weight:900">
+        Free helmet wash.<br>Every visit.
+      </h2>
+      <p class="text-white/85 mt-4 max-w-xl">
+        Bring your RSV helmet to the store and get it washed free: clean, fresh, and fragrant while you browse. Need more? Ask about deep cleaning and interior refresh. Riders in our Google reviews keep coming back for this.
+      </p>
+    </div>
+    <div class="reveal md:col-span-4 md:justify-self-end">
+      <a href="https://wa.me/6285318172500?text=Halo%20RSV%20Store%20Serpong%2C%20saya%20mau%20tanya%20soal%20cuci%20helm%20RSV."
+         class="inline-flex items-center gap-3 bg-ink hover:bg-black transition-colors text-white font-label font-semibold tracking-wider text-sm px-7 py-4 clip-slash">
+        <svg class="w-5 h-5 text-signal"><use href="#i-wa"/></svg>
+        ASK ABOUT HELMET CARE
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="py-16 sm:py-24 bg-ink">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="reveal flex items-end justify-between gap-6 flex-wrap">
+      <div>
+        <p class="font-label text-xs tracking-[0.4em] text-signal">STRAIGHT FROM GOOGLE REVIEWS</p>
+        <h2 class="font-display italic uppercase text-white text-4xl sm:text-6xl leading-none mt-3" style="font-weight:900">Riders talk</h2>
+      </div>
+      <a href="https://maps.app.goo.gl/9Qb8iGVWVbGgH6m87" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 border border-seam bg-carbon px-4 py-3">
+        <svg class="w-5 h-5 text-amber-400"><use href="#i-star"/></svg>
+        <span class="text-white font-semibold">4.7</span>
+        <span class="text-smoke text-sm">· 116 Google reviews</span>
+      </a>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-5">
+      <figure class="reveal bg-carbon border border-seam p-6 flex flex-col">
+        <div class="flex text-amber-400 gap-1" aria-label="5 stars">
+          <svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg>
+        </div>
+        <blockquote class="mt-4 text-chrome text-sm leading-relaxed flex-1">
+          "Bintang 10 ✨ Kakaknya baik bgt, penjelasannya top, product knowledge nya cakep, store juga nyaman bgt dan komplit. Kerennya RSV bisa cuci gratis sampe disaranin deep clean karena kotor. Gak nyesel bgt deh ambil brand ini."
+        </blockquote>
+        <figcaption class="mt-5 pt-4 border-t border-seam">
+          <p class="text-white font-semibold text-sm">Kresna Nugraha Susetyo</p>
+          <p class="font-label text-[10px] tracking-[0.25em] text-smoke mt-1">GOOGLE REVIEW</p>
+        </figcaption>
+      </figure>
+
+      <figure class="reveal bg-carbon border border-seam p-6 flex flex-col">
+        <div class="flex text-amber-400 gap-1" aria-label="5 stars">
+          <svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg>
+        </div>
+        <blockquote class="mt-4 text-chrome text-sm leading-relaxed flex-1">
+          "Di sana dilayani sama Mas Ibnu, ramah banget, komunikatif, dan super membantu. Helm saya dibantu sampai ukurannya pas dan sesuai yang saya inginkan. Pelayanannya top, solusi cepat, nggak ribet. RSV the best banget!"
+        </blockquote>
+        <figcaption class="mt-5 pt-4 border-t border-seam">
+          <p class="text-white font-semibold text-sm">Muhamad Awaludin</p>
+          <p class="font-label text-[10px] tracking-[0.25em] text-smoke mt-1">GOOGLE REVIEW</p>
+        </figcaption>
+      </figure>
+
+      <figure class="reveal bg-carbon border border-seam p-6 flex flex-col">
+        <div class="flex text-amber-400 gap-1" aria-label="5 stars">
+          <svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg>
+        </div>
+        <blockquote class="mt-4 text-chrome text-sm leading-relaxed flex-1">
+          "Mas nya ramah, bisa cuci helm gratis, bersih banget cuci nya + wangi lagiiii. Oiya barang-barang nya lengkap poll. Mantap deh pokok nya, tetap jaga pelayanan nya ya mas."
+        </blockquote>
+        <figcaption class="mt-5 pt-4 border-t border-seam">
+          <p class="text-white font-semibold text-sm">Boriston Siahaan</p>
+          <p class="font-label text-[10px] tracking-[0.25em] text-smoke mt-1">GOOGLE REVIEW</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHOP ONLINE ===== -->
+<section class="py-16 sm:py-20 bg-carbon border-y border-seam relative overflow-hidden">
+  <div class="stripes absolute inset-0 opacity-30 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="reveal">
+      <p class="font-label text-xs tracking-[0.4em] text-signal">CAN'T MAKE IT TO THE STORE?</p>
+      <h2 class="font-display italic uppercase text-white text-4xl sm:text-5xl leading-none mt-3" style="font-weight:900">Shop online, ship anywhere</h2>
+      <p class="text-smoke text-sm mt-3 max-w-lg">The same store, on your favorite marketplace. Official RSV Store Serpong accounts:</p>
+    </div>
+    <div class="reveal mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="https://tokopedia.link/NI3isfrH1Ob" target="_blank" rel="noopener"
+         class="group bg-ink border border-seam hover:border-[#03AC0E] transition-colors p-5 flex flex-col gap-3">
+        <svg class="w-6 h-6 text-[#03AC0E]"><use href="#i-bag"/></svg>
+        <div>
+          <p class="text-white font-semibold">Tokopedia</p>
+          <p class="font-label text-[10px] tracking-[0.25em] text-smoke mt-1 group-hover:text-chrome">RSV STORE SERPONG</p>
+        </div>
+      </a>
+      <a href="https://id.shp.ee/w1zRwvR" target="_blank" rel="noopener"
+         class="group bg-ink border border-seam hover:border-[#EE4D2D] transition-colors p-5 flex flex-col gap-3">
+        <svg class="w-6 h-6 text-[#EE4D2D]"><use href="#i-bag"/></svg>
+        <div>
+          <p class="text-white font-semibold">Shopee</p>
+          <p class="font-label text-[10px] tracking-[0.25em] text-smoke mt-1 group-hover:text-chrome">RSV STORE SERPONG</p>
+        </div>
+      </a>
+      <a href="https://www.tiktok.com/@rsvstoreserpong" target="_blank" rel="noopener"
+         class="group bg-ink border border-seam hover:border-white transition-colors p-5 flex flex-col gap-3">
+        <svg class="w-6 h-6 text-white"><use href="#i-tiktok"/></svg>
+        <div>
+          <p class="text-white font-semibold">TikTok Shop</p>
+          <p class="font-label text-[10px] tracking-[0.25em] text-smoke mt-1 group-hover:text-chrome">LIVE EVERY DAY</p>
+        </div>
+      </a>
+      <a href="https://linktr.ee/RSVStoreSerpong" target="_blank" rel="noopener"
+         class="group bg-ink border border-seam hover:border-signal transition-colors p-5 flex flex-col gap-3">
+        <svg class="w-6 h-6 text-signal"><use href="#i-link"/></svg>
+        <div>
+          <p class="text-white font-semibold">Linktree</p>
+          <p class="font-label text-[10px] tracking-[0.25em] text-smoke mt-1 group-hover:text-chrome">ALL LINKS</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISIT ===== -->
+<section id="visit" class="py-16 sm:py-24 hero-atmo stripes">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="reveal lg:col-span-5 relative order-2 lg:order-1">
+      <div class="absolute -inset-2 -translate-x-3 translate-y-3 border border-signal/50 clip-slash-r pointer-events-none"></div>
+      <img src="assets/storefront.jpg" alt="RSV Store Serpong storefront on Jl. Boulevard iL Lago"
+           class="clip-slash-r w-full h-80 sm:h-[28rem] object-cover object-center" loading="lazy" width="900" height="1200">
+    </div>
+    <div class="reveal lg:col-span-7 order-1 lg:order-2">
+      <p class="font-label text-xs tracking-[0.4em] text-signal">COME SAY HI</p>
+      <h2 class="font-display italic uppercase text-white text-4xl sm:text-6xl leading-none mt-3" style="font-weight:900">Visit the store</h2>
+      <p class="text-smoke mt-4 max-w-lg">Right on the main boulevard, next to Modena Home Center. Park out front, walk in, and try things on. The team will sort out the rest.</p>
+
+      <ul class="mt-8 space-y-5">
+        <li class="flex gap-4">
+          <span class="shrink-0 w-10 h-10 bg-carbon border border-seam flex items-center justify-center"><svg class="w-5 h-5 text-signal"><use href="#i-pin"/></svg></span>
+          <div>
+            <p class="text-white font-semibold">Ruko Mendrisio 3, Jl. Boulevard iL Lago No.33 Blok B</p>
+            <p class="text-smoke text-sm">Cihuni, Kec. Pagedangan, Kabupaten Tangerang, Banten 15332</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="shrink-0 w-10 h-10 bg-carbon border border-seam flex items-center justify-center"><svg class="w-5 h-5 text-signal"><use href="#i-clock"/></svg></span>
+          <div>
+            <p class="text-white font-semibold">Open daily, 09.00–21.00</p>
+            <p class="text-smoke text-sm">Helmet wash while you browse</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="shrink-0 w-10 h-10 bg-carbon border border-seam flex items-center justify-center"><svg class="w-5 h-5 text-signal"><use href="#i-phone"/></svg></span>
+          <div>
+            <p class="text-white font-semibold">0853-1817-2500</p>
+            <p class="text-smoke text-sm">Call or WhatsApp</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="https://maps.app.goo.gl/9Qb8iGVWVbGgH6m87" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 bg-white hover:bg-chrome transition-colors text-ink font-label font-semibold tracking-wider text-sm px-7 py-4 clip-slash">
+          <svg class="w-5 h-5"><use href="#i-pin"/></svg>
+          GET DIRECTIONS
+        </a>
+        <a href="https://wa.me/6285318172500?text=Halo%20RSV%20Store%20Serpong%2C%20saya%20mau%20tanya%20soal%20helm%20dan%20riding%20gear."
+           class="inline-flex items-center gap-3 bg-signal hover:bg-flare transition-colors text-white font-label font-semibold tracking-wider text-sm px-7 py-4 clip-slash-r">
+          <svg class="w-5 h-5"><use href="#i-wa"/></svg>
+          WHATSAPP US
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-ink border-t border-seam py-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="assets/logo.png" alt="RSV Store Serpong logo" class="h-9 w-9 rounded" width="36" height="36">
+      <div class="leading-none">
+        <p class="font-display italic uppercase text-white" style="font-weight:800">RSV Store Serpong</p>
+        <p class="font-label text-[10px] tracking-[0.3em] text-smoke mt-1">FOR EVERY RIDE</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="https://www.instagram.com/rsvstoreserpong/" target="_blank" rel="noopener" aria-label="Instagram"
+         class="w-10 h-10 border border-seam bg-carbon hover:border-signal transition-colors flex items-center justify-center">
+        <svg class="w-5 h-5"><use href="#i-ig"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@rsvstoreserpong" target="_blank" rel="noopener" aria-label="TikTok"
+         class="w-10 h-10 border border-seam bg-carbon hover:border-signal transition-colors flex items-center justify-center">
+        <svg class="w-5 h-5"><use href="#i-tiktok"/></svg>
+      </a>
+      <a href="https://linktr.ee/RSVStoreSerpong" target="_blank" rel="noopener" aria-label="Linktree"
+         class="w-10 h-10 border border-seam bg-carbon hover:border-signal transition-colors flex items-center justify-center">
+        <svg class="w-5 h-5"><use href="#i-link"/></svg>
+      </a>
+      <a href="https://wa.me/6285318172500" aria-label="WhatsApp"
+         class="w-10 h-10 border border-seam bg-carbon hover:border-signal transition-colors flex items-center justify-center">
+        <svg class="w-5 h-5"><use href="#i-wa"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="text-center font-label text-[10px] tracking-[0.25em] text-smoke/70 mt-8 px-4">
+    RSV STORE SERPONG · PART OF THE OFFICIAL RSV STORE NETWORK · JAKARTA, BANDUNG, SURABAYA, MEDAN, PALEMBANG, TANGERANG
+  </p>
+</footer>
+
+<script>
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<script src="/assets/demo-badge.js" defer></script>
+</body>
+</html>

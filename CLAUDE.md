@@ -65,7 +65,7 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
    - **Testimonials**: if the Maps listing has good reviews, extract them (research browser: click the Ulasan tab) and show the best ones on the site verbatim: reviewer name, star count, labeled as Google reviews. Pick quotes that reinforce the page's story (patient teachers, comfy space). Never invent testimonials; omit the section entirely if real ones don't exist.
 6. Mobile-first responsive; the client will almost certainly open the link on their phone from Instagram DM/WhatsApp.
 7. **Never use em dashes (—)** anywhere: page copy, code comments, docs, commit messages. Use commas, colons, periods, or parentheses instead.
-8. Add a card for the new demo to the root `index.html` gallery.
+8. Add a card for the new demo to the root `index.html` gallery. Each card shows the client's real logo (referenced straight from the client's folder, no copies; on a white chip if the logo needs it) and sets the card title in that demo's own display font (add just the heading weights to the gallery's Google Fonts link and a per-client `fontFamily` token in its `tailwind.config`).
 
 ## Adding a new client: workflow
 
@@ -103,3 +103,4 @@ Screenshot: `node tools/mobshot.js <url> <out.png>` (390x844 mobile emulation vi
 | `happy-healthy-massage` | Happy Healthy Reflexology & Family Massage | Massage spa, Gading Mendrisio (dekat BSD) & Alam Sutera, Tangerang | Demo built |
 | `we-are-mukai` | MUKAI (Grosir Modis Outlet, IG @wearmukai) | Women's clothing store, curated everyday wear, Ruko Faraday, Gading Serpong, Kab. Tangerang | Demo built |
 | `otoworx` | OTOWORX Car Detailing | Auto detailing & nano ceramic coating, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |
+| `rsv-store-serpong` | RSV Store Serpong (IG @rsvstoreserpong) | Helmets & riding gear (toko motorsport), Ruko Mendrisio 3, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |
