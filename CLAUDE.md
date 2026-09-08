@@ -39,6 +39,7 @@ The repo is shared **only for deployment convenience**; each client's brand iden
 
 Act as an elite front-end developer and designer. Every demo must be a unique, highly distinctive page for that client's audience, aimed at one primary conversion goal (usually a WhatsApp contact).
 
+- **Target audience first**: before building any page, stop and answer explicitly: "who is the target audience?" (e.g. moms of young kids vs office workers vs bargain resellers vs premium buyers). Write the answer down in your reasoning, then let it drive every choice that follows: tone of copy, formality, palette and typography, section order, imagery, even which CTA feels natural to them. The audience is who must feel "this is for me" on first scroll; design for them, not for the business owner's taste or a generic visitor.
 - **Banned defaults**: no overused generic fonts (Inter, Roboto, Arial, system sans-serif); no cliché 3-column card grids; no generic purple gradient backgrounds.
 - **Typography**: distinctive, high-personality font pairings (e.g., a sharp editorial serif combined with a stark monospace label).
 - **Color & theme**: commit to a bold, cohesive palette. Dominant, intentional tones with a single sharp accent color, inspired by the client's brand world (not a template default).
@@ -71,7 +72,7 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
 1. The user creates `<client-slug>/` and dumps links (Google Maps, Instagram, anything) into `<client-slug>/reference.txt`, then asks to check it. Assets may appear in `assets-suggestions/` at any time.
 2. Read `reference.txt` and research every link. If it includes a competitor or reference site, treat that as the tone the client aspires to (e.g. classy and serene vs playful) and let it steer the design mood, not just the section ideas.
    - Also check root `general-reference.txt`: landing pages the user considers very good. Browse them for design inspiration on any demo; if one is in the same industry as the client, treat it like a competitor reference for tone as well. Use the research browser (below) for pages that block plain fetching (Google Maps details, Instagram). Extract: real phone (for WA links), rating/reviews, address, hours, bio, bio links, brand colors from logo/feed.
-3. Create `<client-slug>/index.html` following the rules above.
+3. State the target audience conclusion from the research (design brief rule above), then create `<client-slug>/index.html` following the rules above.
 4. Add the demo to the root gallery with client name, category, and date.
 5. Push to `main` (Vercel auto-deploys).
 
@@ -100,3 +101,4 @@ Screenshot: `node tools/mobshot.js <url> <out.png>` (390x844 mobile emulation vi
 |------|--------|------|--------|
 | `denting-rumah-musik` | Denting Rumah Musik | Music school (kids, incl. special needs), Medang, Pagedangan, Kab. Tangerang | Demo built |
 | `happy-healthy-massage` | Happy Healthy Reflexology & Family Massage | Massage spa, Gading Mendrisio (dekat BSD) & Alam Sutera, Tangerang | Demo built |
+| `otoworx` | OTOWORX Car Detailing | Auto detailing & nano ceramic coating, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |

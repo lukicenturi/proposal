@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>OTOWORX Auto Detailing | Nano Coating, Paint Correction & Interior Detailing, Gading Serpong</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&family=Yellowtail&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: '#05070c',
+            carbon: '#0b101b',
+            panel: '#101828',
+            sapphire: '#3b76e0',
+            gem: '#7fabf2',
+            deepblue: '#16336e',
+            ice: '#f2f6ff',
+          },
+          fontFamily: {
+            display: ['"Big Shoulders Display"', 'sans-serif'],
+            body: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+            script: ['Yellowtail', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #05070c;
+      background-image:
+        radial-gradient(1000px 520px at 85% -10%, rgba(59, 118, 224, 0.22), transparent 60%),
+        radial-gradient(800px 500px at -15% 30%, rgba(22, 51, 110, 0.35), transparent 55%),
+        linear-gradient(#05070c, #05070c);
+    }
+    .facet-grid {
+      background-image:
+        linear-gradient(rgba(127, 171, 242, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(127, 171, 242, 0.05) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    }
+    .clip-gem { clip-path: polygon(10% 0, 100% 0, 100% 88%, 90% 100%, 0 100%, 0 12%); }
+    .clip-gem-sm { clip-path: polygon(8% 0, 100% 0, 100% 90%, 92% 100%, 0 100%, 0 10%); }
+    .duotone { position: relative; }
+    .duotone::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(59, 118, 224, 0.28), rgba(5, 7, 12, 0.15) 55%, rgba(22, 51, 110, 0.4));
+      mix-blend-mode: soft-light; pointer-events: none;
+    }
+    @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+    .rise { opacity: 0; animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .d1 { animation-delay: 0.08s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.34s; }
+    .d4 { animation-delay: 0.48s; } .d5 { animation-delay: 0.62s; } .d6 { animation-delay: 0.78s; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker { animation: ticker 28s linear infinite; }
+    @keyframes twinkle { 0%, 100% { opacity: 0.25; transform: scale(0.85); } 50% { opacity: 1; transform: scale(1.1); } }
+    .twinkle { animation: twinkle 3.2s ease-in-out infinite; }
+    .twinkle-slow { animation: twinkle 4.6s ease-in-out 1.2s infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .rise { animation: none; opacity: 1; }
+      .ticker, .twinkle, .twinkle-slow { animation: none; }
+    }
+  </style>
+</head>
+<body class="font-body text-ice antialiased selection:bg-sapphire selection:text-white">
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.4 15.16L2.05 22l4.97-1.55A9.9 9.9 0 1 0 12.04 2Zm5.83 14.12c-.25.7-1.44 1.34-1.99 1.38-.53.05-1.02.24-3.43-.71-2.9-1.15-4.73-4.11-4.87-4.3-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09 1-2.38.25-.28.56-.35.75-.35h.54c.17 0 .41-.06.63.49.23.55.78 1.9.85 2.04.07.14.12.3.02.49-.09.19-.14.3-.28.47-.14.16-.3.37-.42.5-.14.14-.29.29-.13.57.16.28.72 1.18 1.54 1.91 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.28.37-.23.63-.14.25.1 1.62.77 1.9.9.28.14.46.21.53.33.07.12.07.7-.18 1.4Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c2.72 0 3.06.01 4.12.06 1.07.05 1.8.22 2.43.47.66.25 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.36.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.8-.47 2.43a4.9 4.9 0 0 1-1.15 1.77c-.55.55-1.11.9-1.77 1.15-.64.25-1.36.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.07-.05-1.8-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.36-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.07.22-1.8.47-2.43.25-.66.6-1.22 1.15-1.77.55-.55 1.11-.9 1.77-1.15.64-.25 1.36-.42 2.43-.47C8.94 2.01 9.28 2 12 2Zm0 1.8c-2.67 0-2.99.01-4.04.06-.98.04-1.5.2-1.86.34-.46.18-.8.4-1.15.75-.35.35-.57.69-.75 1.15-.14.35-.3.88-.34 1.86-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.98.2 1.5.34 1.86.18.46.4.8.75 1.15.35.35.69.57 1.15.75.35.14.88.3 1.86.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.98-.04 1.5-.2 1.86-.34.46-.18.8-.4 1.15-.75.35-.35.57-.69.75-1.15.14-.35.3-.88.34-1.86.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.98-.2-1.5-.34-1.86a3.1 3.1 0 0 0-.75-1.15 3.1 3.1 0 0 0-1.15-.75c-.35-.14-.88-.3-1.86-.34-1.05-.05-1.37-.06-4.04-.06Zm0 3.06a5.14 5.14 0 1 1 0 10.28 5.14 5.14 0 0 1 0-10.28Zm0 1.8a3.34 3.34 0 1 0 0 6.68 3.34 3.34 0 0 0 0-6.68Zm5.34-3.11a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 6.62 11.62 6.9 11.89a.86.86 0 0 0 1.2 0c.28-.27 6.9-6.64 6.9-11.89A7.5 7.5 0 0 0 12 2Zm0 10.13a2.63 2.63 0 1 1 0-5.26 2.63 2.63 0 0 1 0 5.26Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.2 13.2-4.7-2.8V7h1.8v4.4l3.9 2.3-1 1.5Z"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3h12l4 6-10 12L2 9l4-6Zm2.7 6L12 17.4 15.3 9H8.7Zm8.6 0h2.9l-2.4-3.6L16.6 9h.7ZM6.7 9h.7l1.2-3.6L6.2 9h.5Zm3-3.2L8.5 9h7l-1.2-3.2H9.7Z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5 14.4 9.6 22.5 12l-8.1 2.4L12 22.5 9.6 14.4 1.5 12l8.1-2.4L12 1.5Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5.5V11c0 5.2 3.4 9.7 8 11 4.6-1.3 8-5.8 8-11V5.5L12 2Zm-1.3 13.9-3.2-3.2 1.4-1.4 1.8 1.8 4.4-4.4 1.4 1.4-5.8 5.8Z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5s6.75 7.32 6.75 12A6.75 6.75 0 0 1 5.25 14.5c0-4.68 6.75-12 6.75-12Zm-2 13.75a1.13 1.13 0 0 0 0-2.25c-.62 0-1.12.5-1.12 1.13 0 .62.5 1.12 1.12 1.12Z"/></symbol>
+    <symbol id="i-steam" viewBox="0 0 24 24"><path fill="currentColor" d="M7 3c0 1.5-1.5 2-1.5 3.5S7 8.5 7 10H5.5c0-1-1.5-1.5-1.5-3.5S5.5 4 5.5 3H7Zm5 0c0 1.5-1.5 2-1.5 3.5S12 8.5 12 10h-1.5c0-1-1.5-1.5-1.5-3.5S10.5 4 10.5 3H12Zm5 0c0 1.5-1.5 2-1.5 3.5S17 8.5 17 10h-1.5c0-1-1.5-1.5-1.5-3.5S15.5 4 15.5 3H17ZM4 12h16a1 1 0 0 1 1 1.1 8 8 0 0 1-4.4 6.4l.9 1a.9.9 0 0 1-.7 1.5H7.2a.9.9 0 0 1-.7-1.5l.9-1A8 8 0 0 1 3 13.1 1 1 0 0 1 4 12Z"/></symbol>
+    <symbol id="i-engine" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4h6v2h-2v2h4l2 3h2V9h3v8h-3v-2h-2v3l-2 2H8l-3-3H3v-6h2l2-3V6h2V4H7Zm3 6-2 3H6v2h2.8l2.2 2.2h3.2l1.8-1.8V13l-1.3-2H10Z"/></symbol>
+    <symbol id="i-glass" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18l-2 6H5L3 5Zm3.2 8h11.6l-.9 6.5a1.7 1.7 0 0 1-1.7 1.5H8.8a1.7 1.7 0 0 1-1.7-1.5L6.2 13Zm7.3-11.5 3.2 2.3-1 1.4-3.2-2.3 1-1.4Z"/></symbol>
+    <symbol id="i-wash" viewBox="0 0 24 24"><path fill="currentColor" d="M5 11l1.9-4.4A2.5 2.5 0 0 1 9.2 5h5.6a2.5 2.5 0 0 1 2.3 1.6L19 11h.5a1.5 1.5 0 0 1 0 3H19v3.5a1.5 1.5 0 0 1-3 0V16H8v1.5a1.5 1.5 0 0 1-3 0V14h-.5a1.5 1.5 0 0 1 0-3H5Zm2.6 0h8.8l-1.2-2.9a.6.6 0 0 0-.6-.4H9.2a.6.6 0 0 0-.6.4L7.6 11ZM4 2c0 1-.9 1.3-.9 2.3 0 .9.9 1.2.9 2.2H2.7c0-.7-.9-1-.9-2.2C1.8 3.2 2.7 3 2.7 2H4Zm4 0c0 1-.9 1.3-.9 2.3 0 .9.9 1.2.9 2.2H6.7c0-.7-.9-1-.9-2.2 0-1.1.9-1.3.9-2.3H8Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M5 12h12.2l-4.6-4.6L14 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="m9.6 16.6-4.2-4.2 1.4-1.4 2.8 2.8 7.6-7.6 1.4 1.4-9 9Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 3c.5 0 .9.3 1 .8l1 3.7c.1.4 0 .8-.3 1.1L6.6 10a14.6 14.6 0 0 0 7.4 7.4l1.4-1.7c.3-.3.7-.4 1.1-.3l3.7 1c.5.1.8.5.8 1v3.1c0 .6-.5 1.1-1.1 1a18.6 18.6 0 0 1-16.9-17c0-.6.4-1 1-1h3.6Z"/></symbol>
+  </svg>
+
+  <!-- Top bar -->
+  <header class="fixed inset-x-0 top-0 z-40 border-b border-white/5 bg-night/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="OTOWORX logo" class="h-10 w-10 rounded-full ring-1 ring-white/10">
+        <span class="font-display text-xl font-extrabold tracking-wide">OTOWORX</span>
+      </a>
+      <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20I%27d%20like%20to%20book%20a%20detailing%20slot%20for%20my%20car."
+         class="inline-flex items-center gap-2 rounded-full bg-sapphire px-4 py-2 text-sm font-bold text-white shadow-lg shadow-sapphire/30 transition hover:bg-gem hover:text-night">
+        <svg class="h-4 w-4"><use href="#i-wa"/></svg>
+        Book a slot
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative overflow-hidden pt-24">
+    <div class="facet-grid absolute inset-0"></div>
+    <svg class="twinkle absolute left-[8%] top-32 h-4 w-4 text-gem/70"><use href="#i-spark"/></svg>
+    <svg class="twinkle-slow absolute right-[12%] top-48 h-3 w-3 text-gem/50"><use href="#i-spark"/></svg>
+    <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-8 lg:grid-cols-[1.1fr_1fr] lg:gap-6 lg:pb-24">
+      <div>
+        <p class="rise d1 font-script text-3xl text-gem sm:text-4xl">The Devil's in The Details</p>
+        <h1 class="rise d2 mt-3 font-display text-[17vw] font-black uppercase leading-[0.85] sm:text-8xl lg:text-[7.5rem]">
+          Diamond<br>
+          <span class="text-transparent" style="-webkit-text-stroke: 2px #7fabf2;">gloss.</span><br>
+          Every ride.
+        </h1>
+        <p class="rise d3 mt-6 max-w-md text-base leading-relaxed text-ice/70">
+          OTOWORX is an auto detailing studio in Gading Serpong, Tangerang. Nano ceramic coating, paint correction, and deep interior care, done slowly and properly, one car at a time.
+        </p>
+        <div class="rise d4 mt-8 flex flex-wrap items-center gap-4">
+          <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20I%27d%20like%20to%20book%20a%20detailing%20slot%20for%20my%20car."
+             class="inline-flex items-center gap-2.5 rounded-full bg-sapphire px-6 py-3.5 font-bold text-white shadow-xl shadow-sapphire/30 transition hover:-translate-y-0.5 hover:bg-gem hover:text-night">
+            <svg class="h-5 w-5"><use href="#i-wa"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a href="#services" class="inline-flex items-center gap-2 font-mono text-sm text-gem underline decoration-gem/40 underline-offset-4 transition hover:text-ice">
+            See services <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <a href="https://www.google.com/maps/place/OTOWORX+Car+Detailing/@-6.2704729,106.6313069,17z/data=!4m8!3m7!1s0x2e69fb700b1c34e3:0xeb20bc7d5daa59ac!8m2!3d-6.2704729!4d106.6313069!9m1!1b1!16s%2Fg%2F11hzjh241j"
+           target="_blank" rel="noopener"
+           class="rise d5 mt-8 inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-carbon/70 px-4 py-3 transition hover:border-gem/40">
+          <span class="flex text-amber-400">
+            <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+          </span>
+          <span class="text-sm text-ice/80"><strong class="text-ice">4.8 on Google</strong> from 17 reviews</span>
+        </a>
+      </div>
+      <div class="rise d3 relative">
+        <div class="absolute -inset-6 rounded-[2rem] bg-sapphire/20 blur-3xl"></div>
+        <figure class="clip-gem duotone relative overflow-hidden border border-white/10">
+          <img src="assets/hero-gloss.jpg" alt="Freshly detailed black SUV under the studio lights at OTOWORX" class="h-[420px] w-full object-cover sm:h-[520px]" loading="eager">
+        </figure>
+        <figcaption class="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-night/80 px-4 py-2 font-mono text-xs text-gem backdrop-blur">
+          <svg class="h-3.5 w-3.5"><use href="#i-spark"/></svg>
+          Real work, shot in our studio
+        </figcaption>
+        <svg class="twinkle absolute -right-2 -top-3 h-6 w-6 text-gem"><use href="#i-spark"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service ticker -->
+  <div class="border-y border-white/10 bg-carbon/80 py-3">
+    <div class="flex overflow-hidden">
+      <div class="ticker flex min-w-max items-center gap-6 pr-6 font-mono text-sm uppercase tracking-[0.2em] text-gem/80">
+        <span>Car Wash</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Premium Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Diamond Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Titanium Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Paint Correction</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Interior Detailing</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Glass Polish</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Engine Bay</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Waterspot Removal</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Glass Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Car Wash</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Premium Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Diamond Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Titanium Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Paint Correction</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Interior Detailing</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Glass Polish</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Engine Bay</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Waterspot Removal</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+        <span>Glass Coating</span><svg class="h-2.5 w-2.5 text-sapphire"><use href="#i-gem"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-6xl px-5 py-20 lg:py-28">
+    <div class="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+      <div class="lg:sticky lg:top-28 lg:self-start">
+        <p class="font-script text-2xl text-gem">What we do</p>
+        <h2 class="mt-2 font-display text-5xl font-black uppercase leading-[0.9] sm:text-6xl">Every inch,<br>handled.</h2>
+        <p class="mt-5 max-w-sm text-ice/70">
+          From a proper wash to multi-year ceramic protection. Tell us what your car needs, or send a photo on WhatsApp and we will recommend the right treatment.
+        </p>
+        <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20Can%20you%20recommend%20a%20treatment%20for%20my%20car%3F"
+           class="mt-7 inline-flex items-center gap-2.5 rounded-full border border-gem/40 px-5 py-3 font-bold text-gem transition hover:bg-gem hover:text-night">
+          <svg class="h-5 w-5"><use href="#i-wa"/></svg>
+          Ask for a recommendation
+        </a>
+      </div>
+      <ul class="divide-y divide-white/10 border-y border-white/10">
+        <li class="group flex gap-5 py-6 transition hover:bg-white/[0.03] sm:px-4">
+          <span class="clip-gem-sm mt-1 flex h-12 w-12 shrink-0 items-center justify-center bg-sapphire/15 text-gem transition group-hover:bg-sapphire group-hover:text-white"><svg class="h-6 w-6"><use href="#i-gem"/></svg></span>
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wide">Nano Ceramic Coating</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-ice/60">A hard, glossy sacrificial layer over your paint. Protection from UV, light scratches, and waterspots, with a deep wet look that lasts.</p>
+          </div>
+        </li>
+        <li class="group flex gap-5 py-6 transition hover:bg-white/[0.03] sm:px-4">
+          <span class="clip-gem-sm mt-1 flex h-12 w-12 shrink-0 items-center justify-center bg-sapphire/15 text-gem transition group-hover:bg-sapphire group-hover:text-white"><svg class="h-6 w-6"><use href="#i-spark"/></svg></span>
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wide">Paint Correction, Polish & Wax</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-ice/60">Swirls, holograms, and dull paint machine-polished back to a mirror finish, then sealed with wax.</p>
+          </div>
+        </li>
+        <li class="group flex gap-5 py-6 transition hover:bg-white/[0.03] sm:px-4">
+          <span class="clip-gem-sm mt-1 flex h-12 w-12 shrink-0 items-center justify-center bg-sapphire/15 text-gem transition group-hover:bg-sapphire group-hover:text-white"><svg class="h-6 w-6"><use href="#i-steam"/></svg></span>
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wide">Interior Deep Clean</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-ice/60">Steam-cleaned seats, carpets, headliner, and every crevice. Fresh cabin, no leftover odors.</p>
+          </div>
+        </li>
+        <li class="group flex gap-5 py-6 transition hover:bg-white/[0.03] sm:px-4">
+          <span class="clip-gem-sm mt-1 flex h-12 w-12 shrink-0 items-center justify-center bg-sapphire/15 text-gem transition group-hover:bg-sapphire group-hover:text-white"><svg class="h-6 w-6"><use href="#i-engine"/></svg></span>
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wide">Engine Bay Detailing</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-ice/60">Degreased, dressed, and showroom-tidy under the hood, done safely around electronics.</p>
+          </div>
+        </li>
+        <li class="group flex gap-5 py-6 transition hover:bg-white/[0.03] sm:px-4">
+          <span class="clip-gem-sm mt-1 flex h-12 w-12 shrink-0 items-center justify-center bg-sapphire/15 text-gem transition group-hover:bg-sapphire group-hover:text-white"><svg class="h-6 w-6"><use href="#i-glass"/></svg></span>
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wide">Glass Polish, Coating & Waterspot Removal</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-ice/60">Stubborn waterspots and mineral stains polished off, then glass-coated so rain beads and rolls away.</p>
+          </div>
+        </li>
+        <li class="group flex gap-5 py-6 transition hover:bg-white/[0.03] sm:px-4">
+          <span class="clip-gem-sm mt-1 flex h-12 w-12 shrink-0 items-center justify-center bg-sapphire/15 text-gem transition group-hover:bg-sapphire group-hover:text-white"><svg class="h-6 w-6"><use href="#i-wash"/></svg></span>
+          <div>
+            <h3 class="font-display text-2xl font-bold uppercase tracking-wide">Premium Car Wash</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-ice/60">Careful hand wash with proper technique and products, the safe way to keep a coated car flawless.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Coating tiers -->
+  <section class="relative overflow-hidden border-y border-white/10 bg-carbon/60 py-20 lg:py-28">
+    <div class="facet-grid absolute inset-0 opacity-60"></div>
+    <div class="relative mx-auto max-w-6xl px-5">
+      <div class="max-w-2xl">
+        <p class="font-script text-2xl text-gem">Ceramic coating packages</p>
+        <h2 class="mt-2 font-display text-5xl font-black uppercase leading-[0.9] sm:text-6xl">Pick your shine level</h2>
+        <p class="mt-4 text-ice/70">Three coating grades, same obsessive prep on every one. Message us for the current price list, it depends on your car's size and paint condition.</p>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="clip-gem flex flex-col border border-white/10 bg-night/70 p-7 transition hover:border-gem/40">
+          <h3 class="font-display text-3xl font-black uppercase">Premium</h3>
+          <p class="mt-1 font-mono text-xs uppercase tracking-widest text-gem/70">Entry protection</p>
+          <ul class="mt-6 flex-1 space-y-3 text-sm text-ice/70">
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Single-layer nano ceramic coating</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Full wash and paint prep</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Gloss and hydrophobic finish</li>
+          </ul>
+          <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20How%20much%20is%20the%20Premium%20coating%20package%20for%20my%20car%3F" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full border border-gem/40 px-5 py-3 text-sm font-bold text-gem transition hover:bg-gem hover:text-night">
+            <svg class="h-4 w-4"><use href="#i-wa"/></svg> Ask the price
+          </a>
+        </div>
+        <div class="clip-gem relative flex flex-col border border-sapphire bg-gradient-to-b from-deepblue/60 to-night/80 p-7 shadow-2xl shadow-sapphire/20">
+          <span class="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-sapphire px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-white"><svg class="h-3 w-3"><use href="#i-gem"/></svg>Signature</span>
+          <h3 class="font-display text-3xl font-black uppercase text-gem">Diamond</h3>
+          <p class="mt-1 font-mono text-xs uppercase tracking-widest text-gem/70">Our namesake</p>
+          <ul class="mt-6 flex-1 space-y-3 text-sm text-ice/80">
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Multi-layer ceramic coating</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>One-step paint correction included</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Deeper gloss, longer protection</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Free maintenance check</li>
+          </ul>
+          <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20How%20much%20is%20the%20Diamond%20coating%20package%20for%20my%20car%3F" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-sapphire px-5 py-3 text-sm font-bold text-white shadow-lg shadow-sapphire/30 transition hover:bg-gem hover:text-night">
+            <svg class="h-4 w-4"><use href="#i-wa"/></svg> Ask the price
+          </a>
+        </div>
+        <div class="clip-gem flex flex-col border border-white/10 bg-night/70 p-7 transition hover:border-gem/40">
+          <h3 class="font-display text-3xl font-black uppercase">Titanium</h3>
+          <p class="mt-1 font-mono text-xs uppercase tracking-widest text-gem/70">Maximum durability</p>
+          <ul class="mt-6 flex-1 space-y-3 text-sm text-ice/70">
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Hardest, thickest coating stack</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Full paint correction included</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gem"><use href="#i-check"/></svg>Longest-lasting protection</li>
+          </ul>
+          <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20How%20much%20is%20the%20Titanium%20coating%20package%20for%20my%20car%3F" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full border border-gem/40 px-5 py-3 text-sm font-bold text-gem transition hover:bg-gem hover:text-night">
+            <svg class="h-4 w-4"><use href="#i-wa"/></svg> Ask the price
+          </a>
+        </div>
+      </div>
+      <p class="mt-6 font-mono text-xs text-ice/40">Package contents shown here are illustrative for this demo. Final scope and pricing are confirmed by OTOWORX on WhatsApp.</p>
+    </div>
+  </section>
+
+  <!-- Real work -->
+  <section class="mx-auto max-w-6xl px-5 py-20 lg:py-28">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="font-script text-2xl text-gem">Straight from the studio</p>
+        <h2 class="mt-2 font-display text-5xl font-black uppercase leading-[0.9] sm:text-6xl">The work, up close</h2>
+      </div>
+      <a href="https://www.instagram.com/otoworx.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-bold text-ice/80 transition hover:border-gem/50 hover:text-gem">
+        <svg class="h-4 w-4"><use href="#i-ig"/></svg> More on @otoworx.id
+      </a>
+    </div>
+    <div class="mt-12 grid gap-5 sm:grid-cols-3">
+      <figure class="duotone group relative overflow-hidden rounded-2xl border border-white/10 sm:-rotate-1 sm:translate-y-3">
+        <img src="assets/interior-steam.jpg" alt="OTOWORX detailer steam cleaning car seats" class="h-80 w-full object-cover transition duration-500 group-hover:scale-105">
+        <figcaption class="absolute bottom-3 left-3 z-10 rounded-full bg-night/80 px-3.5 py-1.5 font-mono text-xs text-gem backdrop-blur">Seat steam extraction</figcaption>
+      </figure>
+      <figure class="duotone group relative overflow-hidden rounded-2xl border border-white/10 sm:rotate-1 sm:-translate-y-2">
+        <img src="assets/engine-bay.jpg" alt="Detailed engine bay after cleaning at OTOWORX" class="h-80 w-full object-cover transition duration-500 group-hover:scale-105">
+        <figcaption class="absolute bottom-3 left-3 z-10 rounded-full bg-night/80 px-3.5 py-1.5 font-mono text-xs text-gem backdrop-blur">Engine bay detail</figcaption>
+      </figure>
+      <figure class="duotone group relative overflow-hidden rounded-2xl border border-white/10 sm:-rotate-1 sm:translate-y-4">
+        <img src="assets/interior-door.jpg" alt="Steam cleaning a car door panel at OTOWORX" class="h-80 w-full object-cover transition duration-500 group-hover:scale-105">
+        <figcaption class="absolute bottom-3 left-3 z-10 rounded-full bg-night/80 px-3.5 py-1.5 font-mono text-xs text-gem backdrop-blur">Door panel deep clean</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="relative overflow-hidden border-y border-white/10 bg-carbon/60 py-20 lg:py-28">
+    <div class="relative mx-auto max-w-6xl px-5">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.5fr]">
+        <div>
+          <p class="font-script text-2xl text-gem">Word on the street</p>
+          <h2 class="mt-2 font-display text-5xl font-black uppercase leading-[0.9] sm:text-6xl">Drivers rate us</h2>
+          <div class="mt-6 flex items-end gap-3">
+            <span class="font-display text-8xl font-black text-gem">4.8</span>
+            <div class="pb-3">
+              <span class="flex text-amber-400">
+                <svg class="h-5 w-5"><use href="#i-star"/></svg><svg class="h-5 w-5"><use href="#i-star"/></svg><svg class="h-5 w-5"><use href="#i-star"/></svg><svg class="h-5 w-5"><use href="#i-star"/></svg><svg class="h-5 w-5"><use href="#i-star"/></svg>
+              </span>
+              <p class="mt-1 text-sm text-ice/60">17 Google reviews</p>
+            </div>
+          </div>
+          <a href="https://www.google.com/maps/place/OTOWORX+Car+Detailing/@-6.2704729,106.6313069,17z/data=!4m8!3m7!1s0x2e69fb700b1c34e3:0xeb20bc7d5daa59ac!8m2!3d-6.2704729!4d106.6313069!9m1!1b1!16s%2Fg%2F11hzjh241j"
+             target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 font-mono text-sm text-gem underline decoration-gem/40 underline-offset-4 transition hover:text-ice">
+            Read them all on Google Maps <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2">
+          <blockquote class="rounded-2xl border border-white/10 bg-night/70 p-6">
+            <span class="flex text-amber-400"><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg></span>
+            <p class="mt-3 text-sm leading-relaxed text-ice/80">"detailing ter detail so farrrr! pekerjanya pun super komunikatif"</p>
+            <footer class="mt-4 text-xs text-ice/50"><strong class="text-ice/80">Valencia Lius</strong> · Google review</footer>
+          </blockquote>
+          <blockquote class="rounded-2xl border border-white/10 bg-night/70 p-6">
+            <span class="flex text-amber-400"><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg></span>
+            <p class="mt-3 text-sm leading-relaxed text-ice/80">"Recommended banget! 👍🏻👍🏻 Owner nya oke, detail dan teliti banget. Pengerjaan pegawainya juga rapi dan bagus, hasilnya sesuai ekspektasi."</p>
+            <footer class="mt-4 text-xs text-ice/50"><strong class="text-ice/80">Carissa H</strong> · Google review</footer>
+          </blockquote>
+          <blockquote class="rounded-2xl border border-white/10 bg-night/70 p-6">
+            <span class="flex text-amber-400"><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg></span>
+            <p class="mt-3 text-sm leading-relaxed text-ice/80">"Pelayanannya ramah, pengerjaannya rapi dan teliti. Hasil detailing mobil bersih, kinclong, dan memuaskan. Recommended!"</p>
+            <footer class="mt-4 text-xs text-ice/50"><strong class="text-ice/80">Millenia Ilen</strong> · Google review</footer>
+          </blockquote>
+          <blockquote class="rounded-2xl border border-white/10 bg-night/70 p-6">
+            <span class="flex text-amber-400"><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg></span>
+            <p class="mt-3 text-sm leading-relaxed text-ice/80">"Detailing mobil recommended di daerah BSD / Gading Serpong. Pak Michael sangat kooperatif dan ramah 👍🏻👍🏻"</p>
+            <footer class="mt-4 text-xs text-ice/50"><strong class="text-ice/80">Ganesha Saputra</strong> · Google review</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="mx-auto max-w-6xl px-5 py-20 lg:py-28">
+    <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p class="font-script text-2xl text-gem">Find the studio</p>
+        <h2 class="mt-2 font-display text-5xl font-black uppercase leading-[0.9] sm:text-6xl">Drop by, drive out shining</h2>
+        <ul class="mt-8 space-y-5">
+          <li class="flex items-start gap-4">
+            <span class="clip-gem-sm flex h-11 w-11 shrink-0 items-center justify-center bg-sapphire/15 text-gem"><svg class="h-5 w-5"><use href="#i-pin"/></svg></span>
+            <div>
+              <p class="font-bold">Jl. Boulevard iL Lago No.30, Cihuni</p>
+              <p class="text-sm text-ice/60">Kec. Pagedangan, Kabupaten Tangerang, Banten 15334. Inside Tomorrow-else Creative Studio, Gading Serpong.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="clip-gem-sm flex h-11 w-11 shrink-0 items-center justify-center bg-sapphire/15 text-gem"><svg class="h-5 w-5"><use href="#i-clock"/></svg></span>
+            <div>
+              <p class="font-bold">Open every day</p>
+              <p class="text-sm text-ice/60">08.00 to 18.00 WIB</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="clip-gem-sm flex h-11 w-11 shrink-0 items-center justify-center bg-sapphire/15 text-gem"><svg class="h-5 w-5"><use href="#i-phone"/></svg></span>
+            <div>
+              <p class="font-bold">0812-8192-1093</p>
+              <p class="text-sm text-ice/60">Call or WhatsApp, we reply fast.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20I%27d%20like%20to%20book%20a%20detailing%20slot%20for%20my%20car."
+             class="inline-flex items-center gap-2.5 rounded-full bg-sapphire px-6 py-3.5 font-bold text-white shadow-xl shadow-sapphire/30 transition hover:-translate-y-0.5 hover:bg-gem hover:text-night">
+            <svg class="h-5 w-5"><use href="#i-wa"/></svg> WhatsApp us
+          </a>
+          <a href="https://www.google.com/maps/place/OTOWORX+Car+Detailing/@-6.2704729,106.6313069,17z/data=!4m8!3m7!1s0x2e69fb700b1c34e3:0xeb20bc7d5daa59ac!8m2!3d-6.2704729!4d106.6313069!9m1!1b1!16s%2Fg%2F11hzjh241j"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2.5 rounded-full border border-white/15 px-6 py-3.5 font-bold text-ice/80 transition hover:border-gem/50 hover:text-gem">
+            <svg class="h-5 w-5"><use href="#i-pin"/></svg> Directions
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-5 rounded-[2rem] bg-sapphire/15 blur-3xl"></div>
+        <div class="clip-gem relative border border-white/10 bg-gradient-to-b from-panel to-night p-10 text-center">
+          <img src="assets/logo.png" alt="OTOWORX Autodetailing logo" class="mx-auto w-52 rounded-2xl ring-1 ring-white/10">
+          <p class="mt-4 font-script text-3xl text-gem">The Devil's in The Details</p>
+          <div class="mx-auto mt-6 grid max-w-xs grid-cols-3 gap-3 font-mono text-[11px] uppercase tracking-widest text-ice/60">
+            <span class="rounded-lg border border-white/10 px-2 py-2">⚗️ Coating</span>
+            <span class="rounded-lg border border-white/10 px-2 py-2">🛡 Protect</span>
+            <span class="rounded-lg border border-white/10 px-2 py-2">✨ Polish</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="relative overflow-hidden border-t border-white/10">
+    <div class="absolute inset-0 bg-gradient-to-r from-deepblue/50 via-night to-night"></div>
+    <div class="facet-grid absolute inset-0"></div>
+    <div class="relative mx-auto max-w-6xl px-5 py-20 text-center lg:py-24">
+      <svg class="twinkle mx-auto h-8 w-8 text-gem"><use href="#i-spark"/></svg>
+      <h2 class="mt-4 font-display text-5xl font-black uppercase leading-[0.9] sm:text-7xl">Your car deserves<br><span class="text-gem">the diamond treatment</span></h2>
+      <p class="mx-auto mt-5 max-w-md text-ice/70">One message is all it takes. Send your car type and what it needs, we will handle the rest.</p>
+      <a href="https://wa.me/6281281921093?text=Hi%20OTOWORX!%20I%27d%20like%20to%20book%20a%20detailing%20slot%20for%20my%20car."
+         class="mt-9 inline-flex items-center gap-3 rounded-full bg-sapphire px-9 py-4 text-lg font-bold text-white shadow-2xl shadow-sapphire/40 transition hover:-translate-y-0.5 hover:bg-gem hover:text-night">
+        <svg class="h-6 w-6"><use href="#i-wa"/></svg>
+        Book via WhatsApp
+      </a>
+      <p class="mt-4 font-mono text-xs text-ice/40">0812-8192-1093 · Open daily 08.00-18.00</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-night">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 py-10 sm:flex-row">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="OTOWORX logo" class="h-9 w-9 rounded-full ring-1 ring-white/10">
+        <div>
+          <p class="font-display text-lg font-bold tracking-wide">OTOWORX AUTODETAILING</p>
+          <p class="font-mono text-[11px] text-ice/40">Gading Serpong, Tangerang</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/otoworx.id/" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ice/70 transition hover:border-gem/50 hover:text-gem"><svg class="h-5 w-5"><use href="#i-ig"/></svg></a>
+        <a href="https://wa.me/6281281921093" aria-label="WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ice/70 transition hover:border-gem/50 hover:text-gem"><svg class="h-5 w-5"><use href="#i-wa"/></svg></a>
+        <a href="https://www.google.com/maps/place/OTOWORX+Car+Detailing/@-6.2704729,106.6313069,17z/data=!4m8!3m7!1s0x2e69fb700b1c34e3:0xeb20bc7d5daa59ac!8m2!3d-6.2704729!4d106.6313069!9m1!1b1!16s%2Fg%2F11hzjh241j" target="_blank" rel="noopener" aria-label="Google Maps" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ice/70 transition hover:border-gem/50 hover:text-gem"><svg class="h-5 w-5"><use href="#i-pin"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/demo-badge.js" defer></script>
+</body>
+</html>
