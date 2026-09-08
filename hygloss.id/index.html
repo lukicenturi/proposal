@@ -75,16 +75,12 @@
     }
     @keyframes sweep { 0% { transform: translateX(-120%); } 42% { transform: translateX(120%); } 100% { transform: translateX(120%); } }
 
-    /* marquee */
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .marquee-track { animation: marquee 30s linear infinite; }
-
     .svc-img img { transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
     .svc-row:hover .svc-img img { transform: scale(1.045); }
 
     @media (prefers-reduced-motion: reduce) {
       .rise { animation: none; opacity: 1; }
-      .sheen::after, .marquee-track { animation: none; }
+      .sheen::after { animation: none; }
     }
   </style>
 </head>
@@ -177,18 +173,14 @@
     </div>
   </section>
 
-  <!-- marquee -->
-  <div class="relative z-10 border-y hairline py-4 overflow-hidden" aria-hidden="true">
-    <div class="marquee-track flex w-max whitespace-nowrap font-label text-[11px] uppercase tracking-[0.3em] text-champagne/70">
-      <span class="px-6">Paint Protection Film</span><span class="text-brass">✦</span>
-      <span class="px-6">Nano Coating</span><span class="text-brass">✦</span>
-      <span class="px-6">Ultimate Detailing</span><span class="text-brass">✦</span>
-      <span class="px-6">Premium Wash</span><span class="text-brass">✦</span>
-      <span class="px-6">Paint Protection Film</span><span class="text-brass">✦</span>
-      <span class="px-6">Nano Coating</span><span class="text-brass">✦</span>
-      <span class="px-6">Ultimate Detailing</span><span class="text-brass">✦</span>
-      <span class="px-6">Premium Wash</span><span class="text-brass">✦</span>
-    </div>
+  <!-- services strip -->
+  <div class="relative z-10 border-y hairline py-4">
+    <p class="mx-auto max-w-6xl px-5 sm:px-8 flex flex-wrap justify-center items-center gap-x-5 gap-y-2 font-label text-[11px] uppercase tracking-[0.3em] text-champagne/80 text-center">
+      <span>Paint Protection Film</span><span class="text-brass" aria-hidden="true">✦</span>
+      <span>Nano Coating</span><span class="text-brass" aria-hidden="true">✦</span>
+      <span>Ultimate Detailing</span><span class="text-brass" aria-hidden="true">✦</span>
+      <span>Premium Wash</span>
+    </p>
   </div>
 
   <!-- service menu -->
