@@ -131,13 +131,13 @@
     <defs>
       <filter id="ink-bleed" x="-20%" y="-20%" width="140%" height="140%">
         <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
       </filter>
       <filter id="ink-heavy" x="-20%" y="-20%" width="140%" height="140%">
         <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" result="disp"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" result="disp"/>
         <feTurbulence type="fractalNoise" baseFrequency="0.28" numOctaves="2" seed="11" result="mottle"/>
-        <feColorMatrix in="mottle" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 .6" result="mottleA"/>
+        <feColorMatrix in="mottle" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .35 .7" result="mottleA"/>
         <feComposite in="disp" in2="mottleA" operator="in"/>
       </filter>
       <symbol id="icon-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.1 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.2.2 1.8 2.8 4.4 3.8 2.1.9 2.6.7 3 .7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.2-.5-.3l-1.7-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.3 0-.4.1-.6l.6-.7c.2-.2.2-.4.1-.6L10 8.3c-.2-.4-.4-.4-.6-.4l-.5-.1Z"/></symbol>
