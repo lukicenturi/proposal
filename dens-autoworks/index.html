@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dens Autoworks 507 Power | Spesialis Performa Diesel, Remap ECU & Perawatan Diesel Alam Sutera</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,700;1,800;1,900&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            asphalt: '#070708',
+            pit: '#0D0D0F',
+            panel: '#121215',
+            seam: '#232328',
+            steel: '#8B8D98',
+            ash: '#9EA0A8',
+            chrome: '#E6E7EB',
+            redline: '#E8222D',
+            emberdark: '#7F1119',
+          },
+          fontFamily: {
+            display: ['Kanit', 'sans-serif'],
+            tech: ['"Chakra Petch"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #070708; }
+
+    /* diagonal speed stripes, lifted from the logo's stripe block */
+    .stripes {
+      background-image: repeating-linear-gradient(-55deg, #E8222D 0 14px, transparent 14px 30px);
+    }
+    .stripes-soft {
+      background-image: repeating-linear-gradient(-55deg, rgba(255,255,255,.05) 0 2px, transparent 2px 26px);
+    }
+
+    /* asphalt texture: faint grid fading downwards */
+    .pit-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+    }
+    .redglow { background: radial-gradient(46% 36% at 72% 30%, rgba(232,34,45,.22), transparent 70%); }
+
+    /* entrance reveals */
+    .reveal { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.22,.8,.3,1) forwards; }
+    .reveal-1 { animation-delay: .05s } .reveal-2 { animation-delay: .17s }
+    .reveal-3 { animation-delay: .29s } .reveal-4 { animation-delay: .41s }
+    .reveal-5 { animation-delay: .55s } .reveal-6 { animation-delay: .7s }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+
+    /* hero image slides in like a car rolling into the bay */
+    .rollin { opacity: 0; transform: translateX(60px); animation: roll 1.1s cubic-bezier(.2,.75,.25,1) .35s forwards; }
+    @keyframes roll { to { opacity: 1; transform: none; } }
+
+    /* stat ticker */
+    .ticker { display: flex; width: max-content; animation: ticker 28s linear infinite; }
+    @keyframes ticker { to { transform: translateX(-50%); } }
+
+    /* torque needle shimmer on the big 507 */
+    .num-ghost {
+      -webkit-text-stroke: 1px rgba(255,255,255,.07);
+      color: transparent;
+    }
+
+    .svc { border-left: 3px solid transparent; transition: border-color .25s, background .25s; }
+    .svc:hover { border-left-color: #E8222D; background: rgba(232,34,45,.05); }
+    .svc:hover .svc-num { color: #E8222D; }
+
+    .photo-frame { border: 1px solid rgba(255,255,255,.1); box-shadow: 0 24px 60px -20px rgba(0,0,0,.9); }
+  </style>
+</head>
+<body class="bg-asphalt font-display text-chrome antialiased overflow-x-hidden">
+
+  <!-- icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 10.13c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16m0 1.8c-3.15 0-3.52.01-4.76.07-2.43.11-3.56 1.26-3.67 3.67-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.11 2.4 1.24 3.56 3.67 3.67 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c2.43-.11 3.56-1.27 3.67-3.67.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.11-2.41-1.25-3.56-3.67-3.67-1.24-.06-1.61-.07-4.76-.07m0 3.06a5.14 5.14 0 1 1 0 10.27 5.14 5.14 0 0 1 0-10.27m0 1.8a3.33 3.33 0 1 0 0 6.67 3.33 3.33 0 0 0 0-6.67m6.54-2.01a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 6.62 11.87 6.9 12.15a.85.85 0 0 0 1.2 0c.28-.28 6.9-6.9 6.9-12.15A7.5 7.5 0 0 0 12 2m0 10.13a2.63 2.63 0 1 1 0-5.26 2.63 2.63 0 0 1 0 5.26"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 1.8a8.2 8.2 0 1 1 0 16.4 8.2 8.2 0 0 1 0-16.4M11.1 6v6.37l5.4 3.24.93-1.54-4.53-2.72V6z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 17.27 6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a10 10 0 0 0-8.65 15.02l.29.5h16.72l.29-.5A10 10 0 0 0 12 4m0 1.8c4.53 0 8.2 3.67 8.2 8.2 0 1.29-.3 2.5-.83 3.58H4.63A8.16 8.16 0 0 1 3.8 14c0-4.53 3.67-8.2 8.2-8.2m4.89 3.61-4.03 4.03a1.8 1.8 0 1 0 1.27 1.27l4.03-4.03z"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="currentColor" d="M22.61 18.36 13.54 9.3a6.06 6.06 0 0 0-1.4-6.46A6.1 6.1 0 0 0 5.9 1.35l3.6 3.6-2.55 2.54-3.6-3.59a6.08 6.08 0 0 0 1.49 6.24 6.06 6.06 0 0 0 6.46 1.4l9.06 9.06a1 1 0 0 0 1.42 0l.83-.83a1 1 0 0 0 0-1.41"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></symbol>
+  </svg>
+
+  <!-- top bar -->
+  <header class="fixed inset-x-0 top-0 z-40 border-b border-white/5 bg-asphalt/85 backdrop-blur">
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Logo Dens Autoworks 507 Power" class="h-10 w-10 rounded">
+        <span class="font-display text-lg font-800 italic font-extrabold uppercase tracking-wide">Dens <span class="text-redline">Autoworks</span></span>
+      </a>
+      <div class="flex items-center gap-3">
+        <span class="hidden items-center gap-1.5 font-tech text-xs text-ash sm:flex">
+          <svg class="h-4 w-4 text-amber-400"><use href="#i-star"/></svg>
+          4,9 di Google (171 ulasan)
+        </span>
+        <a href="https://wa.me/6282110450778?text=Halo%2C%20saya%20mau%20tanya-tanya%20terkait%20Remap%20ECU%20nya..." class="flex items-center gap-2 rounded bg-redline px-4 py-2 font-tech text-sm font-bold text-white transition hover:bg-red-600">
+          <svg class="h-4 w-4"><use href="#i-wa"/></svg>
+          <span class="hidden sm:inline">Konsultasi Gratis</span><span class="sm:hidden">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="relative overflow-hidden pt-16">
+    <div class="pit-grid absolute inset-0"></div>
+    <div class="redglow absolute inset-0"></div>
+    <p class="num-ghost pointer-events-none absolute -right-6 top-20 select-none font-display text-[11rem] font-black italic leading-none sm:text-[17rem] lg:text-[22rem]">507</p>
+
+    <div class="relative mx-auto grid max-w-6xl gap-6 px-4 pb-10 pt-12 sm:px-6 lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-10 lg:pb-16 lg:pt-24">
+      <div>
+        <p class="reveal reveal-1 flex items-center gap-2 font-tech text-xs font-semibold uppercase tracking-[0.3em] text-redline">
+          <span class="inline-block h-px w-8 bg-redline"></span>
+          Bengkel Spesialis Diesel · Alam Sutera
+        </p>
+        <h1 class="reveal reveal-2 mt-4 font-display text-5xl font-black italic uppercase leading-[0.95] sm:text-6xl lg:text-7xl">
+          Diesel Lo<br>
+          Bisa Jauh<br>
+          <span class="text-redline">Lebih Galak.</span>
+        </h1>
+        <p class="reveal reveal-3 mt-5 max-w-md font-light text-ash sm:text-lg">
+          Remap ECU 507 Power, modifikasi diesel sampai spek monster, dan perawatan khusus diesel. Power ngejambak, tetap aman buat harian.
+        </p>
+
+        <div class="reveal reveal-4 mt-7 flex flex-col gap-3 sm:flex-row">
+          <a href="https://wa.me/6282110450778?text=Halo%2C%20saya%20mau%20tanya-tanya%20terkait%20Remap%20ECU%20nya...%20Bisa%20bantu%20saya%3F" class="flex items-center justify-center gap-2.5 rounded bg-redline px-6 py-3.5 font-tech font-bold text-white transition hover:bg-red-600">
+          <svg class="h-5 w-5"><use href="#i-wa"/></svg>
+          Konsultasi Remap, Gratis
+        </a>
+          <a href="https://wa.me/62812121507?text=Halo%2C%20saya%20mau%20booking%20servicenya...%20Boleh%20bantu%20saya%3F" class="flex items-center justify-center gap-2.5 rounded border border-white/15 bg-white/5 px-6 py-3.5 font-tech font-bold text-chrome transition hover:border-redline hover:text-redline">
+          <svg class="h-5 w-5"><use href="#i-wrench"/></svg>
+          Booking Servis
+        </a>
+        </div>
+
+        <div class="reveal reveal-5 mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-tech text-xs text-steel">
+          <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-amber-400"><use href="#i-star"/></svg> 4,9 di Google · 171 ulasan</span>
+          <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-redline"><use href="#i-ig"/></svg> 30K followers</span>
+          <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-redline"><use href="#i-gauge"/></svg> 1500+ mobil sudah remap</span>
+        </div>
+      </div>
+
+      <figure class="rollin relative">
+        <div class="stripes absolute -left-4 -top-4 h-24 w-24 opacity-60"></div>
+        <img src="assets/img_1.jpg" alt="Toyota Fortuner GR hasil build Dens Autoworks dengan kap mesin terbuka" class="photo-frame relative w-full rounded-lg object-cover">
+        <figcaption class="absolute bottom-3 left-3 rounded bg-black/70 px-3 py-1.5 font-tech text-[11px] uppercase tracking-widest text-ash backdrop-blur">Fortuner GR · build by Dens</figcaption>
+      </figure>
+    </div>
+
+    <!-- stripe divider -->
+    <div class="stripes h-3 w-full opacity-90"></div>
+  </section>
+
+  <!-- ticker -->
+  <div class="overflow-hidden border-b border-white/5 bg-pit py-3">
+    <div class="ticker gap-8 font-tech text-xs font-semibold uppercase tracking-[0.25em] text-steel">
+      <span class="flex shrink-0 items-center gap-8">
+        <span>1500+ mobil sudah remap 507 Power</span><span class="text-redline">///</span>
+        <span>Power ngejambak, aman buat harian</span><span class="text-redline">///</span>
+        <span>4,9 di Google · 171 ulasan</span><span class="text-redline">///</span>
+        <span>Remap · Modifikasi · Perawatan diesel</span><span class="text-redline">///</span>
+      </span>
+      <span class="flex shrink-0 items-center gap-8" aria-hidden="true">
+        <span>1500+ mobil sudah remap 507 Power</span><span class="text-redline">///</span>
+        <span>Power ngejambak, aman buat harian</span><span class="text-redline">///</span>
+        <span>4,9 di Google · 171 ulasan</span><span class="text-redline">///</span>
+        <span>Remap · Modifikasi · Perawatan diesel</span><span class="text-redline">///</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- remap 507 -->
+  <section class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+    <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <figure class="relative order-2 lg:order-1">
+        <img src="assets/img_2.jpg" alt="Ruang mesin diesel dengan turbo dan intercooler FLEX hasil pengerjaan Dens Autoworks" class="photo-frame w-full rounded-lg object-cover">
+        <div class="stripes absolute -bottom-4 -right-4 h-20 w-32 opacity-50"></div>
+      </figure>
+      <div class="order-1 lg:order-2">
+        <p class="flex items-center gap-2 font-tech text-xs font-semibold uppercase tracking-[0.3em] text-redline">
+          <span class="inline-block h-px w-8 bg-redline"></span>
+          Remap ECU 507 Power
+        </p>
+        <h2 class="mt-3 font-display text-4xl font-black italic uppercase leading-tight sm:text-5xl">Standar Itu<br>Cuma Setelan <span class="text-redline">Pabrik.</span></h2>
+        <p class="mt-4 font-light leading-relaxed text-ash">
+          Dari pabrik, mesin diesel modern sengaja ditahan. Remap 507 Power membuka tenaga dan torsi yang selama ini disimpan ECU, dikerjakan langsung bareng tuner 507 (@ronnyhao507), dengan setelan yang tetap aman untuk pemakaian harian.
+        </p>
+        <ul class="mt-6 space-y-3 font-tech text-sm text-chrome">
+          <li class="flex items-start gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0 text-redline"><use href="#i-bolt"/></svg> Tarikan jauh lebih responsif, nyalip tanpa mikir dua kali</li>
+          <li class="flex items-start gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0 text-redline"><use href="#i-gauge"/></svg> 1500+ mobil diesel sudah remap 507 Power di Dens</li>
+          <li class="flex items-start gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0 text-redline"><use href="#i-wa"/></svg> Konsultasi dulu gratis, mobil standar juga bisa</li>
+        </ul>
+        <a href="https://wa.me/6282110450778?text=Halo%2C%20saya%20mau%20tanya-tanya%20terkait%20Remap%20ECU%20nya...%20Bisa%20bantu%20saya%3F" class="mt-7 inline-flex items-center gap-2 font-tech font-bold text-redline transition hover:gap-3.5">
+          Tanya remap buat mobil lo
+          <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- layanan -->
+  <section class="border-y border-white/5 bg-pit">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+      <p class="flex items-center gap-2 font-tech text-xs font-semibold uppercase tracking-[0.3em] text-redline">
+        <span class="inline-block h-px w-8 bg-redline"></span>
+        Layanan
+      </p>
+      <h2 class="mt-3 max-w-xl font-display text-4xl font-black italic uppercase leading-tight sm:text-5xl">Satu Bengkel, <span class="text-redline">Khusus Diesel.</span></h2>
+
+      <div class="mt-10 divide-y divide-white/5 border-y border-white/5">
+        <div class="svc grid gap-3 px-4 py-7 sm:grid-cols-[80px_1fr_1.2fr] sm:items-start sm:px-6">
+          <span class="svc-num font-tech text-sm font-bold text-steel transition">01</span>
+          <h3 class="font-display text-2xl font-extrabold italic uppercase">Remap ECU<br class="hidden sm:block"> 507 Power</h3>
+          <p class="font-light text-sm leading-relaxed text-ash">Buka tenaga tersembunyi mesin diesel common-rail. Power dan torsi naik signifikan, setelan aman buat harian, hasil bisa langsung dirasakan.</p>
+        </div>
+        <div class="svc grid gap-3 px-4 py-7 sm:grid-cols-[80px_1fr_1.2fr] sm:items-start sm:px-6">
+          <span class="svc-num font-tech text-sm font-bold text-steel transition">02</span>
+          <h3 class="font-display text-2xl font-extrabold italic uppercase">Modifikasi<br class="hidden sm:block"> Diesel</h3>
+          <p class="font-light text-sm leading-relaxed text-ash">Upgrade turbo, intercooler, exhaust, sampai full build. Mau harian yang lebih bertenaga atau spek monster, dikerjakan rapi dan dikonsultasikan dari awal.</p>
+        </div>
+        <div class="svc grid gap-3 px-4 py-7 sm:grid-cols-[80px_1fr_1.2fr] sm:items-start sm:px-6">
+          <span class="svc-num font-tech text-sm font-bold text-steel transition">03</span>
+          <h3 class="font-display text-2xl font-extrabold italic uppercase">Perawatan<br class="hidden sm:block"> Khusus Diesel</h3>
+          <p class="font-light text-sm leading-relaxed text-ash">Servis berkala, mesin, AC, kaki-kaki, dengan sparepart original. Diesel standar maupun modif, ditangani teknisi yang paham karakter mesin diesel.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="https://wa.me/62812121507?text=Halo%2C%20saya%20mau%20booking%20servicenya...%20Boleh%20bantu%20saya%3F" class="inline-flex items-center justify-center gap-2.5 rounded bg-redline px-6 py-3.5 font-tech font-bold text-white transition hover:bg-red-600">
+          <svg class="h-5 w-5"><use href="#i-wa"/></svg>
+          Booking Servis Sekarang
+        </a>
+        <a href="tel:082110450778" class="inline-flex items-center justify-center gap-2.5 rounded border border-white/15 bg-white/5 px-6 py-3.5 font-tech font-bold text-chrome transition hover:border-redline hover:text-redline">
+          <svg class="h-5 w-5"><use href="#i-phone"/></svg>
+          0821-1045-0778
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- galeri build + reels -->
+  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+    <p class="flex items-center gap-2 font-tech text-xs font-semibold uppercase tracking-[0.3em] text-redline">
+      <span class="inline-block h-px w-8 bg-redline"></span>
+      Bukti di Bengkel
+    </p>
+    <h2 class="mt-3 font-display text-4xl font-black italic uppercase leading-tight sm:text-5xl">Build Kami <span class="text-redline">Yang Bicara.</span></h2>
+
+    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+      <figure class="relative sm:-mt-4">
+        <img src="assets/img.jpg" alt="Poster build Fortuner GR FREEZE.1GD by Dens Autoworks" class="photo-frame w-full rounded-lg object-cover">
+      </figure>
+      <figure class="relative sm:mt-6">
+        <img src="assets/img_3.jpg" alt="Engine bay build Dens Autoworks dipamerkan di event modifikasi" class="photo-frame w-full rounded-lg object-cover">
+      </figure>
+      <figure class="relative sm:-mt-4">
+        <img src="assets/img_2.jpg" alt="Detail velg dan rem Brembo dengan mesin diesel turbo hasil Dens Autoworks" class="photo-frame w-full rounded-lg object-cover">
+      </figure>
+    </div>
+
+    <div class="mt-10 grid gap-3 sm:grid-cols-2">
+      <a href="https://www.instagram.com/reel/DB3SPuqyXtF/" class="group flex items-center gap-3 rounded border border-white/10 bg-panel px-4 py-3.5 transition hover:border-redline/60">
+        <svg class="h-5 w-5 shrink-0 text-redline"><use href="#i-play"/></svg>
+        <span class="font-tech text-sm text-chrome group-hover:text-white">Lihat review hasil remap di Instagram</span>
+      </a>
+      <a href="https://www.instagram.com/reel/DKUkiBETyiz/" class="group flex items-center gap-3 rounded border border-white/10 bg-panel px-4 py-3.5 transition hover:border-redline/60">
+        <svg class="h-5 w-5 shrink-0 text-redline"><use href="#i-play"/></svg>
+        <span class="font-tech text-sm text-chrome group-hover:text-white">Mobil standar pengen remap? Bisa dong</span>
+      </a>
+      <a href="https://www.instagram.com/reel/C74hz74S6h-/" class="group flex items-center gap-3 rounded border border-white/10 bg-panel px-4 py-3.5 transition hover:border-redline/60">
+        <svg class="h-5 w-5 shrink-0 text-redline"><use href="#i-play"/></svg>
+        <span class="font-tech text-sm text-chrome group-hover:text-white">Sneak peek bengkel Dens</span>
+      </a>
+      <a href="https://www.instagram.com/reel/DLZtzrDzhkj/" class="group flex items-center gap-3 rounded border border-white/10 bg-panel px-4 py-3.5 transition hover:border-redline/60">
+        <svg class="h-5 w-5 shrink-0 text-redline"><use href="#i-play"/></svg>
+        <span class="font-tech text-sm text-chrome group-hover:text-white">Serunya naik diesel, diesel lifestyle</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ulasan -->
+  <section class="border-y border-white/5 bg-pit">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+      <div class="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+        <div>
+          <p class="flex items-center gap-2 font-tech text-xs font-semibold uppercase tracking-[0.3em] text-redline">
+            <span class="inline-block h-px w-8 bg-redline"></span>
+            Ulasan Google
+          </p>
+          <h2 class="mt-3 font-display text-4xl font-black italic uppercase leading-tight sm:text-5xl">Kata Pemilik <span class="text-redline">Diesel.</span></h2>
+        </div>
+        <div class="rounded border border-white/10 bg-panel px-5 py-4 text-right">
+          <p class="font-display text-4xl font-black italic text-white">4,9<span class="text-lg text-steel">/5</span></p>
+          <p class="mt-1 flex items-center justify-end gap-1 text-amber-400">
+            <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+          </p>
+          <p class="mt-1 font-tech text-xs text-steel">171 ulasan di Google</p>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2">
+        <blockquote class="rounded-lg border border-white/10 bg-panel p-6">
+          <p class="flex gap-0.5 text-amber-400">
+            <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+          </p>
+          <p class="mt-3 font-light text-sm leading-relaxed text-chrome">"Dari awal dateng tau dari temen, pemilik toko sangat ramah dan sabar dalam menjelaskan modifikasi yang ingin dilakukan. Overall rekomen banget buat kalian yang mau modif mobil disel kalian dari remap sampe spek monster :)"</p>
+          <footer class="mt-4 font-tech text-xs text-steel">Rayson Sebastian · ulasan Google</footer>
+        </blockquote>
+        <blockquote class="rounded-lg border border-white/10 bg-panel p-6">
+          <p class="flex gap-0.5 text-amber-400">
+            <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+          </p>
+          <p class="mt-3 font-light text-sm leading-relaxed text-chrome">"Mantap, sangat rekomendasi untuk mobil2 diesel modif maupun standar. Bengkel sangat berpengalaman dan ramah. Juara !!!"</p>
+          <footer class="mt-4 font-tech text-xs text-steel">Sonny Willim · ulasan Google</footer>
+        </blockquote>
+        <blockquote class="rounded-lg border border-white/10 bg-panel p-6">
+          <p class="flex gap-0.5 text-amber-400">
+            <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+          </p>
+          <p class="mt-3 font-light text-sm leading-relaxed text-chrome">"Sudah berkali-kali servis disini memuaskan, pengerjaan rapi hingga detail-detail interior pun diperhatikan. Konsultasi servis dan trouble ditangani dengan cepat. Mau servis AC , mesin , kaki2 bisa, selama itu bisa diservis bisa diservis disini deh."</p>
+          <footer class="mt-4 font-tech text-xs text-steel">marsdefacto · ulasan Google</footer>
+        </blockquote>
+        <blockquote class="rounded-lg border border-white/10 bg-panel p-6">
+          <p class="flex gap-0.5 text-amber-400">
+            <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+          </p>
+          <p class="mt-3 font-light text-sm leading-relaxed text-chrome">"Baru sekali servis disini dan memuaskan, pengerjaan rapi. Konsultasi servis dan trouble ditangani dengan cepat."</p>
+          <footer class="mt-4 font-tech text-xs text-steel">kiki fardhi · ulasan Google</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- lokasi -->
+  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div>
+        <p class="flex items-center gap-2 font-tech text-xs font-semibold uppercase tracking-[0.3em] text-redline">
+          <span class="inline-block h-px w-8 bg-redline"></span>
+          Lokasi & Jam Buka
+        </p>
+        <h2 class="mt-3 font-display text-4xl font-black italic uppercase leading-tight sm:text-5xl">Mampir Ke <span class="text-redline">Pit Kami.</span></h2>
+        <ul class="mt-7 space-y-5 text-sm">
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-redline"><use href="#i-pin"/></svg>
+            <span class="font-light leading-relaxed text-ash">Ruko Sutera Niaga I, Jl. Raya Serpong Kilometer 7 No.31,<br>Pakulonan, Serpong Utara, Tangerang Selatan, Banten 15325</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-redline"><use href="#i-clock"/></svg>
+            <span class="font-light text-ash">Senin sampai Sabtu, 09.00 - 17.00 WIB<br>Minggu libur</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-redline"><use href="#i-phone"/></svg>
+            <span class="font-light text-ash">0821-1045-0778</span>
+          </li>
+        </ul>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="https://maps.app.goo.gl/H34ExQY781iAugEz8" class="inline-flex items-center justify-center gap-2.5 rounded border border-white/15 bg-white/5 px-6 py-3.5 font-tech font-bold text-chrome transition hover:border-redline hover:text-redline">
+            <svg class="h-5 w-5"><use href="#i-pin"/></svg>
+            Buka di Google Maps
+          </a>
+          <a href="https://www.instagram.com/densautoworks/" class="inline-flex items-center justify-center gap-2.5 rounded border border-white/15 bg-white/5 px-6 py-3.5 font-tech font-bold text-chrome transition hover:border-redline hover:text-redline">
+            <svg class="h-5 w-5"><use href="#i-ig"/></svg>
+            @densautoworks
+          </a>
+        </div>
+      </div>
+      <div class="photo-frame overflow-hidden rounded-lg">
+        <iframe title="Peta lokasi Dens Autoworks 507 Power" src="https://www.google.com/maps?q=Dens+Autoworks+507+Power,+Ruko+Sutera+Niaga+I,+Jl.+Raya+Serpong+Kilometer+7+No.31,+Pakulonan,+Serpong+Utara&output=embed" class="h-72 w-full grayscale contrast-125 lg:h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA akhir -->
+  <section class="relative overflow-hidden border-t border-white/5 bg-pit">
+    <div class="stripes-soft absolute inset-0"></div>
+    <p class="num-ghost pointer-events-none absolute -left-8 bottom-0 select-none font-display text-[10rem] font-black italic leading-none sm:text-[15rem]">507</p>
+    <div class="relative mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 lg:py-24">
+      <h2 class="mx-auto max-w-2xl font-display text-4xl font-black italic uppercase leading-tight sm:text-5xl">Masih Nahan Mobil Lo<br>Di Setelan <span class="text-redline">Pabrik?</span></h2>
+      <p class="mx-auto mt-4 max-w-md font-light text-ash">Konsultasi dulu aja, gratis. Ceritakan mobil dan kebutuhan lo, tim Dens yang kasih rekomendasinya.</p>
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="https://wa.me/6282110450778?text=Halo%2C%20saya%20mau%20tanya-tanya%20terkait%20Remap%20ECU%20nya...%20Bisa%20bantu%20saya%3F" class="inline-flex w-full items-center justify-center gap-2.5 rounded bg-redline px-8 py-4 font-tech font-bold text-white transition hover:bg-red-600 sm:w-auto">
+          <svg class="h-5 w-5"><use href="#i-wa"/></svg>
+          Konsultasi Remap, Gratis
+        </a>
+        <a href="https://wa.me/62812121507?text=Halo%2C%20saya%20mau%20booking%20servicenya...%20Boleh%20bantu%20saya%3F" class="inline-flex w-full items-center justify-center gap-2.5 rounded border border-white/15 bg-white/5 px-8 py-4 font-tech font-bold text-chrome transition hover:border-redline hover:text-redline sm:w-auto">
+          <svg class="h-5 w-5"><use href="#i-wrench"/></svg>
+          Booking Servis
+        </a>
+      </div>
+    </div>
+    <div class="stripes h-3 w-full opacity-90"></div>
+  </section>
+
+  <!-- footer -->
+  <footer class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div class="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Logo Dens Autoworks 507 Power" class="h-10 w-10 rounded">
+        <div>
+          <p class="font-display font-extrabold italic uppercase">Dens Autoworks <span class="text-redline">507 Power</span></p>
+          <p class="font-tech text-xs text-steel">Diesel Performance Specialist · Alam Sutera, Tangerang Selatan</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/densautoworks/" aria-label="Instagram Dens Autoworks" class="text-steel transition hover:text-redline"><svg class="h-5 w-5"><use href="#i-ig"/></svg></a>
+        <a href="https://linktr.ee/densautoworks507power" class="font-tech text-xs text-steel transition hover:text-redline">Linktree</a>
+        <a href="https://wa.me/6282110450778" aria-label="WhatsApp Dens Autoworks" class="text-steel transition hover:text-redline"><svg class="h-5 w-5"><use href="#i-wa"/></svg></a>
+      </div>
+    </div>
+    <p class="mt-8 font-tech text-[11px] text-steel">© 2026 Dens Autoworks 507 Power. Halaman demo, bukan situs resmi.</p>
+  </footer>
+
+  <script src="/assets/demo-badge.js" defer></script>
+</body>
+</html>
