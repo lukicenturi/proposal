@@ -1,9 +1,9 @@
-// Shared demo watermark badge — injected into every client demo page.
+// Shared demo watermark badge, injected into every client demo page.
 // Update CONFIG once and all demos change together.
 (function () {
   var CONFIG = {
     label: 'DEMO PREVIEW',
-    note: 'Desain proposal — bukan situs resmi',
+    note: 'Desain proposal, bukan situs resmi',
     ctaText: 'Tertarik? Hubungi saya',
     // TODO: replace with your WhatsApp link, e.g. https://wa.me/628123456789
     ctaHref: 'mailto:lukicenturi@gmail.com',
