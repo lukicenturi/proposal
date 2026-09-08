@@ -10,6 +10,7 @@ Demo landing pages pitched to prospective clients (local businesses found on Ins
 ```
 /
 ├── index.html                  # Private gallery of all demos (noindex)
+├── general-reference.txt       # Landing pages the user rates highly; browse for inspiration
 ├── assets/
 │   └── demo-badge.js           # Shared watermark badge, injected into every demo
 └── <client-slug>/
@@ -68,7 +69,8 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
 ## Adding a new client: workflow
 
 1. The user creates `<client-slug>/` and dumps links (Google Maps, Instagram, anything) into `<client-slug>/reference.txt`, then asks to check it. Assets may appear in `assets-suggestions/` at any time.
-2. Read `reference.txt` and research every link. If it includes a competitor or reference site, treat that as the tone the client aspires to (e.g. classy and serene vs playful) and let it steer the design mood, not just the section ideas. Use the research browser (below) for pages that block plain fetching (Google Maps details, Instagram). Extract: real phone (for WA links), rating/reviews, address, hours, bio, bio links, brand colors from logo/feed.
+2. Read `reference.txt` and research every link. If it includes a competitor or reference site, treat that as the tone the client aspires to (e.g. classy and serene vs playful) and let it steer the design mood, not just the section ideas.
+   - Also check root `general-reference.txt`: landing pages the user considers very good. Browse them for design inspiration on any demo; if one is in the same industry as the client, treat it like a competitor reference for tone as well. Use the research browser (below) for pages that block plain fetching (Google Maps details, Instagram). Extract: real phone (for WA links), rating/reviews, address, hours, bio, bio links, brand colors from logo/feed.
 3. Create `<client-slug>/index.html` following the rules above.
 4. Add the demo to the root gallery with client name, category, and date.
 5. Push to `main` (Vercel auto-deploys).
