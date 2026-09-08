@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Gorillaz Scientia Gading Serpong · EV Coating, Detailing & Treatment</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0B0F1E',
+            panel: '#121830',
+            edge: 'rgba(237,237,230,0.09)',
+            bone: '#EDEDE6',
+            dim: '#9AA0B5',
+            amber: '#F5A623',
+            volt: '#3E63C4',
+          },
+          fontFamily: {
+            display: ['Anton', 'sans-serif'],
+            body: ['Sora', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #0B0F1E; }
+    .atmosphere {
+      background-color: #0B0F1E;
+      background-image:
+        radial-gradient(900px 500px at 85% -10%, rgba(245,166,35,0.13), transparent 60%),
+        radial-gradient(700px 500px at -10% 25%, rgba(62,99,196,0.18), transparent 60%),
+        repeating-linear-gradient(0deg, rgba(237,237,230,0.025) 0 1px, transparent 1px 56px),
+        repeating-linear-gradient(90deg, rgba(237,237,230,0.025) 0 1px, transparent 1px 56px);
+    }
+    .hazard {
+      background: repeating-linear-gradient(-45deg, #F5A623 0 14px, transparent 14px 28px);
+    }
+    .clip-slant { clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%); }
+    .clip-tag { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); }
+    @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+    .rise { opacity: 0; animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+    .d1 { animation-delay: .08s; } .d2 { animation-delay: .2s; } .d3 { animation-delay: .32s; }
+    .d4 { animation-delay: .44s; } .d5 { animation-delay: .58s; } .d6 { animation-delay: .74s; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee { animation: marquee 30s linear infinite; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .marquee { animation: none; opacity: 1; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body class="atmosphere font-body text-bone antialiased">
+
+  <!-- icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.4 15.2L2.1 21.9l4.84-1.5A9.9 9.9 0 1 0 12.04 2Zm0 1.67a8.23 8.23 0 1 1-4.2 15.3l-.3-.18-2.87.89.9-2.8-.2-.3a8.23 8.23 0 0 1 6.67-12.9Zm-3.1 3.6c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.6.12.17 1.78 2.84 4.4 3.87 2.18.86 2.62.69 3.1.65.47-.04 1.52-.62 1.73-1.22.22-.6.22-1.12.16-1.23-.07-.1-.24-.17-.5-.3s-1.52-.75-1.76-.83c-.23-.09-.4-.13-.58.12-.17.26-.66.84-.8 1-.15.18-.3.2-.55.07a6.96 6.96 0 0 1-2.07-1.28 7.8 7.8 0 0 1-1.43-1.78c-.15-.26-.02-.4.11-.52.12-.12.26-.3.39-.46.13-.15.17-.26.26-.43.08-.17.04-.32-.02-.45-.07-.13-.57-1.4-.8-1.9-.2-.5-.42-.32-.58-.32Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c2.67 0 3 .01 4.05.06 1.05.05 1.76.21 2.39.46.65.25 1.2.59 1.74 1.13a4.8 4.8 0 0 1 1.13 1.74c.24.63.41 1.34.46 2.39.05 1.05.06 1.38.06 4.05s-.01 3-.06 4.05a7.2 7.2 0 0 1-.46 2.39 4.8 4.8 0 0 1-1.13 1.74 4.8 4.8 0 0 1-1.74 1.13c-.63.24-1.34.41-2.39.46-1.05.05-1.38.06-4.05.06s-3-.01-4.05-.06a7.2 7.2 0 0 1-2.39-.46 4.8 4.8 0 0 1-1.74-1.13 4.8 4.8 0 0 1-1.13-1.74 7.2 7.2 0 0 1-.46-2.39C2.2 15 2.2 14.67 2.2 12s.01-3 .06-4.05c.05-1.05.22-1.76.46-2.39.25-.65.59-1.2 1.13-1.74a4.8 4.8 0 0 1 1.74-1.13c.63-.25 1.34-.41 2.39-.46C9 2.2 9.33 2.2 12 2.2Zm0 1.76c-2.62 0-2.93.01-3.97.06-.96.04-1.48.2-1.83.34-.46.18-.79.39-1.14.74-.35.35-.56.68-.74 1.14-.13.35-.3.87-.34 1.83-.05 1.04-.06 1.35-.06 3.97s.01 2.93.06 3.97c.04.96.2 1.48.34 1.83.18.46.39.79.74 1.14.35.35.68.56 1.14.74.35.13.87.3 1.83.34 1.04.05 1.35.06 3.97.06s2.93-.01 3.97-.06c.96-.04 1.48-.2 1.83-.34.46-.18.79-.39 1.14-.74.35-.35.56-.68.74-1.14.13-.35.3-.87.34-1.83.05-1.04.06-1.35.06-3.97s-.01-2.93-.06-3.97c-.04-.96-.2-1.48-.34-1.83a3.07 3.07 0 0 0-.74-1.14 3.07 3.07 0 0 0-1.14-.74c-.35-.13-.87-.3-1.83-.34-1.04-.05-1.35-.06-3.97-.06Zm0 3a5.03 5.03 0 1 1 0 10.07 5.03 5.03 0 0 1 0-10.07Zm0 1.76a3.27 3.27 0 1 0 0 6.55 3.27 3.27 0 0 0 0-6.55Zm5.23-3.07a1.18 1.18 0 1 1 0 2.35 1.18 1.18 0 0 1 0-2.35Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7.3 7.3 0 0 0-7.3 7.3c0 5.47 6.44 11.97 6.71 12.24a.84.84 0 0 0 1.18 0c.27-.27 6.71-6.77 6.71-12.24A7.3 7.3 0 0 0 12 2Zm0 10.1a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.9-13H11v6l5.2 3.1.95-1.55-4.25-2.55V7Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 17.3-6.2 3.7 1.6-7L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.4 4.8 1.6 7z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2 4.5 13.5H11L9.5 22 19 10.5h-6.5L13 2Z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.7s6.8 7.7 6.8 12.4a6.8 6.8 0 1 1-13.6 0C5.2 10.4 12 2.7 12 2.7Zm-2 12.9a2 2 0 0 0 2 2v1.6a3.6 3.6 0 0 1-3.6-3.6H10Z"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24"><path fill="currentColor" d="M9.4 4 7.6 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.6l-1.8-2H9.4ZM12 8.5a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5Zm0 1.9a2.85 2.85 0 1 0 0 5.7 2.85 2.85 0 0 0 0-5.7Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5.5v5.1c0 5 3.4 9.6 8 10.9 4.6-1.3 8-5.9 8-10.9V5.5L12 2Zm-1.3 14.3-3.2-3.2 1.4-1.4 1.8 1.8 4.4-4.4 1.4 1.4-5.8 5.8Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6 12-12L20.1 5.6 9.5 16.2Z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm-2 8h14v10H5V10Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 4.5 12.1 5.9l5.1 5.1H3v2h14.2l-5.1 5.1 1.4 1.4L21 12l-7.5-7.5Z"/></symbol>
+  </svg>
+
+  <!-- header -->
+  <header class="rise fixed inset-x-0 top-0 z-40 border-b border-edge bg-ink/85 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Gorillaz logo" class="h-10 w-auto">
+        <span class="hidden font-mono text-[11px] uppercase tracking-[0.22em] text-dim sm:block">Scientia · Gading Serpong</span>
+      </a>
+      <a href="https://wa.me/6281315109630?text=Hi%20Gorillaz!%20I%20want%20to%20book%20an%20appointment%20for%20my%20car." target="_blank" rel="noopener"
+        class="clip-tag inline-flex items-center gap-2 bg-amber px-4 py-2 text-sm font-bold text-ink transition hover:brightness-110">
+        <svg class="h-4 w-4"><use href="#i-wa"/></svg> Book now
+      </a>
+    </div>
+  </header>
+
+  <main id="top" class="overflow-x-clip">
+
+    <!-- hero -->
+    <section class="relative mx-auto grid max-w-6xl gap-10 px-5 pb-16 pt-28 md:grid-cols-12 md:items-center md:pb-24 md:pt-36">
+      <div class="md:col-span-7">
+        <p class="rise d1 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
+          <svg class="h-3.5 w-3.5"><use href="#i-bolt"/></svg>
+          Coating · Detailing · Treatment
+        </p>
+        <h1 class="rise d2 mt-4 font-display text-[15vw] uppercase leading-[0.92] sm:text-6xl md:text-7xl lg:text-[5.2rem]">
+          Gorilla-grade<br>
+          protection<br>
+          <span class="text-amber">for your EV.</span>
+        </h1>
+        <p class="rise d3 mt-6 max-w-xl text-base leading-relaxed text-dim">
+          Trusted by <strong class="text-bone">500+ EVs, HEVs and PHEVs</strong> around Gading Serpong.
+          Real, long-lasting hydrophobic coating, applied by a crew that works on electric cars every single day.
+        </p>
+        <div class="rise d4 mt-8 flex flex-wrap items-center gap-4">
+          <a href="https://wa.me/6281315109630?text=Hi%20Gorillaz!%20I%20want%20to%20book%20an%20appointment%20for%20my%20car." target="_blank" rel="noopener"
+            class="clip-tag inline-flex items-center gap-2.5 bg-amber px-6 py-3.5 text-base font-bold text-ink transition hover:brightness-110">
+            <svg class="h-5 w-5"><use href="#i-wa"/></svg> Book via WhatsApp
+          </a>
+          <span class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-dim">
+            <svg class="h-4 w-4 text-amber"><use href="#i-cal"/></svg> By appointment only
+          </span>
+        </div>
+        <dl class="rise d5 mt-10 grid max-w-xl grid-cols-3 divide-x divide-edge border border-edge bg-panel/60">
+          <div class="px-4 py-3">
+            <dt class="font-mono text-[10px] uppercase tracking-widest text-dim">Google rating</dt>
+            <dd class="mt-1 flex items-center gap-1.5 font-display text-2xl text-amber">4.8 <svg class="h-4 w-4"><use href="#i-star"/></svg></dd>
+          </div>
+          <div class="px-4 py-3">
+            <dt class="font-mono text-[10px] uppercase tracking-widest text-dim">Reviews</dt>
+            <dd class="mt-1 font-display text-2xl">50</dd>
+          </div>
+          <div class="px-4 py-3">
+            <dt class="font-mono text-[10px] uppercase tracking-widest text-dim">Electrified cars</dt>
+            <dd class="mt-1 font-display text-2xl">500+</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="relative md:col-span-5">
+        <div class="rise d3 relative">
+          <div class="absolute -left-3 -top-3 h-full w-full border-2 border-amber/60"></div>
+          <figure class="clip-slant relative overflow-hidden">
+            <img src="assets/hero-ev.jpg" alt="Electric SUV under studio light after coating" class="h-[420px] w-full object-cover md:h-[520px]">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent"></div>
+          </figure>
+          <div class="rise d5 absolute -bottom-5 left-0 clip-tag border border-edge bg-ink px-4 py-3">
+            <p class="font-mono text-[10px] uppercase tracking-widest text-dim">Hydrophobic test</p>
+            <p class="mt-0.5 inline-flex items-center gap-1.5 font-mono text-sm font-bold text-amber">
+              <svg class="h-4 w-4"><use href="#i-check"/></svg> PASSED · WATER JUST ROLLS OFF
+            </p>
+          </div>
+          <img src="assets/logo.png" alt="" class="rise d6 absolute -right-4 -top-10 h-24 w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)] md:h-28">
+        </div>
+      </div>
+    </section>
+
+    <!-- brand marquee -->
+    <section class="rise d6 border-y border-edge bg-panel/50 py-4" aria-label="EV brands handled">
+      <div class="overflow-hidden">
+        <div class="marquee flex w-max items-center gap-10 font-mono text-xs uppercase tracking-[0.28em] text-dim">
+          <span class="flex items-center gap-10">
+            <span class="text-amber">Trusted by</span><span>BYD</span><span>·</span><span>Denza</span><span>·</span><span>Geely</span><span>·</span><span>MG</span><span>·</span><span>BAIC</span><span>·</span><span>Jaecoo</span><span>·</span><span>AION</span><span>·</span><span>Chery</span><span>·</span><span>Hyundai Kona</span><span>·</span><span>IONIQ</span><span aria-hidden="true">·</span>
+          </span>
+          <span class="flex items-center gap-10" aria-hidden="true">
+            <span class="text-amber">Trusted by</span><span>BYD</span><span>·</span><span>Denza</span><span>·</span><span>Geely</span><span>·</span><span>MG</span><span>·</span><span>BAIC</span><span>·</span><span>Jaecoo</span><span>·</span><span>AION</span><span>·</span><span>Chery</span><span>·</span><span>Hyundai Kona</span><span>·</span><span>IONIQ</span><span>·</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- why -->
+    <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+      <p class="reveal font-mono text-[11px] uppercase tracking-[0.3em] text-amber">Why EV owners come here</p>
+      <h2 class="reveal mt-3 max-w-2xl font-display text-4xl uppercase leading-tight md:text-5xl">Not every workshop should touch an electric car.</h2>
+
+      <div class="mt-12 space-y-14">
+        <article class="reveal grid items-center gap-8 md:grid-cols-12">
+          <figure class="relative md:col-span-5">
+            <div class="hazard absolute -bottom-2 left-6 right-6 h-2 opacity-70"></div>
+            <img src="assets/ev-charging.jpg" alt="Charging port of an electric car" class="clip-slant h-64 w-full object-cover md:h-72">
+          </figure>
+          <div class="md:col-span-7">
+            <p class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-amber">
+              <svg class="h-4 w-4"><use href="#i-bolt"/></svg> 01 · EV-first floor
+            </p>
+            <h3 class="mt-2 font-display text-2xl uppercase md:text-3xl">Most cars in here run on batteries</h3>
+            <p class="mt-3 max-w-xl leading-relaxed text-dim">
+              From BYD and Denza to Kona and IONIQ, electrified cars are the daily routine, not the exception.
+              The crew knows the sensors, cameras and quirks of your car, and even customers say they learned new
+              things about their own EV during the handover briefing.
+            </p>
+          </div>
+        </article>
+
+        <article class="reveal grid items-center gap-8 md:grid-cols-12">
+          <figure class="relative order-1 md:order-2 md:col-span-5">
+            <div class="hazard absolute -bottom-2 left-6 right-6 h-2 opacity-70"></div>
+            <img src="assets/detailing.jpg" alt="Detailer machine-polishing a black car" class="clip-slant h-64 w-full object-cover md:h-72">
+          </figure>
+          <div class="order-2 md:order-1 md:col-span-7 md:text-right">
+            <p class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-amber">
+              <svg class="h-4 w-4"><use href="#i-cam"/></svg> 02 · Proof, not promises
+            </p>
+            <h3 class="mt-2 font-display text-2xl uppercase md:text-3xl">You watch the work happen</h3>
+            <p class="mt-3 max-w-xl leading-relaxed text-dim md:ml-auto">
+              Progress photos and condition notes are sent while your car is on the floor. Every coating job ends
+              with a before-and-after water test, so you see the hydrophobic effect with your own eyes instead of
+              taking our word for it.
+            </p>
+          </div>
+        </article>
+
+        <article class="reveal grid items-center gap-8 md:grid-cols-12">
+          <figure class="relative md:col-span-5">
+            <div class="hazard absolute -bottom-2 left-6 right-6 h-2 opacity-70"></div>
+            <img src="assets/silver-front.jpg" alt="Hybrid sedan front view in studio lighting" class="clip-slant h-64 w-full object-cover md:h-72">
+          </figure>
+          <div class="md:col-span-7">
+            <p class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-amber">
+              <svg class="h-4 w-4"><use href="#i-shield"/></svg> 03 · Premium coating, sane price
+            </p>
+            <h3 class="mt-2 font-display text-2xl uppercase md:text-3xl">Branded coating without the markup</h3>
+            <p class="mt-3 max-w-xl leading-relaxed text-dim">
+              The same premium coating brands the big names use, minus the fancy-lobby surcharge. Reviewers keep
+              saying the same thing: the result competes with the famous shops, the invoice does not.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- hydrophobic banner -->
+    <section class="reveal relative overflow-hidden border-y border-edge">
+      <img src="assets/hydrophobic.jpg" alt="Water beading on freshly coated black paint" class="absolute inset-0 h-full w-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20"></div>
+      <div class="relative mx-auto max-w-6xl px-5 py-20 md:py-28">
+        <p class="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
+          <svg class="h-4 w-4"><use href="#i-drop"/></svg> Straight from our bio
+        </p>
+        <h2 class="mt-3 max-w-xl font-display text-4xl uppercase leading-tight md:text-6xl">Real &amp; long-lasting hydrophobic!</h2>
+        <p class="mt-4 max-w-lg leading-relaxed text-dim">
+          Rain becomes beads, beads roll off, dirt goes with them. Customers report the effect still going strong
+          eight months after application.
+        </p>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+      <p class="reveal font-mono text-[11px] uppercase tracking-[0.3em] text-amber">What we do</p>
+      <h2 class="reveal mt-3 font-display text-4xl uppercase leading-tight md:text-5xl">Three ways to keep it showroom-fresh</h2>
+
+      <div class="mt-10 divide-y divide-edge border border-edge bg-panel/40">
+        <article class="reveal grid gap-4 p-6 md:grid-cols-12 md:items-center md:p-8">
+          <p class="font-display text-3xl text-amber/70 md:col-span-1">01</p>
+          <div class="md:col-span-8">
+            <h3 class="flex items-center gap-2.5 font-display text-2xl uppercase">
+              <svg class="h-5 w-5 text-amber"><use href="#i-shield"/></svg> Coating
+            </h3>
+            <p class="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
+              Multi-layer ceramic protection with our flagship <strong class="text-bone">Diamond package</strong>:
+              deep gloss, strong chemical resistance and the hydrophobic water test done in front of you.
+            </p>
+          </div>
+          <div class="md:col-span-3 md:text-right">
+            <span class="font-mono text-xs uppercase tracking-widest text-dim">Flagship · Diamond</span>
+          </div>
+        </article>
+        <article class="reveal grid gap-4 p-6 md:grid-cols-12 md:items-center md:p-8">
+          <p class="font-display text-3xl text-amber/70 md:col-span-1">02</p>
+          <div class="md:col-span-8">
+            <h3 class="flex items-center gap-2.5 font-display text-2xl uppercase">
+              <svg class="h-5 w-5 text-amber"><use href="#i-star"/></svg> Detailing
+            </h3>
+            <p class="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
+              Paint correction, water-spot and fungus removal, wheel and trim restoration. Finished panel by panel,
+              wiped down again and again until it passes inspection.
+            </p>
+          </div>
+          <div class="md:col-span-3 md:text-right">
+            <span class="font-mono text-xs uppercase tracking-widest text-dim">Exterior · Interior</span>
+          </div>
+        </article>
+        <article class="reveal grid gap-4 p-6 md:grid-cols-12 md:items-center md:p-8">
+          <p class="font-display text-3xl text-amber/70 md:col-span-1">03</p>
+          <div class="md:col-span-8">
+            <h3 class="flex items-center gap-2.5 font-display text-2xl uppercase">
+              <svg class="h-5 w-5 text-amber"><use href="#i-drop"/></svg> Treatment
+            </h3>
+            <p class="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
+              Glass treatment, interior deep-clean and ongoing after-care. We even tell you which shampoo keeps
+              your coating alive, long after you have driven home.
+            </p>
+          </div>
+          <div class="md:col-span-3 md:text-right">
+            <span class="font-mono text-xs uppercase tracking-widest text-dim">After-care included</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="reveal mt-6 flex flex-wrap items-center gap-2 text-sm text-dim">
+        <svg class="h-4 w-4 text-amber"><use href="#i-wa"/></svg>
+        Prices depend on car size and paint condition.
+        <a href="https://wa.me/6281315109630?text=Hi%20Gorillaz!%20Can%20I%20get%20the%20price%20list%20and%20current%20promo%3F" target="_blank" rel="noopener" class="font-semibold text-amber underline decoration-amber/40 underline-offset-4 hover:decoration-amber">
+          Ask for the price list and current promo on WhatsApp</a>
+      </p>
+    </section>
+
+    <!-- reviews -->
+    <section class="border-y border-edge bg-panel/40">
+      <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+        <div class="reveal flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">Google reviews</p>
+            <h2 class="mt-3 font-display text-4xl uppercase leading-tight md:text-5xl">4.8 out of 5, said out loud</h2>
+          </div>
+          <a href="https://maps.app.goo.gl/G2wHfW1dRME4CbKv5" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-dim transition hover:text-amber">
+            <span class="flex text-amber">
+              <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+            </span>
+            4.8 · 50 reviews on Google <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          <figure class="reveal clip-tag border border-edge bg-ink p-6">
+            <div class="flex text-amber" aria-label="5 stars">
+              <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+            </div>
+            <blockquote class="mt-3 text-sm leading-relaxed text-dim">
+              "Memang cocok untuk dikatakan Gorillaz Scientia ini EV specialist, karna yang masuk lebih dri 80%
+              mobil2 EV dari Hyundai maupun Chinese brands... great job Gorillaz Scientia, emang ga salah percayain
+              EV cars saya disini"
+            </blockquote>
+            <figcaption class="mt-4 font-mono text-xs uppercase tracking-widest text-bone">Michael Lazuardi <span class="text-dim">· Google review</span></figcaption>
+          </figure>
+          <figure class="reveal clip-tag border border-edge bg-ink p-6">
+            <div class="flex text-amber" aria-label="5 stars">
+              <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+            </div>
+            <blockquote class="mt-3 text-sm leading-relaxed text-dim">
+              "Great place to coat your car, affordable price, friendly owner (ko Ryan), outstanding result...
+              overall hasil coatingnya memuaskan dan awet juga setelah hampir 8 bulan, ambil paket Diamond"
+            </blockquote>
+            <figcaption class="mt-4 font-mono text-xs uppercase tracking-widest text-bone">Felicia Natalie <span class="text-dim">· Google review</span></figcaption>
+          </figure>
+          <figure class="reveal clip-tag border border-edge bg-ink p-6">
+            <div class="flex text-amber" aria-label="5 stars">
+              <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+            </div>
+            <blockquote class="mt-3 text-sm leading-relaxed text-dim">
+              "Pengerjaannya rapih dan sangat memuaskan, teknisinya sangat detil dan menyeluruh, foto2 dan penjelasan
+              kondisi mobil selalu diupdate berkala selama mobil d kerjakan... harga oke tapi kualitas boleh diadu
+              sama yang di ruko2"
+            </blockquote>
+            <figcaption class="mt-4 font-mono text-xs uppercase tracking-widest text-bone">Xa Ra <span class="text-dim">· Google review</span></figcaption>
+          </figure>
+          <figure class="reveal clip-tag border border-edge bg-ink p-6">
+            <div class="flex text-amber" aria-label="5 stars">
+              <svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg><svg class="h-4 w-4"><use href="#i-star"/></svg>
+            </div>
+            <blockquote class="mt-3 text-sm leading-relaxed text-dim">
+              "Pelayanan sangat ramah oleh pak Ryan, hasil coating diamond nya juga terbilang bagus dan worth dengan
+              harganya, hydrophobic effect nya real nih👍 dikasih komparasi video, nicely done and recommended"
+            </blockquote>
+            <figcaption class="mt-4 font-mono text-xs uppercase tracking-widest text-bone">Vira <span class="text-dim">· Google review</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- visit / booking -->
+    <section class="mx-auto max-w-6xl px-5 py-16 md:py-24">
+      <div class="grid gap-10 md:grid-cols-12">
+        <div class="md:col-span-7">
+          <p class="reveal font-mono text-[11px] uppercase tracking-[0.3em] text-amber">Visit us</p>
+          <h2 class="reveal mt-3 font-display text-4xl uppercase leading-tight md:text-5xl">Book a slot, bring the beast</h2>
+          <p class="reveal mt-4 max-w-lg leading-relaxed text-dim">
+            We work <strong class="text-bone">by appointment only</strong>, so your car gets the floor and the crew's
+            full attention. Chat with us on WhatsApp first, then drive in.
+          </p>
+          <ul class="reveal mt-8 space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-amber"><use href="#i-pin"/></svg>
+              <span class="text-dim">Scientia area, Medang, Kec. Pagedangan, Kabupaten Tangerang, Banten 15334
+                <a href="https://maps.app.goo.gl/G2wHfW1dRME4CbKv5" target="_blank" rel="noopener" class="ml-1 font-semibold text-amber underline decoration-amber/40 underline-offset-4 hover:decoration-amber">Open in Google Maps</a></span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-amber"><use href="#i-ig"/></svg>
+              <a href="https://www.instagram.com/gorillazscientiags/" target="_blank" rel="noopener" class="text-dim transition hover:text-amber">@gorillazscientiags</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-amber"><use href="#i-wa"/></svg>
+              <a href="https://wa.me/6281315109630" target="_blank" rel="noopener" class="text-dim transition hover:text-amber">0813-1510-9630</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-5">
+          <div class="reveal clip-tag border border-edge bg-panel/60 p-6">
+            <p class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-amber">
+              <svg class="h-4 w-4"><use href="#i-clock"/></svg> Opening hours
+            </p>
+            <table class="mt-4 w-full text-sm">
+              <tbody class="divide-y divide-edge">
+                <tr><td class="py-2 text-dim">Monday</td><td class="py-2 text-right font-mono text-xs uppercase tracking-widest text-dim/70">Closed</td></tr>
+                <tr><td class="py-2 text-dim">Tuesday to Sunday</td><td class="py-2 text-right font-mono text-xs tracking-widest text-bone">09.00-18.00</td></tr>
+              </tbody>
+            </table>
+            <a href="https://wa.me/6281315109630?text=Hi%20Gorillaz!%20I%20want%20to%20book%20an%20appointment%20for%20my%20car." target="_blank" rel="noopener"
+              class="clip-tag mt-6 flex w-full items-center justify-center gap-2.5 bg-amber px-6 py-3.5 text-base font-bold text-ink transition hover:brightness-110">
+              <svg class="h-5 w-5"><use href="#i-wa"/></svg> Book via WhatsApp
+            </a>
+            <p class="mt-3 text-center font-mono text-[10px] uppercase tracking-widest text-dim">By appointment only · slots fill fast</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="border-t border-edge bg-ink">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-10 text-center">
+      <img src="assets/logo.png" alt="Gorillaz logo" class="h-16 w-auto">
+      <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-dim">Gorillaz Scientia Gading Serpong</p>
+      <p class="max-w-md text-xs leading-relaxed text-dim/70">Coating, Detailing &amp; Treatment · Trusted by 500+ EVs, HEVs and PHEVs · Real &amp; Long Lasting Hydrophobic!</p>
+      <div class="flex items-center gap-5 text-dim">
+        <a href="https://www.instagram.com/gorillazscientiags/" target="_blank" rel="noopener" aria-label="Instagram" class="transition hover:text-amber"><svg class="h-5 w-5"><use href="#i-ig"/></svg></a>
+        <a href="https://wa.me/6281315109630" target="_blank" rel="noopener" aria-label="WhatsApp" class="transition hover:text-amber"><svg class="h-5 w-5"><use href="#i-wa"/></svg></a>
+        <a href="https://maps.app.goo.gl/G2wHfW1dRME4CbKv5" target="_blank" rel="noopener" aria-label="Google Maps" class="transition hover:text-amber"><svg class="h-5 w-5"><use href="#i-pin"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+  <script src="/assets/demo-badge.js" defer></script>
+</body>
+</html>
