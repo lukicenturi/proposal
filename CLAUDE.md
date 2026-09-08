@@ -13,7 +13,9 @@ Demo landing pages pitched to prospective clients (local businesses found on Ins
 ├── assets/
 │   └── demo-badge.js           # Shared watermark badge, injected into every demo
 └── <client-slug>/
-    └── index.html              # One self-contained demo per client
+    ├── index.html              # One self-contained demo per client
+    ├── img/                    # Web-optimized images/video used by the page
+    └── assets-suggestions/     # Raw assets the user drops in (client footage, logos); check here first, compress into img/ before use
 ```
 
 - One folder per client, kebab-case slug (e.g. `denting-rumah-musik/`). Everything for a demo lives in that folder (plus optional `img/` subfolder for logos/photos).
