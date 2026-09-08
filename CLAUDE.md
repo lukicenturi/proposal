@@ -105,3 +105,4 @@ Screenshot: `node tools/mobshot.js <url> <out.png>` (390x844 mobile emulation vi
 | `otoworx` | OTOWORX Car Detailing | Auto detailing & nano ceramic coating, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |
 | `rsv-store-serpong` | RSV Store Serpong (IG @rsvstoreserpong) | Helmets & riding gear (toko motorsport), Ruko Mendrisio 3, Gading Serpong (Cihuni, Pagedangan), Kab. Tangerang | Demo built |
 | `shion-dental` | Shion Dental Clinic Gading Serpong (IG @shiondental) | Klinik gigi, 5.0 (292 ulasan) di Google, Pakulonan Barat, Kelapa Dua, Kab. Tangerang. Real WA: wa.me/message/JZ2ADZ7UAV7EA1 (from IG bio; Maps has no phone) | Demo built |
+| `sutera-dental` | Sutera Dental Gading Serpong (IG @suteradental) | Klinik gigi (black-gold luxury brand), 5.0 (61 ulasan) di Google, Ruko Neo Arcade Lt. 2 Blok A/31, Kelapa Dua, Kab. Tangerang. Real WA: 0877-1233-9393 | Demo built |
