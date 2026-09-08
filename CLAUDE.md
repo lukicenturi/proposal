@@ -14,9 +14,13 @@ Demo landing pages pitched to prospective clients (local businesses found on Ins
 │   └── demo-badge.js           # Shared watermark badge, injected into every demo
 └── <client-slug>/
     ├── index.html              # One self-contained demo per client
-    ├── img/                    # Web-optimized images/video used by the page
-    └── assets-suggestions/     # Raw assets the user drops in (client footage, logos); check here first, compress into img/ before use
+    ├── assets/                 # Only assets the page actually uses, web-optimized
+    └── assets-suggestions/     # Raw asset dump from the user (client footage, photos, logos)
 ```
+
+### Asset workflow
+
+The user dumps any assets they think are good enough into `<client-slug>/assets-suggestions/` (often mid-session; re-check the folder before building). For each suggestion: review it, and if used, copy it out into `<client-slug>/assets/` (compress/resize/strip audio for web first). Never reference `assets-suggestions/` from a page, never delete anything in it, and leave unused suggestions where they are. Real client assets always beat stock placeholders.
 
 - One folder per client, kebab-case slug (e.g. `denting-rumah-musik/`). Everything for a demo lives in that folder (plus optional `img/` subfolder for logos/photos).
 - No build step. Plain HTML + Tailwind via CDN (`https://cdn.tailwindcss.com` with inline `tailwind.config`) + Google Fonts.
