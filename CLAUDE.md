@@ -66,7 +66,14 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
    - **Testimonials**: if the Maps listing has good reviews, extract them (research browser: click the Ulasan tab) and show the best ones on the site verbatim: reviewer name, star count, labeled as Google reviews. Pick quotes that reinforce the page's story (patient teachers, comfy space). Never invent testimonials; omit the section entirely if real ones don't exist.
 6. Mobile-first responsive; the client will almost certainly open the link on their phone from Instagram DM/WhatsApp.
 7. **Never use em dashes (—)** anywhere: page copy, code comments, docs, commit messages. Use commas, colons, periods, or parentheses instead.
-8. Add a card for the new demo to the root `index.html` gallery. Each card shows the client's real logo (referenced straight from the client's folder, no copies; on a white chip if the logo needs it) and sets the card title in that demo's own display font (add just the heading weights to the gallery's Google Fonts link and a per-client `fontFamily` token in its `tailwind.config`).
+8. Add a card for the new demo to the root `index.html` gallery. Each card shows the client's real logo (referenced straight from the client's folder, no copies; on a white chip if the logo needs it) and sets the card title in that demo's own display font (add just the heading weights to the gallery's Google Fonts link and a per-client `fontFamily` token in its `tailwind.config`). Each card also shows the demo's mockup screenshots above the logo row: `mockup-desktop.jpg` with `hidden sm:block`, `mockup-mobile.jpg` with `sm:hidden aspect-[3/4] object-cover object-top` (both `loading="lazy"`, rounded-xl, border-neutral-800), so desktop visitors see the desktop mockup and mobile visitors the mobile one.
+9. **Mockup screenshots + OG tags** (after the page is final):
+   - Serve the repo locally (`python3 -m http.server 8899`) and capture with `node tools/shot.js <url> <out.png> [width] [height] [dpr] [mobile01]`; it removes the demo badge before capturing, so mockups are clean while live pages keep the watermark.
+   - Desktop: `node tools/shot.js http://localhost:8899/<slug>/ /tmp/d.png 1200 630 1 0`. Mobile: `... /tmp/m.png 390 844 2 1`.
+   - Convert to JPEG q80 into the client folder: `sips -s format jpeg -s formatOptions 80 /tmp/d.png --out <slug>/assets/mockup-desktop.jpg` (same for mobile).
+   - Demo page `<head>` gets OG tags right after the robots meta: `og:title` (page title), `og:description` (meta description or a short one in the page's language), `og:image` = absolute `https://proposal.lukicenturi.com/<slug>/assets/mockup-desktop.jpg`, `og:image:width` 1200, `og:image:height` 630, `og:url`, `og:type` website. WhatsApp/IG previews need absolute URLs.
+   - After adding the gallery card, regenerate the root OG image: `node tools/shot.js http://localhost:8899/ /tmp/og.png 1200 630 1 0` then sips to `assets/og.jpg` (referenced by the root page's own OG tags).
+   - If a demo's design changes later, re-capture its two mockups and the root `assets/og.jpg`.
 
 ## Adding a new client: workflow
 
@@ -75,7 +82,8 @@ These guardrails work *with* brand isolation: distinctiveness comes from the cli
    - Also check root `general-reference.txt`: landing pages the user considers very good. Browse them for design inspiration on any demo; if one is in the same industry as the client, treat it like a competitor reference for tone as well. Use the research browser (below) for pages that block plain fetching (Google Maps details, Instagram). Extract: real phone (for WA links), rating/reviews, address, hours, bio, bio links, brand colors from logo/feed.
 3. State the target audience conclusion from the research (design brief rule above), then create `<client-slug>/index.html` following the rules above.
 4. Add the demo to the root gallery with client name, category, and date.
-5. Push to `main` (Vercel auto-deploys).
+5. Capture mockup screenshots, add OG tags, regenerate root `assets/og.jpg` (rule 9 above).
+6. Push to `main` (Vercel auto-deploys).
 
 ## Research browser (for Maps/Instagram)
 
