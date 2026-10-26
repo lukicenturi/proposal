@@ -1,0 +1,13 @@
+# Not part of the static site
+tools/
+.impeccable/
+.claude/
+PRODUCT.md
+CLAUDE.md
+vanili/DESIGN.md
+vanili/.impeccable/
+vanili/Vanilla_Business_Plan.pdf
+vanili/logo.png
+general-reference.txt
+*/reference.txt
+*/assets-suggestions/
