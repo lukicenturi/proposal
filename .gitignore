@@ -1,3 +1,10 @@
 .idea/
 .DS_Store
 .vercel
+bakeoff/
+.env.local
+reels/
+
+# LuxVanilla source material, never deploy
+vanili/Vanilla_Business_Plan.pdf
+vanili/logo.png
